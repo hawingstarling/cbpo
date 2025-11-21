@@ -1,0 +1,13 @@
+# Source
+from app.financial.services.fedex_shipment.config import FEDEX_SHIPMENT_SOURCE_FTP_EDI, FEDEX_SHIPMENT_SOURCE_FTP_CSV
+
+FTP_EDI_CONFIG = (
+    (FEDEX_SHIPMENT_SOURCE_FTP_EDI, 'FTP EDI'),
+    (FEDEX_SHIPMENT_SOURCE_FTP_CSV, 'FTP CSV'),
+)
+
+# Source Config Extension
+SOURCE_EXTENSION_CONFIG = {
+    '.txt': FEDEX_SHIPMENT_SOURCE_FTP_EDI,
+    '.csv': FEDEX_SHIPMENT_SOURCE_FTP_CSV
+}

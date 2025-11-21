@@ -1,0 +1,15 @@
+[
+  {
+    "model": "tenancies.organizationuser",
+    "pk": "e894b9d5-ee03-4992-b05a-838a5f71bcd6",
+    "fields": {
+      "created": "2021-02-24T02:36:38.577Z",
+      "modified": "2021-02-24T02:36:38.577Z",
+      "is_removed": false,
+      "organization": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+      "user": "119250a0-d5db-4a20-801c-581575305ef5",
+      "role": "da454c6d-1e60-42d6-97fd-4cf19155af22",
+      "status": "MEMBER"
+    }
+  }
+]

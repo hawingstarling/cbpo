@@ -1,0 +1,59 @@
+{
+  "type": "checkout.session.completed",
+  "data": {
+    "object": {
+      "id": "cs_test_a1QxcpVuCGEl0mquCTKQMCMCt7gcASvX53ICnBnsZN8F6UN48J5pbRGEd8",
+      "url": null,
+      "mode": "payment",
+      "locale": null,
+      "object": "checkout.session",
+      "consent": null,
+      "currency": "usd",
+      "customer": "cus_KABv7iuehSSqI0",
+      "livemode": false,
+      "metadata": {
+        "user_id": "119250a0-d5db-4a20-801c-581575305ef5",
+        "checkout_type": "CHECKOUT_FUND",
+        "fund_package_id": "3c2d1502-ac27-405f-bcbc-3dee50e8d4e9",
+        "organization_id": "4e50aaab-78a8-4373-90b7-2690ae214d31"
+      },
+      "shipping": null,
+      "cancel_url": "http://localhost:8080/#/ps/organization-settings/4e50aaab-78a8-4373-90b7-2690ae214d31/billing/fund-packages?status=cancel",
+      "expires_at": 1631168473,
+      "submit_type": null,
+      "success_url": "http://localhost:8080/#/ps/organization-settings/4e50aaab-78a8-4373-90b7-2690ae214d31/billing/fund-packages?status=success",
+      "amount_total": 10000,
+      "setup_intent": null,
+      "subscription": null,
+      "automatic_tax": {
+        "status": null,
+        "enabled": false
+      },
+      "total_details": {
+        "amount_tax": 0,
+        "amount_discount": 0,
+        "amount_shipping": 0
+      },
+      "customer_email": null,
+      "payment_intent": "pi_3JXK9lBhZLR2oJFV1EjLCY9n",
+      "payment_status": "paid",
+      "recovered_from": null,
+      "amount_subtotal": 10000,
+      "after_expiration": null,
+      "customer_details": {
+        "email": "vnhd1@example.com",
+        "tax_ids": [],
+        "tax_exempt": "none"
+      },
+      "consent_collection": null,
+      "client_reference_id": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+      "payment_method_types": [
+        "card"
+      ],
+      "allow_promotion_codes": false,
+      "payment_method_options": {},
+      "billing_address_collection": null,
+      "shipping_address_collection": null
+    }
+  }
+}

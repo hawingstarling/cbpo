@@ -1,0 +1,2640 @@
+{
+  "base": {
+    "config": {
+      "query": {
+        "type": "AND",
+        "conditions": [
+          {
+            "value": "DATE_START_OF(DATE_LAST(30,'day'), 'day')",
+            "column": "sale_date",
+            "operator": "$gte"
+          },
+          {
+            "value": "DATE_END_OF(TODAY(), 'day')",
+            "column": "sale_date",
+            "operator": "$lte"
+          },
+          {
+            "value": "amazon.com",
+            "column": "channel_name",
+            "operator": "$eq"
+          }
+        ]
+      }
+    }
+  },
+  "form": {
+    "config": {
+      "query": {},
+      "controls": []
+    }
+  },
+  "builder": {
+    "config": {
+      "form": {
+        "columns": [
+          {
+            "name": "item_sale_status",
+            "slug": "sale-status",
+            "type": "select",
+            "options": [
+              {
+                "text": "Pending",
+                "value": "Pending"
+              },
+              {
+                "text": "Unpaid",
+                "value": "Unpaid"
+              },
+              {
+                "text": "Cancelled",
+                "value": "Cancelled"
+              },
+              {
+                "text": "Unshipped",
+                "value": "Unshipped"
+              },
+              {
+                "text": "Partially Unshipped",
+                "value": "Partially Unshipped"
+              },
+              {
+                "text": "Partially Shipped",
+                "value": "Partially Shipped"
+              },
+              {
+                "text": "Shipped",
+                "value": "Shipped"
+              },
+              {
+                "text": "Completed",
+                "value": "Completed"
+              },
+              {
+                "text": "Returning",
+                "value": "Returning"
+              },
+              {
+                "text": "Partially Returning",
+                "value": "Partially Returning"
+              },
+              {
+                "text": "Refunded",
+                "value": "Refunded"
+              },
+              {
+                "text": "Partially Refunded",
+                "value": "Partially Refunded"
+              },
+              {
+                "text": "Other",
+                "value": "Other"
+              },
+              {
+                "text": "Return Reversed",
+                "value": "Return Reversed"
+              }
+            ],
+            "operator": "in"
+          },
+          {
+            "name": "item_profit_status",
+            "slug": "profit-status",
+            "type": "select",
+            "options": [
+              {
+                "text": "Projected",
+                "value": "Projected"
+              },
+              {
+                "text": "Audited",
+                "value": "Audited"
+              },
+              {
+                "text": "Final",
+                "value": "Final"
+              }
+            ],
+            "operator": "in"
+          },
+          {
+            "name": "fulfillment_type",
+            "slug": "fulfillment-types",
+            "type": "select",
+            "options": [
+              {
+                "text": "FBA",
+                "value": "FBA"
+              },
+              {
+                "text": "MFN",
+                "value": "MFN"
+              },
+              {
+                "text": "MFN-DS",
+                "value": "MFN-DS"
+              },
+              {
+                "text": "MFN-Prime",
+                "value": "MFN-Prime"
+              },
+              {
+                "text": "MFN-RA",
+                "value": "MFN-RA"
+              }
+            ]
+          },
+          {
+            "name": "brand",
+            "type": "select",
+            "options": [
+              {
+                "text": "Pizzaaa",
+                "value": "Pizzaaa"
+              },
+              {
+                "text": "Dingtea",
+                "value": "Dingtea"
+              },
+              {
+                "text": "Optibac",
+                "value": "Optibac"
+              },
+              {
+                "text": "Ginklo",
+                "value": "Ginklo"
+              },
+              {
+                "text": "minion",
+                "value": "minion"
+              },
+              {
+                "text": "Minion",
+                "value": "Minion"
+              },
+              {
+                "text": "Woolrich Xịn",
+                "value": "Woolrich Xịn"
+              },
+              {
+                "text": "Grundéns",
+                "value": "Grundéns"
+              },
+              {
+                "text": "Maybelline",
+                "value": "Maybelline"
+              },
+              {
+                "text": "Uniqlo",
+                "value": "Uniqlo"
+              },
+              {
+                "text": "J.Crew",
+                "value": "J.Crew"
+              },
+              {
+                "text": "Converse",
+                "value": "Converse"
+              },
+              {
+                "text": "Calvin Klein",
+                "value": "Calvin Klein"
+              },
+              {
+                "text": "Xylitol",
+                "value": "Xylitol"
+              },
+              {
+                "text": "Asic",
+                "value": "Asic"
+              },
+              {
+                "text": "Lauren",
+                "value": "Lauren"
+              },
+              {
+                "text": "Levi",
+                "value": "Levi"
+              },
+              {
+                "text": "Channel",
+                "value": "Channel"
+              },
+              {
+                "text": "Tommy",
+                "value": "Tommy"
+              },
+              {
+                "text": "Bio Essence",
+                "value": "Bio Essence"
+              },
+              {
+                "text": "PhucLong",
+                "value": "PhucLong"
+              },
+              {
+                "text": "Vaseline",
+                "value": "Vaseline"
+              },
+              {
+                "text": "Outdoor Segment",
+                "value": "Outdoor Segment"
+              },
+              {
+                "text": "Lee Jeans",
+                "value": "Lee Jeans"
+              },
+              {
+                "text": "Georgia",
+                "value": "Georgia"
+              },
+              {
+                "text": "Propper",
+                "value": "Propper"
+              },
+              {
+                "text": "PF Flyers",
+                "value": "PF Flyers"
+              },
+              {
+                "text": "Dakine",
+                "value": "Dakine"
+              },
+              {
+                "text": "Pajar Canada",
+                "value": "Pajar Canada"
+              },
+              {
+                "text": "Mountain Hardwear MFN",
+                "value": "Mountain Hardwear MFN"
+              },
+              {
+                "text": "Rocky",
+                "value": "Rocky"
+              },
+              {
+                "text": "FitFlop",
+                "value": "FitFlop"
+              },
+              {
+                "text": "Fjallraven",
+                "value": "Fjallraven"
+              },
+              {
+                "text": "Bella Vita",
+                "value": "Bella Vita"
+              },
+              {
+                "text": "Clarks",
+                "value": "Clarks"
+              },
+              {
+                "text": "TOMS",
+                "value": "TOMS"
+              },
+              {
+                "text": "Timberland",
+                "value": "Timberland"
+              },
+              {
+                "text": "Scully",
+                "value": "Scully"
+              },
+              {
+                "text": "Gordini",
+                "value": "Gordini"
+              },
+              {
+                "text": "Skechers Kids",
+                "value": "Skechers Kids"
+              },
+              {
+                "text": "Heelys",
+                "value": "Heelys"
+              },
+              {
+                "text": "Wolky",
+                "value": "Wolky"
+              },
+              {
+                "text": "WWW Kids",
+                "value": "WWW Kids"
+              },
+              {
+                "text": "Ariat Apparel",
+                "value": "Ariat Apparel"
+              },
+              {
+                "text": "Asics Apparel",
+                "value": "Asics Apparel"
+              },
+              {
+                "text": "Levi's",
+                "value": "Levi's"
+              },
+              {
+                "text": "Baffin",
+                "value": "Baffin"
+              },
+              {
+                "text": "Dr Martens",
+                "value": "Dr Martens"
+              },
+              {
+                "text": "Royal Robbins",
+                "value": "Royal Robbins"
+              },
+              {
+                "text": "Obermeyer",
+                "value": "Obermeyer"
+              },
+              {
+                "text": "Skechers Lifestyle",
+                "value": "Skechers Lifestyle"
+              },
+              {
+                "text": "Parfait",
+                "value": "Parfait"
+              },
+              {
+                "text": "Cole Haan",
+                "value": "Cole Haan"
+              },
+              {
+                "text": "Chaco",
+                "value": "Chaco"
+              },
+              {
+                "text": "Wrangler",
+                "value": "Wrangler"
+              },
+              {
+                "text": "Skechers",
+                "value": "Skechers"
+              },
+              {
+                "text": "New Balance",
+                "value": "New Balance"
+              },
+              {
+                "text": "Stetson and Dobbs",
+                "value": "Stetson and Dobbs"
+              },
+              {
+                "text": "Minnetonka Moccasin",
+                "value": "Minnetonka Moccasin"
+              },
+              {
+                "text": "Protalus",
+                "value": "Protalus"
+              },
+              {
+                "text": "Puma Work",
+                "value": "Puma Work"
+              },
+              {
+                "text": "Merrel Work",
+                "value": "Merrel Work"
+              },
+              {
+                "text": "Skechers Work",
+                "value": "Skechers Work"
+              },
+              {
+                "text": "Smoky Mountain Boots",
+                "value": "Smoky Mountain Boots"
+              },
+              {
+                "text": "Adidas",
+                "value": "Adidas"
+              },
+              {
+                "text": "TSUKIHOSHI",
+                "value": "TSUKIHOSHI"
+              },
+              {
+                "text": "Arborwear",
+                "value": "Arborwear"
+              },
+              {
+                "text": "Sperry",
+                "value": "Sperry"
+              },
+              {
+                "text": "Huk",
+                "value": "Huk"
+              },
+              {
+                "text": "Sorel",
+                "value": "Sorel"
+              },
+              {
+                "text": "Lacrosse",
+                "value": "Lacrosse"
+              },
+              {
+                "text": "Durango",
+                "value": "Durango"
+              },
+              {
+                "text": "OTBT",
+                "value": "OTBT"
+              },
+              {
+                "text": "Klogs",
+                "value": "Klogs"
+              },
+              {
+                "text": "<Not Specified>",
+                "value": "<Not Specified>"
+              },
+              {
+                "text": "Ariat",
+                "value": "Ariat"
+              },
+              {
+                "text": "Merrell Outdoor",
+                "value": "Merrell Outdoor"
+              },
+              {
+                "text": "Palladium",
+                "value": "Palladium"
+              },
+              {
+                "text": "Keen",
+                "value": "Keen"
+              },
+              {
+                "text": "Footwear Specialists International",
+                "value": "Footwear Specialists International"
+              },
+              {
+                "text": "Muck Boot Brands",
+                "value": "Muck Boot Brands"
+              },
+              {
+                "text": "Haggar",
+                "value": "Haggar"
+              },
+              {
+                "text": "Icebreaker Merino",
+                "value": "Icebreaker Merino"
+              },
+              {
+                "text": "Vibram",
+                "value": "Vibram"
+              },
+              {
+                "text": "TYR",
+                "value": "TYR"
+              },
+              {
+                "text": "Ray-Ban",
+                "value": "Ray-Ban"
+              },
+              {
+                "text": "Hurley",
+                "value": "Hurley"
+              },
+              {
+                "text": "Fitflop DS",
+                "value": "Fitflop DS"
+              },
+              {
+                "text": "Asics Footwear",
+                "value": "Asics Footwear"
+              },
+              {
+                "text": "Helly Hansen",
+                "value": "Helly Hansen"
+              },
+              {
+                "text": "Oakley App and Accessories",
+                "value": "Oakley App and Accessories"
+              },
+              {
+                "text": "Smartwool",
+                "value": "Smartwool"
+              },
+              {
+                "text": "Saucony",
+                "value": "Saucony"
+              },
+              {
+                "text": "Belleville",
+                "value": "Belleville"
+              },
+              {
+                "text": "Twisted X Boots",
+                "value": "Twisted X Boots"
+              },
+              {
+                "text": "Stance",
+                "value": "Stance"
+              },
+              {
+                "text": "Wigwam",
+                "value": "Wigwam"
+              },
+              {
+                "text": "The North Face",
+                "value": "The North Face"
+              },
+              {
+                "text": "Thorogood",
+                "value": "Thorogood"
+              },
+              {
+                "text": "Darn Tough",
+                "value": "Darn Tough"
+              },
+              {
+                "text": "Sockwell",
+                "value": "Sockwell"
+              },
+              {
+                "text": "Danner",
+                "value": "Danner"
+              },
+              {
+                "text": "Darn Tough & TH",
+                "value": "Darn Tough & TH"
+              },
+              {
+                "text": "Cut throw.",
+                "value": "Cut throw."
+              },
+              {
+                "text": "Support.",
+                "value": "Support."
+              },
+              {
+                "text": "Energy.",
+                "value": "Energy."
+              },
+              {
+                "text": "Note how.",
+                "value": "Note how."
+              },
+              {
+                "text": "Bit speak.",
+                "value": "Bit speak."
+              },
+              {
+                "text": "Place.",
+                "value": "Place."
+              },
+              {
+                "text": "Bit.",
+                "value": "Bit."
+              },
+              {
+                "text": "Figure.",
+                "value": "Figure."
+              },
+              {
+                "text": "Order ok.",
+                "value": "Order ok."
+              },
+              {
+                "text": "Society.",
+                "value": "Society."
+              },
+              {
+                "text": "Bed stop.",
+                "value": "Bed stop."
+              },
+              {
+                "text": "Tough.",
+                "value": "Tough."
+              },
+              {
+                "text": "Language.",
+                "value": "Language."
+              },
+              {
+                "text": "Lawyer.",
+                "value": "Lawyer."
+              },
+              {
+                "text": "Several.",
+                "value": "Several."
+              },
+              {
+                "text": "Idea tend.",
+                "value": "Idea tend."
+              },
+              {
+                "text": "Citizen.",
+                "value": "Citizen."
+              },
+              {
+                "text": "Kid when.",
+                "value": "Kid when."
+              },
+              {
+                "text": "Nice show.",
+                "value": "Nice show."
+              },
+              {
+                "text": "Boy local.",
+                "value": "Boy local."
+              },
+              {
+                "text": "Born.",
+                "value": "Born."
+              },
+              {
+                "text": "Like.",
+                "value": "Like."
+              },
+              {
+                "text": "Relate.",
+                "value": "Relate."
+              },
+              {
+                "text": "Those.",
+                "value": "Those."
+              },
+              {
+                "text": "Teacher.",
+                "value": "Teacher."
+              },
+              {
+                "text": "Degree.",
+                "value": "Degree."
+              },
+              {
+                "text": "Hand.",
+                "value": "Hand."
+              },
+              {
+                "text": "Share.",
+                "value": "Share."
+              },
+              {
+                "text": "How.",
+                "value": "How."
+              },
+              {
+                "text": "Always.",
+                "value": "Always."
+              },
+              {
+                "text": "Born item.",
+                "value": "Born item."
+              },
+              {
+                "text": "Democrat.",
+                "value": "Democrat."
+              },
+              {
+                "text": "Down.",
+                "value": "Down."
+              },
+              {
+                "text": "Worker.",
+                "value": "Worker."
+              },
+              {
+                "text": "Apply.",
+                "value": "Apply."
+              },
+              {
+                "text": "Animal.",
+                "value": "Animal."
+              },
+              {
+                "text": "Here as.",
+                "value": "Here as."
+              },
+              {
+                "text": "Trial.",
+                "value": "Trial."
+              },
+              {
+                "text": "Course.",
+                "value": "Course."
+              },
+              {
+                "text": "Door.",
+                "value": "Door."
+              },
+              {
+                "text": "Movie.",
+                "value": "Movie."
+              },
+              {
+                "text": "Serious.",
+                "value": "Serious."
+              },
+              {
+                "text": "Century.",
+                "value": "Century."
+              },
+              {
+                "text": "Article.",
+                "value": "Article."
+              },
+              {
+                "text": "Decision.",
+                "value": "Decision."
+              },
+              {
+                "text": "Through.",
+                "value": "Through."
+              },
+              {
+                "text": "Suggest.",
+                "value": "Suggest."
+              },
+              {
+                "text": "Cause.",
+                "value": "Cause."
+              },
+              {
+                "text": "Bring.",
+                "value": "Bring."
+              },
+              {
+                "text": "Sign say.",
+                "value": "Sign say."
+              },
+              {
+                "text": "Bit send.",
+                "value": "Bit send."
+              },
+              {
+                "text": "Out.",
+                "value": "Out."
+              },
+              {
+                "text": "Away very.",
+                "value": "Away very."
+              },
+              {
+                "text": "Party.",
+                "value": "Party."
+              },
+              {
+                "text": "Happen.",
+                "value": "Happen."
+              },
+              {
+                "text": "Painting.",
+                "value": "Painting."
+              },
+              {
+                "text": "Between.",
+                "value": "Between."
+              },
+              {
+                "text": "Should.",
+                "value": "Should."
+              },
+              {
+                "text": "Case push.",
+                "value": "Case push."
+              },
+              {
+                "text": "Financial.",
+                "value": "Financial."
+              },
+              {
+                "text": "Line.",
+                "value": "Line."
+              },
+              {
+                "text": "Nike",
+                "value": "Nike"
+              },
+              {
+                "text": "News.",
+                "value": "News."
+              },
+              {
+                "text": "Respond.",
+                "value": "Respond."
+              },
+              {
+                "text": "Light.",
+                "value": "Light."
+              },
+              {
+                "text": "Require.",
+                "value": "Require."
+              },
+              {
+                "text": "West.",
+                "value": "West."
+              },
+              {
+                "text": "Far.",
+                "value": "Far."
+              },
+              {
+                "text": "Cold very.",
+                "value": "Cold very."
+              },
+              {
+                "text": "Far from.",
+                "value": "Far from."
+              },
+              {
+                "text": "This poor.",
+                "value": "This poor."
+              },
+              {
+                "text": "Billion.",
+                "value": "Billion."
+              },
+              {
+                "text": "National.",
+                "value": "National."
+              },
+              {
+                "text": "American.",
+                "value": "American."
+              },
+              {
+                "text": "Trouble.",
+                "value": "Trouble."
+              },
+              {
+                "text": "To.",
+                "value": "To."
+              },
+              {
+                "text": "Anyone.",
+                "value": "Anyone."
+              },
+              {
+                "text": "Probably.",
+                "value": "Probably."
+              },
+              {
+                "text": "Adult.",
+                "value": "Adult."
+              },
+              {
+                "text": "Do time.",
+                "value": "Do time."
+              },
+              {
+                "text": "World.",
+                "value": "World."
+              },
+              {
+                "text": "South.",
+                "value": "South."
+              },
+              {
+                "text": "Six throw.",
+                "value": "Six throw."
+              },
+              {
+                "text": "Hear.",
+                "value": "Hear."
+              },
+              {
+                "text": "Forget on.",
+                "value": "Forget on."
+              },
+              {
+                "text": "Sort oil.",
+                "value": "Sort oil."
+              },
+              {
+                "text": "Join to.",
+                "value": "Join to."
+              },
+              {
+                "text": "Another.",
+                "value": "Another."
+              },
+              {
+                "text": "Senior.",
+                "value": "Senior."
+              },
+              {
+                "text": "Policy.",
+                "value": "Policy."
+              },
+              {
+                "text": "Attack.",
+                "value": "Attack."
+              },
+              {
+                "text": "Save.",
+                "value": "Save."
+              },
+              {
+                "text": "Finish.",
+                "value": "Finish."
+              },
+              {
+                "text": "Son fine.",
+                "value": "Son fine."
+              },
+              {
+                "text": "During.",
+                "value": "During."
+              },
+              {
+                "text": "Political.",
+                "value": "Political."
+              },
+              {
+                "text": "Lose.",
+                "value": "Lose."
+              },
+              {
+                "text": "Month air.",
+                "value": "Month air."
+              },
+              {
+                "text": "Night.",
+                "value": "Night."
+              },
+              {
+                "text": "Last.",
+                "value": "Last."
+              },
+              {
+                "text": "Nearly.",
+                "value": "Nearly."
+              },
+              {
+                "text": "Note sit.",
+                "value": "Note sit."
+              },
+              {
+                "text": "Everybody.",
+                "value": "Everybody."
+              },
+              {
+                "text": "College.",
+                "value": "College."
+              },
+              {
+                "text": "Lot.",
+                "value": "Lot."
+              },
+              {
+                "text": "Put worry.",
+                "value": "Put worry."
+              },
+              {
+                "text": "Apple",
+                "value": "Apple"
+              },
+              {
+                "text": "Money.",
+                "value": "Money."
+              },
+              {
+                "text": "Help.",
+                "value": "Help."
+              },
+              {
+                "text": "Move ball.",
+                "value": "Move ball."
+              },
+              {
+                "text": "Tax.",
+                "value": "Tax."
+              },
+              {
+                "text": "Report.",
+                "value": "Report."
+              },
+              {
+                "text": "Deep.",
+                "value": "Deep."
+              },
+              {
+                "text": "Forget.",
+                "value": "Forget."
+              },
+              {
+                "text": "Want ever.",
+                "value": "Want ever."
+              },
+              {
+                "text": "Maintain.",
+                "value": "Maintain."
+              },
+              {
+                "text": "North.",
+                "value": "North."
+              },
+              {
+                "text": "Meeting.",
+                "value": "Meeting."
+              },
+              {
+                "text": "Film rate.",
+                "value": "Film rate."
+              },
+              {
+                "text": "Sport yes.",
+                "value": "Sport yes."
+              },
+              {
+                "text": "Send.",
+                "value": "Send."
+              },
+              {
+                "text": "Find hard.",
+                "value": "Find hard."
+              },
+              {
+                "text": "Many pass.",
+                "value": "Many pass."
+              },
+              {
+                "text": "Center.",
+                "value": "Center."
+              },
+              {
+                "text": "Mother.",
+                "value": "Mother."
+              },
+              {
+                "text": "Two.",
+                "value": "Two."
+              },
+              {
+                "text": "Within.",
+                "value": "Within."
+              },
+              {
+                "text": "List.",
+                "value": "List."
+              },
+              {
+                "text": "Old.",
+                "value": "Old."
+              },
+              {
+                "text": "Improve.",
+                "value": "Improve."
+              },
+              {
+                "text": "Star mean.",
+                "value": "Star mean."
+              },
+              {
+                "text": "Member.",
+                "value": "Member."
+              },
+              {
+                "text": "Must so.",
+                "value": "Must so."
+              },
+              {
+                "text": "Body Mrs.",
+                "value": "Body Mrs."
+              },
+              {
+                "text": "Personal.",
+                "value": "Personal."
+              },
+              {
+                "text": "Future.",
+                "value": "Future."
+              },
+              {
+                "text": "Say born.",
+                "value": "Say born."
+              },
+              {
+                "text": "School.",
+                "value": "School."
+              },
+              {
+                "text": "Range Mrs.",
+                "value": "Range Mrs."
+              },
+              {
+                "text": "Add drug.",
+                "value": "Add drug."
+              },
+              {
+                "text": "Top.",
+                "value": "Top."
+              },
+              {
+                "text": "How war.",
+                "value": "How war."
+              },
+              {
+                "text": "Skin life.",
+                "value": "Skin life."
+              },
+              {
+                "text": "Follow.",
+                "value": "Follow."
+              },
+              {
+                "text": "Trip.",
+                "value": "Trip."
+              },
+              {
+                "text": "Clear.",
+                "value": "Clear."
+              },
+              {
+                "text": "Worry.",
+                "value": "Worry."
+              },
+              {
+                "text": "Least.",
+                "value": "Least."
+              },
+              {
+                "text": "That art.",
+                "value": "That art."
+              },
+              {
+                "text": "How throw.",
+                "value": "How throw."
+              },
+              {
+                "text": "Open.",
+                "value": "Open."
+              },
+              {
+                "text": "Arrive.",
+                "value": "Arrive."
+              },
+              {
+                "text": "Dinner.",
+                "value": "Dinner."
+              },
+              {
+                "text": "Computer.",
+                "value": "Computer."
+              },
+              {
+                "text": "Explain.",
+                "value": "Explain."
+              },
+              {
+                "text": "Behind.",
+                "value": "Behind."
+              },
+              {
+                "text": "Could.",
+                "value": "Could."
+              },
+              {
+                "text": "Put.",
+                "value": "Put."
+              },
+              {
+                "text": "Prevent.",
+                "value": "Prevent."
+              },
+              {
+                "text": "Suffer.",
+                "value": "Suffer."
+              },
+              {
+                "text": "Let item.",
+                "value": "Let item."
+              },
+              {
+                "text": "Range.",
+                "value": "Range."
+              },
+              {
+                "text": "Some.",
+                "value": "Some."
+              },
+              {
+                "text": "Meet hour.",
+                "value": "Meet hour."
+              },
+              {
+                "text": "Hope.",
+                "value": "Hope."
+              },
+              {
+                "text": "Avoid.",
+                "value": "Avoid."
+              },
+              {
+                "text": "Reflect.",
+                "value": "Reflect."
+              },
+              {
+                "text": "Activity.",
+                "value": "Activity."
+              },
+              {
+                "text": "Maggie",
+                "value": "Maggie"
+              },
+              {
+                "text": "Field.",
+                "value": "Field."
+              },
+              {
+                "text": "Blue.",
+                "value": "Blue."
+              },
+              {
+                "text": "Must up.",
+                "value": "Must up."
+              },
+              {
+                "text": "Act.",
+                "value": "Act."
+              },
+              {
+                "text": "Three.",
+                "value": "Three."
+              },
+              {
+                "text": "Grow.",
+                "value": "Grow."
+              },
+              {
+                "text": "Water.",
+                "value": "Water."
+              },
+              {
+                "text": "View wife.",
+                "value": "View wife."
+              },
+              {
+                "text": "Force.",
+                "value": "Force."
+              },
+              {
+                "text": "Country.",
+                "value": "Country."
+              },
+              {
+                "text": "Simply.",
+                "value": "Simply."
+              },
+              {
+                "text": "Show.",
+                "value": "Show."
+              },
+              {
+                "text": "Street.",
+                "value": "Street."
+              },
+              {
+                "text": "Nature.",
+                "value": "Nature."
+              },
+              {
+                "text": "Hear tree.",
+                "value": "Hear tree."
+              },
+              {
+                "text": "Message.",
+                "value": "Message."
+              },
+              {
+                "text": "Easy ball.",
+                "value": "Easy ball."
+              },
+              {
+                "text": "Focus.",
+                "value": "Focus."
+              },
+              {
+                "text": "Design.",
+                "value": "Design."
+              },
+              {
+                "text": "Do clear.",
+                "value": "Do clear."
+              },
+              {
+                "text": "Station.",
+                "value": "Station."
+              },
+              {
+                "text": "Trade.",
+                "value": "Trade."
+              },
+              {
+                "text": "Media.",
+                "value": "Media."
+              },
+              {
+                "text": "To car.",
+                "value": "To car."
+              },
+              {
+                "text": "Ability.",
+                "value": "Ability."
+              },
+              {
+                "text": "Police.",
+                "value": "Police."
+              },
+              {
+                "text": "Hospital.",
+                "value": "Hospital."
+              },
+              {
+                "text": "Example.",
+                "value": "Example."
+              },
+              {
+                "text": "Ok.",
+                "value": "Ok."
+              },
+              {
+                "text": "Control.",
+                "value": "Control."
+              },
+              {
+                "text": "Direction.",
+                "value": "Direction."
+              },
+              {
+                "text": "Different.",
+                "value": "Different."
+              },
+              {
+                "text": "Base.",
+                "value": "Base."
+              },
+              {
+                "text": "Quite.",
+                "value": "Quite."
+              },
+              {
+                "text": "Until bad.",
+                "value": "Until bad."
+              },
+              {
+                "text": "Both ask.",
+                "value": "Both ask."
+              },
+              {
+                "text": "Reason.",
+                "value": "Reason."
+              },
+              {
+                "text": "Score.",
+                "value": "Score."
+              },
+              {
+                "text": "List name.",
+                "value": "List name."
+              },
+              {
+                "text": "When fire.",
+                "value": "When fire."
+              },
+              {
+                "text": "Imagine.",
+                "value": "Imagine."
+              },
+              {
+                "text": "Start.",
+                "value": "Start."
+              },
+              {
+                "text": "Human.",
+                "value": "Human."
+              },
+              {
+                "text": "Road for.",
+                "value": "Road for."
+              },
+              {
+                "text": "Turn",
+                "value": "Turn"
+              },
+              {
+                "text": "Response.",
+                "value": "Response."
+              },
+              {
+                "text": "Out above.",
+                "value": "Out above."
+              },
+              {
+                "text": "Color top.",
+                "value": "Color top."
+              },
+              {
+                "text": "Kid in.",
+                "value": "Kid in."
+              },
+              {
+                "text": "Early.",
+                "value": "Early."
+              },
+              {
+                "text": "Physical.",
+                "value": "Physical."
+              },
+              {
+                "text": "Go also.",
+                "value": "Go also."
+              },
+              {
+                "text": "White.",
+                "value": "White."
+              },
+              {
+                "text": "Inside.",
+                "value": "Inside."
+              },
+              {
+                "text": "Turn talk.",
+                "value": "Turn talk."
+              },
+              {
+                "text": "Room push.",
+                "value": "Room push."
+              },
+              {
+                "text": "Cold like.",
+                "value": "Cold like."
+              },
+              {
+                "text": "Away feel.",
+                "value": "Away feel."
+              },
+              {
+                "text": "Special.",
+                "value": "Special."
+              },
+              {
+                "text": "The read.",
+                "value": "The read."
+              },
+              {
+                "text": "Recently.",
+                "value": "Recently."
+              },
+              {
+                "text": "Expert.",
+                "value": "Expert."
+              },
+              {
+                "text": "Tree.",
+                "value": "Tree."
+              },
+              {
+                "text": "Prepare.",
+                "value": "Prepare."
+              },
+              {
+                "text": "Join road.",
+                "value": "Join road."
+              },
+              {
+                "text": "Role the.",
+                "value": "Role the."
+              },
+              {
+                "text": "Character.",
+                "value": "Character."
+              },
+              {
+                "text": "Firm go.",
+                "value": "Firm go."
+              },
+              {
+                "text": "Eat.",
+                "value": "Eat."
+              },
+              {
+                "text": "View set.",
+                "value": "View set."
+              },
+              {
+                "text": "Raise.",
+                "value": "Raise."
+              },
+              {
+                "text": "Laugh.",
+                "value": "Laugh."
+              },
+              {
+                "text": "Often.",
+                "value": "Often."
+              },
+              {
+                "text": "Idea.",
+                "value": "Idea."
+              },
+              {
+                "text": "At could.",
+                "value": "At could."
+              },
+              {
+                "text": "Gucci",
+                "value": "Gucci"
+              },
+              {
+                "text": "Art line.",
+                "value": "Art line."
+              },
+              {
+                "text": "Piece boy.",
+                "value": "Piece boy."
+              },
+              {
+                "text": "Term.",
+                "value": "Term."
+              },
+              {
+                "text": "Say.",
+                "value": "Say."
+              },
+              {
+                "text": "Hold not.",
+                "value": "Hold not."
+              },
+              {
+                "text": "Foot else.",
+                "value": "Foot else."
+              },
+              {
+                "text": "Spring.",
+                "value": "Spring."
+              },
+              {
+                "text": "They.",
+                "value": "They."
+              },
+              {
+                "text": "Meet.",
+                "value": "Meet."
+              },
+              {
+                "text": "Find talk.",
+                "value": "Find talk."
+              },
+              {
+                "text": "Research.",
+                "value": "Research."
+              },
+              {
+                "text": "Wait ago.",
+                "value": "Wait ago."
+              },
+              {
+                "text": "Next.",
+                "value": "Next."
+              },
+              {
+                "text": "Affect in.",
+                "value": "Affect in."
+              },
+              {
+                "text": "Around.",
+                "value": "Around."
+              },
+              {
+                "text": "Sing.",
+                "value": "Sing."
+              },
+              {
+                "text": "Order.",
+                "value": "Order."
+              },
+              {
+                "text": "Among.",
+                "value": "Among."
+              },
+              {
+                "text": "Make.",
+                "value": "Make."
+              },
+              {
+                "text": "Training.",
+                "value": "Training."
+              },
+              {
+                "text": "Both none.",
+                "value": "Both none."
+              },
+              {
+                "text": "Play.",
+                "value": "Play."
+              },
+              {
+                "text": "Stuff.",
+                "value": "Stuff."
+              },
+              {
+                "text": "What main.",
+                "value": "What main."
+              },
+              {
+                "text": "Career.",
+                "value": "Career."
+              },
+              {
+                "text": "Shoulder.",
+                "value": "Shoulder."
+              },
+              {
+                "text": "Part.",
+                "value": "Part."
+              },
+              {
+                "text": "He book.",
+                "value": "He book."
+              },
+              {
+                "text": "Rather.",
+                "value": "Rather."
+              },
+              {
+                "text": "Position.",
+                "value": "Position."
+              },
+              {
+                "text": "Sport.",
+                "value": "Sport."
+              },
+              {
+                "text": "Floor.",
+                "value": "Floor."
+              },
+              {
+                "text": "Role.",
+                "value": "Role."
+              },
+              {
+                "text": "Pattern.",
+                "value": "Pattern."
+              },
+              {
+                "text": "Small.",
+                "value": "Small."
+              },
+              {
+                "text": "Word.",
+                "value": "Word."
+              },
+              {
+                "text": "But age.",
+                "value": "But age."
+              },
+              {
+                "text": "Detail.",
+                "value": "Detail."
+              },
+              {
+                "text": "Sense.",
+                "value": "Sense."
+              },
+              {
+                "text": "Watch.",
+                "value": "Watch."
+              },
+              {
+                "text": "Half.",
+                "value": "Half."
+              },
+              {
+                "text": "Why.",
+                "value": "Why."
+              },
+              {
+                "text": "Study.",
+                "value": "Study."
+              },
+              {
+                "text": "Age able.",
+                "value": "Age able."
+              },
+              {
+                "text": "What.",
+                "value": "What."
+              },
+              {
+                "text": "Rest.",
+                "value": "Rest."
+              },
+              {
+                "text": "Treatment.",
+                "value": "Treatment."
+              },
+              {
+                "text": "Thing.",
+                "value": "Thing."
+              },
+              {
+                "text": "Really.",
+                "value": "Really."
+              },
+              {
+                "text": "Official.",
+                "value": "Official."
+              },
+              {
+                "text": "Already.",
+                "value": "Already."
+              },
+              {
+                "text": "Crime.",
+                "value": "Crime."
+              },
+              {
+                "text": "Model.",
+                "value": "Model."
+              },
+              {
+                "text": "Chair.",
+                "value": "Chair."
+              },
+              {
+                "text": "Nice.",
+                "value": "Nice."
+              },
+              {
+                "text": "Altra",
+                "value": "Altra"
+              },
+              {
+                "text": "Grundens",
+                "value": "Grundens"
+              },
+              {
+                "text": "Lee",
+                "value": "Lee"
+              },
+              {
+                "text": "Asics",
+                "value": "Asics"
+              },
+              {
+                "text": "Operation.",
+                "value": "Operation."
+              },
+              {
+                "text": "Receive.",
+                "value": "Receive."
+              },
+              {
+                "text": "Author.",
+                "value": "Author."
+              },
+              {
+                "text": "Pull.",
+                "value": "Pull."
+              },
+              {
+                "text": "Head war.",
+                "value": "Head war."
+              },
+              {
+                "text": "Beyond.",
+                "value": "Beyond."
+              },
+              {
+                "text": "So.",
+                "value": "So."
+              },
+              {
+                "text": "Ahead.",
+                "value": "Ahead."
+              },
+              {
+                "text": "Method.",
+                "value": "Method."
+              },
+              {
+                "text": "Price yet.",
+                "value": "Price yet."
+              },
+              {
+                "text": "Campaign.",
+                "value": "Campaign."
+              },
+              {
+                "text": "Not.",
+                "value": "Not."
+              },
+              {
+                "text": "Pressure.",
+                "value": "Pressure."
+              },
+              {
+                "text": "Student.",
+                "value": "Student."
+              },
+              {
+                "text": "I hope.",
+                "value": "I hope."
+              },
+              {
+                "text": "Care join.",
+                "value": "Care join."
+              },
+              {
+                "text": "Mission.",
+                "value": "Mission."
+              },
+              {
+                "text": "Take.",
+                "value": "Take."
+              },
+              {
+                "text": "Note.",
+                "value": "Note."
+              },
+              {
+                "text": "Standard.",
+                "value": "Standard."
+              },
+              {
+                "text": "President.",
+                "value": "President."
+              },
+              {
+                "text": "Space.",
+                "value": "Space."
+              },
+              {
+                "text": "No.",
+                "value": "No."
+              },
+              {
+                "text": "Look.",
+                "value": "Look."
+              },
+              {
+                "text": "Big left.",
+                "value": "Big left."
+              },
+              {
+                "text": "Speak.",
+                "value": "Speak."
+              },
+              {
+                "text": "Someone.",
+                "value": "Someone."
+              },
+              {
+                "text": "Capital.",
+                "value": "Capital."
+              },
+              {
+                "text": "Difficult.",
+                "value": "Difficult."
+              },
+              {
+                "text": "Customer.",
+                "value": "Customer."
+              },
+              {
+                "text": "Professor.",
+                "value": "Professor."
+              },
+              {
+                "text": "Many true.",
+                "value": "Many true."
+              },
+              {
+                "text": "Gun only.",
+                "value": "Gun only."
+              },
+              {
+                "text": "Build.",
+                "value": "Build."
+              },
+              {
+                "text": "List use.",
+                "value": "List use."
+              },
+              {
+                "text": "Impact.",
+                "value": "Impact."
+              },
+              {
+                "text": "Structure.",
+                "value": "Structure."
+              },
+              {
+                "text": "Father.",
+                "value": "Father."
+              },
+              {
+                "text": "Want land.",
+                "value": "Want land."
+              },
+              {
+                "text": "Glass.",
+                "value": "Glass."
+              },
+              {
+                "text": "Employee.",
+                "value": "Employee."
+              },
+              {
+                "text": "Same.",
+                "value": "Same."
+              },
+              {
+                "text": "Above.",
+                "value": "Above."
+              },
+              {
+                "text": "First.",
+                "value": "First."
+              },
+              {
+                "text": "Wrong our.",
+                "value": "Wrong our."
+              },
+              {
+                "text": "Discover.",
+                "value": "Discover."
+              },
+              {
+                "text": "Value.",
+                "value": "Value."
+              },
+              {
+                "text": "Tonight.",
+                "value": "Tonight."
+              },
+              {
+                "text": "Bad.",
+                "value": "Bad."
+              },
+              {
+                "text": "Memory.",
+                "value": "Memory."
+              },
+              {
+                "text": "Per ask.",
+                "value": "Per ask."
+              },
+              {
+                "text": "Majority.",
+                "value": "Majority."
+              },
+              {
+                "text": "Officer.",
+                "value": "Officer."
+              },
+              {
+                "text": "Factor.",
+                "value": "Factor."
+              },
+              {
+                "text": "Writer.",
+                "value": "Writer."
+              },
+              {
+                "text": "Item tree.",
+                "value": "Item tree."
+              },
+              {
+                "text": "Him.",
+                "value": "Him."
+              },
+              {
+                "text": "However.",
+                "value": "However."
+              },
+              {
+                "text": "From sing.",
+                "value": "From sing."
+              },
+              {
+                "text": "Easy.",
+                "value": "Easy."
+              },
+              {
+                "text": "Necessary.",
+                "value": "Necessary."
+              },
+              {
+                "text": "Community.",
+                "value": "Community."
+              },
+              {
+                "text": "Green.",
+                "value": "Green."
+              },
+              {
+                "text": "Keep.",
+                "value": "Keep."
+              },
+              {
+                "text": "Only sign.",
+                "value": "Only sign."
+              },
+              {
+                "text": "Away step.",
+                "value": "Away step."
+              },
+              {
+                "text": "Parent.",
+                "value": "Parent."
+              },
+              {
+                "text": "Child.",
+                "value": "Child."
+              },
+              {
+                "text": "Skin.",
+                "value": "Skin."
+              },
+              {
+                "text": "View.",
+                "value": "View."
+              },
+              {
+                "text": "Area.",
+                "value": "Area."
+              },
+              {
+                "text": "Go allow.",
+                "value": "Go allow."
+              },
+              {
+                "text": "Then.",
+                "value": "Then."
+              },
+              {
+                "text": "Clear yet.",
+                "value": "Clear yet."
+              },
+              {
+                "text": "Never.",
+                "value": "Never."
+              },
+              {
+                "text": "Forward.",
+                "value": "Forward."
+              },
+              {
+                "text": "Red boy.",
+                "value": "Red boy."
+              },
+              {
+                "text": "Leg job.",
+                "value": "Leg job."
+              },
+              {
+                "text": "Old image.",
+                "value": "Old image."
+              },
+              {
+                "text": "Also.",
+                "value": "Also."
+              },
+              {
+                "text": "Scene.",
+                "value": "Scene."
+              },
+              {
+                "text": "Fire.",
+                "value": "Fire."
+              },
+              {
+                "text": "Good.",
+                "value": "Good."
+              },
+              {
+                "text": "Us short.",
+                "value": "Us short."
+              },
+              {
+                "text": "Yes.",
+                "value": "Yes."
+              },
+              {
+                "text": "End you.",
+                "value": "End you."
+              },
+              {
+                "text": "Choose.",
+                "value": "Choose."
+              },
+              {
+                "text": "Agreement.",
+                "value": "Agreement."
+              },
+              {
+                "text": "Once only.",
+                "value": "Once only."
+              },
+              {
+                "text": "Ready not.",
+                "value": "Ready not."
+              },
+              {
+                "text": "Write.",
+                "value": "Write."
+              },
+              {
+                "text": "Husband.",
+                "value": "Husband."
+              },
+              {
+                "text": "Fish want.",
+                "value": "Fish want."
+              },
+              {
+                "text": "Outside.",
+                "value": "Outside."
+              },
+              {
+                "text": "Surface.",
+                "value": "Surface."
+              },
+              {
+                "text": "Newspaper.",
+                "value": "Newspaper."
+              },
+              {
+                "text": "Gun.",
+                "value": "Gun."
+              },
+              {
+                "text": "Key.",
+                "value": "Key."
+              },
+              {
+                "text": "Amount.",
+                "value": "Amount."
+              },
+              {
+                "text": "Military.",
+                "value": "Military."
+              },
+              {
+                "text": "Letter.",
+                "value": "Letter."
+              },
+              {
+                "text": "Material.",
+                "value": "Material."
+              },
+              {
+                "text": "Science.",
+                "value": "Science."
+              },
+              {
+                "text": "Shake.",
+                "value": "Shake."
+              },
+              {
+                "text": "One our.",
+                "value": "One our."
+              },
+              {
+                "text": "Hand else.",
+                "value": "Hand else."
+              },
+              {
+                "text": "Change.",
+                "value": "Change."
+              },
+              {
+                "text": "Kind top.",
+                "value": "Kind top."
+              },
+              {
+                "text": "Paper.",
+                "value": "Paper."
+              },
+              {
+                "text": "Sound.",
+                "value": "Sound."
+              },
+              {
+                "text": "Wrong.",
+                "value": "Wrong."
+              },
+              {
+                "text": "Develop.",
+                "value": "Develop."
+              },
+              {
+                "text": "Specific.",
+                "value": "Specific."
+              },
+              {
+                "text": "Step east.",
+                "value": "Step east."
+              },
+              {
+                "text": "Will.",
+                "value": "Will."
+              },
+              {
+                "text": "Whom.",
+                "value": "Whom."
+              },
+              {
+                "text": "Popular.",
+                "value": "Popular."
+              },
+              {
+                "text": "Game.",
+                "value": "Game."
+              },
+              {
+                "text": "Statement.",
+                "value": "Statement."
+              },
+              {
+                "text": "Middle.",
+                "value": "Middle."
+              },
+              {
+                "text": "Situation.",
+                "value": "Situation."
+              },
+              {
+                "text": "Why focus.",
+                "value": "Why focus."
+              },
+              {
+                "text": "Wonder.",
+                "value": "Wonder."
+              },
+              {
+                "text": "Your.",
+                "value": "Your."
+              },
+              {
+                "text": "Arm south.",
+                "value": "Arm south."
+              },
+              {
+                "text": "Throw.",
+                "value": "Throw."
+              },
+              {
+                "text": "Prove.",
+                "value": "Prove."
+              },
+              {
+                "text": "This.",
+                "value": "This."
+              },
+              {
+                "text": "Woman.",
+                "value": "Woman."
+              },
+              {
+                "text": "After.",
+                "value": "After."
+              },
+              {
+                "text": "Big them.",
+                "value": "Big them."
+              },
+              {
+                "text": "Travel.",
+                "value": "Travel."
+              },
+              {
+                "text": "Site ten.",
+                "value": "Site ten."
+              },
+              {
+                "text": "Action.",
+                "value": "Action."
+              },
+              {
+                "text": "Table.",
+                "value": "Table."
+              },
+              {
+                "text": "Effort.",
+                "value": "Effort."
+              },
+              {
+                "text": "Their arm.",
+                "value": "Their arm."
+              },
+              {
+                "text": "Our firm.",
+                "value": "Our firm."
+              },
+              {
+                "text": "Idea day.",
+                "value": "Idea day."
+              },
+              {
+                "text": "Serve.",
+                "value": "Serve."
+              },
+              {
+                "text": "Visit.",
+                "value": "Visit."
+              },
+              {
+                "text": "Person.",
+                "value": "Person."
+              },
+              {
+                "text": "Church.",
+                "value": "Church."
+              },
+              {
+                "text": "Want.",
+                "value": "Want."
+              },
+              {
+                "text": "Resource.",
+                "value": "Resource."
+              },
+              {
+                "text": "Worker no.",
+                "value": "Worker no."
+              },
+              {
+                "text": "Maybe.",
+                "value": "Maybe."
+              },
+              {
+                "text": "Protect.",
+                "value": "Protect."
+              },
+              {
+                "text": "Doctor.",
+                "value": "Doctor."
+              },
+              {
+                "text": "Put lose.",
+                "value": "Put lose."
+              },
+              {
+                "text": "Concern.",
+                "value": "Concern."
+              },
+              {
+                "text": "Herself.",
+                "value": "Herself."
+              },
+              {
+                "text": "Business.",
+                "value": "Business."
+              },
+              {
+                "text": "Clearly.",
+                "value": "Clearly."
+              },
+              {
+                "text": "Staff.",
+                "value": "Staff."
+              },
+              {
+                "text": "Floor but.",
+                "value": "Floor but."
+              },
+              {
+                "text": "Indeed.",
+                "value": "Indeed."
+              },
+              {
+                "text": "Catch.",
+                "value": "Catch."
+              },
+              {
+                "text": "Dream end.",
+                "value": "Dream end."
+              },
+              {
+                "text": "Provide.",
+                "value": "Provide."
+              },
+              {
+                "text": "Thus.",
+                "value": "Thus."
+              },
+              {
+                "text": "True.",
+                "value": "True."
+              },
+              {
+                "text": "There.",
+                "value": "There."
+              },
+              {
+                "text": "Answer.",
+                "value": "Answer."
+              },
+              {
+                "text": "Rate dark.",
+                "value": "Rate dark."
+              },
+              {
+                "text": "Family.",
+                "value": "Family."
+              },
+              {
+                "text": "Expect.",
+                "value": "Expect."
+              },
+              {
+                "text": "Believe.",
+                "value": "Believe."
+              },
+              {
+                "text": "Let.",
+                "value": "Let."
+              },
+              {
+                "text": "Would.",
+                "value": "Would."
+              },
+              {
+                "text": "Still.",
+                "value": "Still."
+              },
+              {
+                "text": "Wait.",
+                "value": "Wait."
+              },
+              {
+                "text": "Check.",
+                "value": "Check."
+              },
+              {
+                "text": "General.",
+                "value": "General."
+              },
+              {
+                "text": "Charge.",
+                "value": "Charge."
+              },
+              {
+                "text": "Care.",
+                "value": "Care."
+              },
+              {
+                "text": "Summer.",
+                "value": "Summer."
+              },
+              {
+                "text": "Ago ready.",
+                "value": "Ago ready."
+              },
+              {
+                "text": "Sure.",
+                "value": "Sure."
+              },
+              {
+                "text": "Win air.",
+                "value": "Win air."
+              },
+              {
+                "text": "Upon.",
+                "value": "Upon."
+              },
+              {
+                "text": "Player.",
+                "value": "Player."
+              },
+              {
+                "text": "Call.",
+                "value": "Call."
+              },
+              {
+                "text": "Involve.",
+                "value": "Involve."
+              },
+              {
+                "text": "Car.",
+                "value": "Car."
+              },
+              {
+                "text": "List view.",
+                "value": "List view."
+              },
+              {
+                "text": "PM good.",
+                "value": "PM good."
+              },
+              {
+                "text": "Common.",
+                "value": "Common."
+              },
+              {
+                "text": "Little he.",
+                "value": "Little he."
+              },
+              {
+                "text": "Bank.",
+                "value": "Bank."
+              },
+              {
+                "text": "Better.",
+                "value": "Better."
+              },
+              {
+                "text": "Determine.",
+                "value": "Determine."
+              },
+              {
+                "text": "Recognize.",
+                "value": "Recognize."
+              },
+              {
+                "text": "Federal.",
+                "value": "Federal."
+              },
+              {
+                "text": "Wind.",
+                "value": "Wind."
+              },
+              {
+                "text": "Magazine.",
+                "value": "Magazine."
+              },
+              {
+                "text": "The deal.",
+                "value": "The deal."
+              }
+            ],
+            "operator": "in"
+          },
+          {
+            "name": "shipping_cost_accuracy",
+            "type": "input",
+            "value": 100,
+            "operator": "$eq"
+          },
+          {
+            "name": "channel_listing_fee_accuracy",
+            "type": "input",
+            "value": 100,
+            "operator": "$eq"
+          },
+          {
+            "name": "sale_charged_accuracy",
+            "type": "input",
+            "value": 100,
+            "operator": "$eq"
+          }
+        ]
+      },
+      "modal": {
+        "title": "Query Builder"
+      },
+      "query": {
+        "id": null,
+        "type": "AND",
+        "level": 0,
+        "conditions": []
+      },
+      "format": {
+        "temporal": {
+          "date": {
+            "type": "date",
+            "formatLabel": "MM/DD/YYYY",
+            "formatValue": "YYYY-MM-DD"
+          },
+          "datetime": {
+            "type": "datetime",
+            "formatLabel": "MM/DD/YYYY hh:mm:ss A",
+            "formatValue": "YYYY-MM-DDTHH:mm:ss"
+          }
+        }
+      },
+      "ignore": {
+        "base": {
+          "value": false,
+          "visible": true
+        },
+        "global": {
+          "value": false,
+          "visible": false
+        }
+      },
+      "trigger": {
+        "label": "Setting Filter"
+      },
+      "threshold": {
+        "maxLevel": 5
+      }
+    },
+    "enabled": true,
+    "readable": {
+      "enabled": false
+    },
+    "enabledFilterReadable": false
+  },
+  "alignment": "",
+  "globalFilter": {
+    "enabled": false
+  }
+}

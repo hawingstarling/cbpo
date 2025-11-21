@@ -1,0 +1,13 @@
+[
+  {
+    "model": "payments.stripecustomer",
+    "pk": "ada88b24-6ecb-42ea-8b0e-696ee2cadfcd",
+    "fields": {
+      "created": "2021-04-26T10:16:42.863Z",
+      "modified": "2021-05-18T11:32:37.014Z",
+      "is_removed": false,
+      "user": "119250a0-d5db-4a20-801c-581575305ef5",
+      "customer_stripe_id": "cus_JNBsN0sJoCPAic"
+    }
+  }
+]

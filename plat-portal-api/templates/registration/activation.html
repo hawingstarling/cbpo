@@ -1,0 +1,10 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+<p>
+    Thanks for signing up for {{ app_name }} - and welcome!
+    <br/>
+    To make sure it’s you, please enter the code below to complete the registration.
+</p>
+
+<p><strong>{{ code }}</strong></p>
+{% endblock %}

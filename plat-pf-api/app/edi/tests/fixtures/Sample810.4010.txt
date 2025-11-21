@@ -1,0 +1,149 @@
+ISA*00*          *00*          *ZZ*RS TESTING SEND*ZZ*UR CUSTOMER     *130905
+GS*IN*055001924*CUSTOMER*20130912*1623*43*X*004010.                       
+ST*810*0592.                                                                
+BIG*20130912*420000888*****DI*00.                                           
+NTE*SAN*D.                                                                  
+CUR*SE*USD.                                                                 
+REF*14*199913921.                                                           
+REF*SCA*FDE.                                                                
+N1*BT*BILLED COMPANY.                                                       
+N3*705 E 65TH ST.                                                           
+N4*MEMPHIS*TN*381031251*US.                                                 
+REF*12*300600011.                                                           
+N1*II*FEDEX.                                                                
+N3*FEDEX PARKWAY.                                       
+N4*COLLIERVILLE*TN*38017*US.                            
+N1*RI*FEDEX ERS.                                        
+N3*ATTN EDI PAYMENT*PO BOX 371741.                      
+N4*PITTSBURGH*PA*152507741*US.                          
+ITD*05*3****20130927*15********0.                       
+IT1*1*1*SX*12**VP*150013451319*BP*REFERENCE NOTES*JP*2. 
+CUR*SE*USD.                                             
+PID*F****20****EN.                                      
+PO4****PCK*B*15*LB.                                     
+REF*FJ*1.                                               
+REF*BLT*3.                                              
+REF*ZB*R.KILZER. 
+DTM*111*20130909.           
+DTM*035*20130910*1000*LT.   
+SAC*C*H090***1200.          
+N1*SF*SHIPPER NAME.         
+N2*SHIPPER COMPANY.         
+N3*891 RICHMOND RD.         
+N4*CLEVELAND*OH*44143*US.   
+REF*DP*SHIPPER DEPT.        
+N1*ST*RECIPIENT CONTACT1.
+N2*RECIPIENT COMPANY.       
+N3*21562 80 FEDEX PKWY.     
+N4*COLLIERVILLE*TN*38017*US. 
+IT1*2*1*SX*11.99**VP*150013451455*BP*REFERENCE NOTES*JP*2. 
+CUR*SE*USD.              
+PID*F****3****EN.        
+PO4****PCK*B*15*LB.      
+REF*FJ*2.                
+REF*BLT*3.               
+REF*ZB*R.KILZER.         
+DTM*111*20130909.        
+DTM*035*20130910*1000*LT.
+SAC*C*H090***1199.       
+N1*SF*SHIPPER NAME.      
+N2*SHIPPER COMPANY.      
+N3*891 RICHMOND RD. 
+N4*CLEVELAND*OH*44143*US.  
+REF*DP*SHIPPER DEPT.                                      
+N1*ST*RECIPIENT CONTACT2.
+N2*RECIPIENT COMPANY.                                     
+N3*21565 80 FEDEX PKWY.                                   
+N4*MEMPHIS*TN*38125*US.                                   
+IT1*3*1*SX*14.01**VP*150013451499*BP*REFERENCE NOTES*JP*2.
+CUR*SE*USD.                                               
+PID*F****3****EN.                                         
+PO4****PCK*B*15*LB.                                       
+REF*FJ*3.                                                 
+REF*BLT*3.                                                
+REF*ZB*R.KILZER.                                          
+DTM*111*20130910.
+DTM*035*20130910*1000*LT.   
+SAC*C*H090***1401.          
+N1*SF*SHIPPER NAME.         
+N2*SHIPPER COMPANY.         
+N3*891 RICHMOND RD.         
+N4*CLEVELAND*OH*44143*US.   
+REF*DP*SHIPPER DEPT.        
+N1*ST*RECIPIENT CONTACT3.
+N2*RECIPIENT COMPANY.       
+N3*21566 80 FEDEX PKWY.     
+N4*COLLIERVILLE*TN*38017*US.
+TDS*3800.                   
+AMT*N*38. 
+AMT*BAP*38.                      
+CTT*3.                           
+SE*79*0592.                      
+ST*810*0593.                     
+BIG*20130912*420000999*****DI*00.
+NTE*SAN*D.                       
+CUR*SE*USD.                      
+REF*14*199913921.                
+REF*SCA*FDE.                     
+N1*BT*BILLED COMPANY.            
+N3*705 E 65TH ST.                
+N4*MEMPHIS*TN*381031251*US.      
+REF*12*211100811. 
+N1*II*FEDEX.                                              
+N3*FEDEX PARKWAY.                                         
+N4*COLLIERVILLE*TN*38017*US.                              
+N1*RI*FEDEX ERS.                                          
+N3*ATTN EDI PAYMENT*PO BOX 371741.                        
+N4*PITTSBURGH*PA*152507741*US.                            
+ITD*05*3****20130901*15********0.                         
+IT1*1*1*SX*15.78**VP*150013437495*BP*REFERENCE NOTES*JP*2.
+CUR*SE*USD.                                               
+PID*F****1****EN.                                         
+PO4****TBE*B*3*LB.                                        
+REF*FJ*1.                                                 
+REF*BLT*1.  
+REF*ZB*R.KILZER.           
+DTM*111*20130910.          
+DTM*035*20130911*1000*LT.  
+SAC*C*H090***1578.         
+N1*SF*SHIPPER NAME.        
+N2*SHIPPER2 COMPANY.       
+N3*26250 W PIONEER RD.     
+N4*FOND DU LAC*WI*54935*US.
+REF*4F*122220822.          
+REF*DP*SHIPPER DEPT.       
+N1*ST*RECIPIENT CONTACT4.
+N2*RECIPIENT2 COMPANY.     
+N3*30162 701 FEDEX PRKWY.  
+N4*MEMPHIS*TN*38115*US.                                   
+IT1*2*1*SX*23.22**VP*150013437543*BP*REFERENCE NOTES*JP*2.
+CUR*SE*USD.                                               
+PID*F****80****EN.                                        
+PO4****PCK*B*151*LB***20*20*20*IN*****194.                
+REF*FJ*2.                                                 
+REF*BLT*1.                                                
+REF*ZB*R.KILZER.                                          
+DTM*111*20130910.                                         
+DTM*035*20130911*1000*LT.                                 
+SAC*C*H090***2322.                                        
+N1*SF*SHIPPER NAME.                                       
+N2*SHIPPER2 COMPANY.
+N3*26250 W PIONEER RD.      
+N4*FOND DU LAC*WI*54935*US. 
+REF*4F*122220822.           
+REF*DP*SHIPPER DEPT.        
+N1*ST*RECIPIENT CONTACT5.
+N2*RECIPIENT2 COMPANY.      
+N3*3680 FEDEX PARKWAY.      
+N4*AVENEL*NJ*07001*US.      
+TDS*3900.                   
+AMT*N*39.                   
+AMT*BAP*39.                 
+CTT*2.                      
+SE*62*0593.    
+GE*2*43.          
+IEA*1*000000043.                                                    
+                                                
+                               
+  
+                                                                               

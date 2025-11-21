@@ -1,0 +1,7 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+    <div>
+        <p>You got this email because you are in the administration list of the {{ org_name }} organization in the MAP Watcher application.</p>
+        <p>{{ message_text }}</p>
+    </div>
+{% endblock %}

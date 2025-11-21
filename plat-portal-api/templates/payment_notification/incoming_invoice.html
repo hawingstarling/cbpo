@@ -1,0 +1,108 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+    <div>
+        <div style="display: table; font-size: 14px">
+            <div style="display: table-row">
+                <div style="display: table-cell; vertical-align: top; padding: 0 10px;">
+                    <div>
+                        <p>This e-mail confirms that your upcoming billing is on <b>{{ period_end }}</b> for the
+                            plan {{ plan_name }}.</p>
+                        <p>Your current subscription's period: <b>{{ period_start }} - {{ period_end }}</b>.</p>
+                        <p>Your account will be charge following:</p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: table-row">
+                <div>
+                    <table style="width: 100%; border-collapse: collapse">
+                        <!-- Header -->
+                        <tr>
+                            <th style="text-align: left; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>DESCRIPTION</b>
+                            </th>
+                            <th style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>QTY</b>
+                            </th>
+                            <th style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>AMOUNT</b>
+                            </th>
+                        </tr>
+                        <!-- End Header -->
+
+                        <!-- Detail -->
+                        {% for item in grouped_lines %}
+                            <tr>
+                                <td style="color: #73818f; border-top: 1px solid #c8ced3; padding: 10px" colspan="3">
+                                    {{ item.from }} - {{ item.to }}</td>
+                            </tr>
+                            {% for ele_item in item.data %}
+                                <tr>
+                                    <td style="border-top: 1px solid #c8ced3; padding: 10px">{{ ele_item.description }}</td>
+                                    <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                        {{ ele_item.quantity }}</td>
+                                    <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">{{ ele_item.amount }}
+                                    </td>
+                                </tr>
+                                {% for ele_discount in ele_item.data_discount_amounts %}
+                                    <tr>
+                                        <td style="border-top: 1px solid #c8ced3; padding: 10px">{{ ele_discount.description }}</td>
+                                        <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px"></td>
+                                        <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">{{ ele_discount.amount }}
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                        <!-- End Detail -->
+
+                        <!-- Total -->
+                        <tr>
+                            <td colspan="2" style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>Subtotal</b>
+                            </td>
+                            <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>{{ subtotal }}</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>Discount Total</b>
+                            </td>
+                            <td style="text-align: right; border-top: 1px solid #c8ced3; padding: 10px">
+                                <b>{{ discount_total }}</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: right; padding: 10px">
+                                <b>Total</b>
+                            </td>
+                            <td style="text-align: right; padding: 10px">
+                                <b>{{ total }}</b>
+                            </td>
+                        </tr>
+                        {% if applied_balance != 0 %}
+                            <tr>
+                                <td colspan="2" style="text-align: right; padding: 10px">
+                                    <b>Applied balance</b>
+                                </td>
+                                <td style="text-align: right; padding: 10px">
+                                    <b>{{ applied_balance }}</b>
+                                </td>
+                            </tr>
+                        {% endif %}
+                        <tr>
+                            <td colspan="2" style="text-align: right; padding: 10px">
+                                <b>Amount due</b>
+                            </td>
+                            <td style="text-align: right; padding: 10px">
+                                <b>{{ amount }}</b>
+                            </td>
+                        </tr>
+                        <!-- End Total -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>This message was produced and distributed by {{ team_name }}.</p>
+{% endblock %}

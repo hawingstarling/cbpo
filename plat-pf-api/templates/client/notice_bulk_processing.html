@@ -1,0 +1,65 @@
+{% extends '_base_sending_email_template.html' %}
+{% block content %}
+    <p>You have this email because you've started a bulk processing that's run for more than {{ description.minutes }}
+        minutes.</p>
+
+    <div>
+        <table style="border: 1px solid" align="center">
+            <tr>
+                <td>
+                    <table style="padding: 10px 20px">
+                        <tr>
+                            <td style="padding-bottom: 5px">ID: {{ description.uuid }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 5px">Action: {{ description.action }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 5px">Started: {{ description.process_started }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 5px">Completed: {{ description.process_completed }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 5px">Item Total: {{ description.total_items }}</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-bottom: 5px">Item Updated: {{ description.total_items_success }}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+
+    <p>It's completed now. There is the summary:</p>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse">
+            <tr>
+                <th style="padding: 5px; border: 1px solid black;">ID</th>
+                <th style="padding: 5px; border: 1px solid black;">Command</th>
+                <th style="padding: 5px; border: 1px solid black;">Valid</th>
+                <th style="padding: 5px; border: 1px solid black;">Complete</th>
+                <th style="padding: 5px; border: 1px solid black;">Processing Errors</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.id }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.command }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.valid }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.complete }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">
+                        <ul>
+                            {% for message_error in item.processing_errors %}
+                                <li>{{ message_error }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>Please login to have more detailed information.</p>
+
+{% endblock %}

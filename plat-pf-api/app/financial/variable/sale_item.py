@@ -1,0 +1,12 @@
+JOB_ACTION = 'job_action'
+SINGLE_EDIT_JOB = 'single_edit_job'
+BULK_EDIT_JOB = 'bulk_edit_job'
+
+
+COG_TYPE_CALCULATED_KEY = 'CALCULATED'
+COG_TYPE_USER_PROVIDED_KEY = 'USER_PROVIDED'
+
+ENUM_COG_TYPE = (
+    (COG_TYPE_CALCULATED_KEY, 'Calculated'),
+    (COG_TYPE_USER_PROVIDED_KEY, 'User Provided'),
+)

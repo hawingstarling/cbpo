@@ -1,0 +1,16 @@
+[
+  {
+    "model": "shopify_partner.setting",
+    "pk": "9fdb0601-b255-44db-88b5-a47b6e2dc787",
+    "fields": {
+      "created": "2022-05-27T10:08:40.854Z",
+      "modified": "2022-10-21T07:17:45.241Z",
+      "api_key": "78fc00447196c8b050d5ffd697aca658",
+      "secret": "gAAAAABjVn9hqmd211Io0KBpDohCRWfPyRl69yXJNCA25FrkpgnlF0UL7zJhD0w7EUEnyAtgBW0-3r2Owomub4x6I_yE-D_j0QdU6BnBODCh1i4FeNFgKPw=",
+      "set_new_secret_key": false,
+      "redirect_url_oauth": "https://4fa0-42-116-43-112.ap.ngrok.io/v1/pf/sp-oauth-callback",
+      "scope": "read_products,read_reports,read_customers",
+      "web_redirect_url": "http://localhost:8080/#/pf/<client_id>/settings"
+    }
+  }
+]

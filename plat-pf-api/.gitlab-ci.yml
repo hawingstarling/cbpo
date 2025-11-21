@@ -1,0 +1,139 @@
+stages:
+  - build-lib
+  - wait
+  - test
+  - build-deploy
+  - deploy
+  - build-production
+  - deploy-production
+
+variables:
+  VERSION: 'v1.0.0-dev0'
+  IMPORT_LIB_VERSION: 'v1.0.dev2'
+  CONTAINER_DEV_IMAGE: $REGISTRY/$PROJECT_ID/$PROJECT_NAME
+  DEPLOYMENT_TYPE: 'dev'
+  CLUSTER_NAME: uat-hd-bpo-cluster
+  DEV_CLUSTER_NAME: dev-hd-cbpo-cluster
+  QA_CLUSTER_NAME: qa-hd-bpo-cluster
+  DEV_ZONE: 'us-central1-f'
+  QA_ZONE: 'us-central1-a'
+  REPLICAS: '1'
+  PORT: '8000'
+  REF_NAME: 'develop'
+
+check-and-build-lib:
+  stage: build-lib
+  script:
+    - >
+        if [[ ! `wget -S --spider  "http://python-registry.channelprecision.com/packages/django-plat-import-lib-api-v2-${IMPORT_LIB_VERSION:1}.tar.gz"  2>&1 | grep 'HTTP/1.1 200 OK'` ]];
+        then curl -X POST -F token=$IMPORT_LIB_TOKEN -F ref=$REF_NAME -F "variables[VERSION]=${IMPORT_LIB_VERSION}" https://gitlab.com/api/v4/projects/17094807/trigger/pipeline;
+        else echo "$IMPORT_LIB_VERSION has existed"; fi
+  only:
+    - build/dev
+    - build/qa
+    - build/release
+
+wait:
+  stage: wait
+  script:
+    - chmod +x ./scripts/wait_lib_build_done.sh
+    - ./scripts/wait_lib_build_done.sh
+  only:
+    - build/dev
+    - build/qa
+    - build/release
+
+test:
+  stage: test
+  tags:
+    - dev
+  script:
+    - cp -f $env ./.env
+    - export ranCtx=($RANDOM % 10000);
+    - sed -ie 's/.*DB_NAME_RUNNING_TEST.*/'"DB_NAME_RUNNING_TEST=${ranCtx}_financial_unit_test"'/g; s/_DEPLOYMENT_TYPE_/'"$DEPLOYMENT_TYPE"'/g' ./.env;
+    - rm -rf .enve
+    - mkdir config/cer
+    - mkdir cer
+    - cp ./.env ./config/settings/.env
+    - cp -rf $firebase ./cer/precise-b1d88d3b3f76.json
+    - cp $public_key ./config/cer/public_key.pem
+    - cp $private_key ./config/cer/private_key.pem
+    - pyenv local 3.10.13
+    - python -m venv virtualenv
+    - source virtualenv/bin/activate
+    - pip install poetry==1.6.1
+    - poetry install
+    - pip install pyactiveresource==2.2.2
+    - chmod a+x manage.py
+    - ./manage.py test --noinput
+    - deactivate
+
+build-deploy:
+  stage: build-deploy
+  tags:
+    - deploy
+  script:
+    - mkdir config/cer
+    - mkdir cer
+    - mkdir certificates
+    - cp -rf $firebase ./cer/precise-b1d88d3b3f76.json
+    - cp -rf $precise ./certificates/precise-7fb53dd47513.json
+    - cp $public_key ./config/cer/public_key.pem
+    - cp $private_key ./config/cer/private_key.pem
+    - cp ./compose/django/Dockerfile ./
+    - chmod +x ./scripts/check-build-deploy.sh
+    - ./scripts/check-build-deploy.sh
+    - rm Dockerfile
+  only:
+    - build/dev
+    - build/qa
+    - build/uat
+
+deploy:
+  stage: deploy
+  tags:
+    - deploy
+  environment:
+    name: dev
+  script:
+    - if [ $DEPLOYMENT_TYPE == "dev" ]; then gcloud container clusters get-credentials $DEV_CLUSTER_NAME --zone $DEV_ZONE --project $PROJECT_ID; fi
+    - if [ $DEPLOYMENT_TYPE == "qa" ]; then gcloud container clusters get-credentials $QA_CLUSTER_NAME --zone $QA_ZONE --project $PROJECT_ID; fi
+    - if [ $DEPLOYMENT_TYPE == "uat" ]; then gcloud container clusters get-credentials $CLUSTER_NAME --zone $ZONE --project $PROJECT_ID; fi
+    - sed 's/_APP_NAME_/'"$PROJECT_NAME"'/g; s/_PROJECT_ID_/'"$PROJECT_ID"'/g; s/_REGISTRY_/'"$REGISTRY"'/g; s/_DEPLOYMENT_TYPE_/'"$DEPLOYMENT_TYPE"'/g; s/_REPLICAS_/'"$REPLICAS"'/g; s/_PORT_/'"$PORT"'/g; s/_BUG_SNAG_API_KEY_/'"$BUG_SNAG_API_KEY"'/g; s/_SENDGRID_API_KEY_/'"$SENDGRID_API_KEY"'/g; s/_DJANGO_SECRET_KEY_/'"$DJANGO_SECRET_KEY"'/g; s/_POSTGRES_USERNAME_/'"$POSTGRES_USERNAME"'/g;s/_POSTGRES_PASSWORD_/'"$POSTGRES_PASSWORD"'/g; s/_VERSION_/'"$VERSION"'/g' values.tpl.yml > values.yml;
+    - export DEPLOYS=$(helm ls | grep ${DEPLOYMENT_TYPE}-${PROJECT_NAME} | wc -l)
+    - if [ ${DEPLOYS} == 0 ]; then helm install cbpo-repo/bpo-chart --name ${DEPLOYMENT_TYPE}-${PROJECT_NAME} --values values.yml; else helm upgrade ${DEPLOYMENT_TYPE}-${PROJECT_NAME} cbpo-repo/bpo-chart --values values.yml; fi
+  only:
+    - build/dev
+    - build/qa
+    - build/uat
+
+build-production:
+  stage: build-production
+  tags:
+    - deploy-production
+  script:
+    - mkdir config/cer
+    - mkdir cer
+    - mkdir certificates
+    - cp -rf $firebase_prod ./cer/precise-b1d88d3b3f76.json
+    - cp $precise_prod ./certificates/precise-7fb53dd47513.json
+    - cp $public_key_prod ./config/cer/public_key.pem
+    - cp $private_key_prod ./config/cer/private_key.pem
+    - cp ./compose/django/Dockerfile ./
+    - chmod +x ./scripts/check-build-deploy.sh
+    - ./scripts/check-build-deploy.sh
+    - rm Dockerfile
+  only:
+    - build/release
+
+deploy-production:
+  stage: deploy-production
+  tags:
+    - deploy-production
+  script:
+    - sed 's/_APP_NAME_/'"$PROJECT_PRODUCTION_APP"'/g; s/_PROJECT_ID_/'"$PROJECT_PRODUCTION_ID"'/g; s/_REGISTRY_/'"$REGISTRY"'/g; s/_REPLICAS_/'"$REPLICAS"'/g; s/_PORT_/'"$PORT"'/g; s/_BUG_SNAG_API_KEY_/'"$BUG_SNAG_API_KEY"'/g; s/_PROXY_API_KEY_/'"$PROXY_API_KEY"'/g;s/_SENDGRID_API_KEY_/'"$SENDGRID_API_KEY"'/g;s/_REDIS_SERVER_/'"$REDIS_SERVER"'/g;s/_MONGO_USERNAME_/'"$MONGO_USERNAME"'/g;s/_MONGO_PASSWORD_/'"$MONGO_PASSWORD"'/g; s/_VERSION_/'"$VERSION"'/g' values.tpl.yml > values.yml;
+    - export DEPLOYS=$(helm ls | grep $PROJECT_PRODUCTION_APP | wc -l)
+    - if [ ${DEPLOYS} == 0 ]; then helm install cbpo-repo/bpo-chart --name $PROJECT_PRODUCTION_APP --values values.yml; else helm upgrade $PROJECT_PRODUCTION_APP cbpo-repo/bpo-chart --values values.yml; fi
+  only:
+    - build/release
+  when: manual

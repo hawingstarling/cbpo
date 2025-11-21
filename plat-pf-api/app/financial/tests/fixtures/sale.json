@@ -1,0 +1,32 @@
+[
+  {
+    "model": "financial.sale",
+    "pk": 3000000,
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "date": "2020-06-30 08:45:46.997000",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "profit_status_id": "9d41389c-ea0b-42a3-99bc-73be4f11ada8",
+      "sale_status_id": "a4d57188-aa29-4f16-9288-5365ebe2e4a7",
+      "channel_sale_id": "111-222-3334"
+    }
+  },
+  {
+    "model": "financial.sale",
+    "pk": 3000001,
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "date": "2020-07-31 09:27:45.299604",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "profit_status_id": "58cdedf5-473a-4a73-a27b-ccff5c3878ed",
+      "sale_status_id": "f8cc2fd5-d735-43d1-b8d6-d38e92309f5b",
+      "channel_sale_id": "111-222-3336"
+    }
+  }
+]

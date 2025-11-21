@@ -1,0 +1,82 @@
+version: '3'
+
+volumes:
+  postgres_data:
+  postgres_backup:
+  ipython_data:
+
+services:
+  postgres:
+    image: cbpo-postgres
+    build: ./compose/postgres
+    container_name: cbpo-postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backups:/backups
+    env_file:
+      - config/settings/.env
+
+  redis:
+    image: redis:latest
+
+  django:
+    image: cbpo-django-prod
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    container_name: cbpo-django-prod
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.production
+      - ENVIRONMENT=production
+      - DEBUG=False
+    env_file:
+      - config/settings/.env
+    ports:
+      - "8000:8000"
+
+    links:
+      - postgres
+      - redis
+
+  celeryworker:
+    image: cbpo-celeryworker-prod
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    command: /start-celery-worker.sh
+    container_name: cbpo-celeryworker-prod
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.production
+      - ENVIRONMENT=production
+      - DEBUG=False
+    env_file:
+      - config/settings/.env
+    links:
+      - postgres
+      - redis
+
+  celerybeat:
+    image: cbpo-celerybeat-prod
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile
+    command: /start-celery-beat.sh
+    container_name: cbpo-celerybeat-prod
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.production
+      - ENVIRONMENT=production
+      - DEBUG=False
+    env_file:
+      - config/settings/.env
+    links:
+      - postgres
+      - redis

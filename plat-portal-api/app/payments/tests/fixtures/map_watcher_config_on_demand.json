@@ -1,0 +1,52 @@
+[
+  {
+    "model": "payments.mapwatcherconfigondemand",
+    "pk": "7a0f00b2-5b16-4429-9f73-327fd19081ce",
+    "fields": {
+      "created": "2021-10-18T07:48:35.735Z",
+      "modified": "2021-10-20T03:02:23.323Z",
+      "is_removed": false,
+      "organization": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+      "tenancy_on_demand": {
+        "max_workspaces": null,
+        "max_external_users": 159,
+        "max_internal_users": 159
+      },
+      "plan_config_on_demand": {
+        "data_lifetime": null,
+        "plan_max_of_reports": 99,
+        "seller_enforcement_enabled": true,
+        "allowed_amazon_marketplaces": [
+          "USA"
+        ],
+        "allowed_walmart_marketplaces": [
+          "USA"
+        ],
+        "plan_max_of_asin_for_amazon": 99,
+        "seller_investigation_dashboard": true,
+        "plan_max_of_reports_with_amazon": 99,
+        "plan_max_of_asin_for_google_shopping": 99,
+        "plan_max_of_asin_for_walmart": 99,
+        "plan_max_of_reports_with_google_shopping": 99,
+        "plan_max_of_reports_with_walmart": 99
+      },
+      "daily_limitation": {
+        "daily_max_amazon_scraping": 7,
+        "daily_max_amazon_screenshot": 7,
+        "daily_max_of_retry_per_report": 7,
+        "daily_max_of_amazon_screenshot": 12,
+        "daily_max_of_google_screenshot": 12,
+        "daily_max_of_walmart_screenshot": 12,
+        "daily_max_google_shopping_scraping": 7,
+        "daily_max_amazon_inventory_scraping": 7,
+        "daily_max_google_shopping_screenshot": 7
+      },
+      "is_created_on_stripe": false,
+      "price": 56.0,
+      "name": "Demand 1",
+      "trial_days": 0,
+      "plan": null,
+      "application": "mwrw"
+    }
+  }
+]

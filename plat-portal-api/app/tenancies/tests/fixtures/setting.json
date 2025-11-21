@@ -1,0 +1,15 @@
+[
+  {
+    "model": "tenancies.setting",
+    "pk": 1,
+    "fields": {
+      "created": "2020-12-22T10:32:28.184Z",
+      "modified": "2020-12-22T10:32:28.184Z",
+      "emails": [],
+      "is_active": true,
+      "number_org_limit": 10,
+      "number_ws_limit": 30,
+      "name": "default"
+    }
+  }
+]

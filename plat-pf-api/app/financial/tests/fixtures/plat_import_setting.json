@@ -1,0 +1,12 @@
+[
+  {
+    "model": "plat_import_lib_api.setting",
+    "pk": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+    "fields": {
+      "use_queue": false,
+      "round_up_currency": 0.01,
+      "storage_folder": "pf/lib_imports",
+      "module_template_location": "app.financial.import_template.base"
+    }
+  }
+]

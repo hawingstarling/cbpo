@@ -1,0 +1,16 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+    <div>
+        <h3>There's a payment fail!</h3>
+        <div>
+            <p>Organization: {{ organization_name }}</p>
+            <p>Plan: {{ plan_name }}</p>
+            <p>Application {{ application }}</p>
+            {% if exprired_in %}
+                <p>Expired: {{ expired_in }}</p>
+            {% endif %}
+            <p>Owner: {{ owner_name }} - Email {{ owner_email }}</p>
+        </div>
+
+    </div>
+{% endblock %}

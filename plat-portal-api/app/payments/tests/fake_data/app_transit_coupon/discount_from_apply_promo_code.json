@@ -1,0 +1,31 @@
+{
+  "discount": {
+    "id": "di_1M7BqFBhZLR2oJFVQTHJwZyR",
+    "object": "discount",
+    "checkout_session": null,
+    "coupon": {
+      "id": "TEGkiX9j",
+      "object": "coupon",
+      "amount_off": 1000,
+      "created": 1635494636,
+      "currency": "usd",
+      "duration": "once",
+      "duration_in_months": null,
+      "livemode": false,
+      "max_redemptions": null,
+      "metadata": {},
+      "name": "first coupon",
+      "percent_off": null,
+      "redeem_by": null,
+      "times_redeemed": 44,
+      "valid": true
+    },
+    "customer": "cus_KOpIurlaccYM3k",
+    "end": null,
+    "invoice": null,
+    "invoice_item": null,
+    "promotion_code": "promo_1Jpq4UBhZLR2oJFVH35CvbaQ",
+    "start": 1669182591,
+    "subscription": "sub_1M79iPBhZLR2oJFVGeM0lYVh"
+  }
+}

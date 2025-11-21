@@ -1,0 +1,301 @@
+[
+  {
+    "model": "financial.generictransaction",
+    "pk": "fbbe41fe-21d2-4882-88e2-d4a2fabdae33",
+    "fields": {
+      "created": "2020-09-23 06:53:28.190803",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": -13.34,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "Commission",
+      "category": "fee",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "3c8b59d5-b775-4bac-83ed-c760d0d30ec0",
+    "fields": {
+      "created": "2020-09-23 06:53:25.704488",
+      "modified": "2020-09-23 06:53:29.331352",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 13.34,
+      "currency": "USD",
+      "date": "2020-09-20 16:30:10.029000",
+      "type": "Commission",
+      "category": "fee",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "refund"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "f52d5651-dcef-4234-bac4-4ac6048aabe5",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": -2.67,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "RefundCommission",
+      "category": "fee",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "refund"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "09a1b1a5-6985-4ceb-89eb-b557c4dc5993",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 68.76,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "REVERSAL_REIMBURSEMENT",
+      "category": null,
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "adjustment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "0d80e061-ae98-471e-9e4d-dd8cf1e11b81",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 5.5,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "Tax",
+      "category": "charge",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "c7eb1a51-c469-490f-93d5-8aa2bb2c4906",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 1.1,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "GiftWrapTax",
+      "category": "charge",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "2c36ebe9-d728-4f8d-a569-9418a440fd43",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 1.1,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "ShippingTax",
+      "category": "charge",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "e769e820-0db4-4498-9cf0-4306c41ddd5d",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 1.0,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "FBAPerUnitFulfillmentFee",
+      "category": "fee",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "a21ebdbd-6427-4f7e-954d-e639112f4546",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 2.0,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "PromotionMetaDataDefinitionValue",
+      "category": "promotion",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "shipment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "fe3f5be4-eec0-4d59-9b2d-85dcfc9699a2",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": null,
+      "amount": -8.14,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "PostageBilling_Postage",
+      "category": null,
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "adjustment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "150b5053-2385-49fd-b599-e29cd2b81d85",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": null,
+      "amount": -9.29,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "ReturnPostageBilling_Postage",
+      "category": null,
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "adjustment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "72a4f01a-27e7-4742-85bf-bedf121424ef",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": null,
+      "amount": -0.65,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "ReturnPostageBilling_FuelSurcharge",
+      "category": null,
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "adjustment"
+    }
+  },
+  {
+    "model": "financial.generictransaction",
+    "pk": "1623a2a3-991d-4794-8f58-f162d6776692",
+    "fields": {
+      "created": "2020-09-23 06:53:28.199805",
+      "modified": "2020-09-23 06:53:29.334353",
+      "is_removed": false,
+      "channel_sale_id": "111-222-3336",
+      "sku": "AL-DAT-2236",
+      "amount": 1,
+      "currency": "USD",
+      "date": "2020-09-22 17:14:54.020000",
+      "type": "MarketplaceFacilitatorTax-Principal",
+      "category": "charge",
+      "channel_id": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "content_type": [
+        "financial",
+        "saleitem"
+      ],
+      "event": "refund"
+    }
+  }
+]

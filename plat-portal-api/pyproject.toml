@@ -1,0 +1,71 @@
+[tool.poetry]
+name = "plat-ps-api"
+version = "1.0.0"
+description = ""
+authors = ["hdwebsoft <devs@hdwebsoft.co>"]
+readme = "README.md"
+packages = [{ include = "app" }]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+django-debug-toolbar = "^4.4.6"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "5.1.4"
+django-environ = "^0.11.2"
+django-bulk-update = "^2.2.0"
+psycopg2-binary = "^2.9.10"
+django-pgviews = "^0.6.0"
+django-model-utils = "^5.0.0"
+python-dateutil = "^2.9.0.post0"
+djangorestframework = "^3.15.2"
+django-oauth-toolkit = "^3.0.1"
+django-cors-headers = "^4.6.0"
+djangorestframework-simplejwt = "^5.3.1"
+cryptography = "^44.0.0"
+pycryptodome = "^3.21.0"
+whitenoise = "*"
+drf-yasg = "^1.21.8"
+celery = "^5.4.0"
+eventlet = "^0.38.2"
+redis = "^5.2.1"
+django-celery-beat = "^2.7.0"
+django-celery-results = "^2.5.1"
+itsdangerous = "^2.2.0"
+coverage = "^7.6.9"
+google-cloud-storage = "^2.19.0"
+bugsnag = "^4.7.1"
+firebase-admin = "^6.6.0"
+django-redis = "^5.4.0"
+django-auditlog = "^3.0.0"
+django-bulk-sync = "^3.3.0"
+stripe = "^11.4.0"
+django-admin-sortable = "^2.3"
+django-better-admin-arrayfield = "1.4.2"
+django-json-widget = "^2.0.1"
+mailchimp-marketing = "^3.0.80"
+sendgrid = "^6.11.0"
+django-entangled = "^0.6.2"
+django-admin-autocomplete-filter = "0.7.1"
+django-silk = "^5.3.2"
+django-durationwidget2 = "1.0.6"
+django-allauth = "^65.3.0"
+dj-rest-auth = "^7.0.0"
+crypto = "^1.4.1"
+django-extensions = "3.2.3"
+setuptools = "^75.6.0"
+dulwich = "^0.22.6"
+keyring = "^25.5.0"
+
+
+[tool.poetry.scripts]
+my_script = "app.main:main" # Example script entry point
+
+[tool.poetry.urls]
+Documentation = "https://example.com/docs"  # Optional URL links
+Bug-Tracker = "https://example.com/issues"

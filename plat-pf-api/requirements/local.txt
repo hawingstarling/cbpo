@@ -1,0 +1,9 @@
+-r base.txt
+
+flower==0.9.7
+django_extensions==2.2.8
+django-debug-toolbar==2.2
+#git+https://gitlab.com/hd-bpo/plat-import-lib-api-py.git
+
+
+eventlet==0.30.2

@@ -1,0 +1,67 @@
+[
+  {
+    "model": "financial.brand",
+    "pk": "02edd561-1084-4f55-bd5c-9222d008df4e",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Adidas",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "supplier_name": "Adidas",
+      "acquired_date": "2020-08-04T12:42:18.205Z"
+    }
+  },
+  {
+    "model": "financial.brand",
+    "pk": "40e9d228-9785-4cf0-a6c2-d90fe813b32e",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Nike",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "supplier_name": "Nike",
+      "acquired_date": "2020-08-04T12:42:18.205Z"
+    }
+  },
+  {
+    "model": "financial.brand",
+    "pk": "818ad366-f624-4b2c-b0d3-64cc942d17ce",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "NorthFace",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "supplier_name": "NorthFace",
+      "acquired_date": "2020-08-04T12:42:18.205Z"
+    }
+  },
+  {
+    "model": "financial.brand",
+    "pk": "d3f93c04-821d-46ea-b0c8-4d154686ea74",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Altra",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "supplier_name": "Altra",
+      "acquired_date": "2020-08-04T12:42:18.205Z"
+    }
+  },
+  {
+    "model": "financial.brand",
+    "pk": "1641d47d-d2dd-4cf8-8ec7-f9bba86ee7d1",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "The NorthFace",
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "supplier_name": "The NorthFace",
+      "acquired_date": "2020-08-04T12:42:18.205Z"
+    }
+  }
+]

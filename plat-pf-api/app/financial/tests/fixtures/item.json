@@ -1,0 +1,46 @@
+[
+  {
+    "model": "financial.item",
+    "pk": "b657093e-dac6-4113-9f27-629bc520aaf8",
+    "fields": {
+      "created": "2022-06-08T03:48:18.670Z",
+      "modified": "2022-06-08T03:48:18.670Z",
+      "is_removed": false,
+      "channel": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "sku": "EY_46-09057_5-Q",
+      "upc": "304071789001",
+      "asin": "IVOSDK9C2P",
+      "title": "Heavy",
+      "description": "Month",
+      "style": "04ec180d-30be-4044-ac64-ba10b61f2ea0",
+      "size": "82bf23e3-87b1-4150-a9e1-dfe751fc1753",
+      "brand": "02edd561-1084-4f55-bd5c-9222d008df4e",
+      "est_shipping_cost": "3147.71",
+      "est_drop_ship_cost": "2566.17",
+      "fulfillment_type": "5b7bc589-14ce-41cb-8911-2925f504bb8d"
+    }
+  },
+  {
+    "model": "financial.item",
+    "pk": "d7e93d88-ea0e-41f8-a909-f9a5e415234a",
+    "fields": {
+      "created": "2022-06-08T03:48:18.670Z",
+      "modified": "2022-06-08T03:48:18.672Z",
+      "is_removed": false,
+      "channel": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "sku": "VQ_54-21135_0-B",
+      "upc": "1704633174449",
+      "asin": "GVQAQ5VFVO",
+      "title": "Reach",
+      "description": "Maybe",
+      "style": "04ec180d-30be-4044-ac64-ba10b61f2ea0",
+      "size": "82bf23e3-87b1-4150-a9e1-dfe751fc1753",
+      "brand": "02edd561-1084-4f55-bd5c-9222d008df4e",
+      "est_shipping_cost": "6280.94",
+      "est_drop_ship_cost": "2251.13",
+      "fulfillment_type": "5b7bc589-14ce-41cb-8911-2925f504bb8d"
+    }
+  }
+]

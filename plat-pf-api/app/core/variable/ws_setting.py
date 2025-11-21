@@ -1,0 +1,5 @@
+DS_TRACK_ENABLED = "data_source_track_enabled"
+WS_IS_OE = "workspace_is_oe"
+COG_USE_PF = "cog_use_pf"
+COG_USE_EXTENSIV = "cog_use_extensiv"
+COG_USE_DC = "cog_use_dc"

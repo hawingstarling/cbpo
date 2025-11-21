@@ -1,0 +1,29 @@
+{
+    "id": "cus_JNBsN0sJoCPAic",
+    "object": "customer",
+    "address": null,
+    "balance": 0,
+    "created": 1630733739,
+    "currency": "usd",
+    "default_source": null,
+    "delinquent": true,
+    "description": "My First Test Customer (created for API docs)",
+    "discount": null,
+    "email": "vnhd1@example.com",
+    "invoice_prefix": "31821171",
+    "invoice_settings": {
+        "custom_fields": null,
+        "default_payment_method": null,
+        "footer": null
+    },
+    "livemode": false,
+    "metadata": {
+        "user_id": "119250a0-d5db-4a20-801c-581575305ef5"
+    },
+    "name": "dang vu",
+    "next_invoice_sequence": 82,
+    "phone": null,
+    "preferred_locales": [],
+    "shipping": null,
+    "tax_exempt": "none"
+}

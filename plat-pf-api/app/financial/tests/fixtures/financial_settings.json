@@ -1,0 +1,17 @@
+[
+  {
+    "model": "financial.financialsettings",
+    "pk": 1,
+    "fields": {
+      "created": "2020-01-01T00:00:00.000Z",
+      "modified": "2020-01-01T00:00:00.000Z",
+      "is_removed": false,
+      "system_contacts": ["admin@test.com"],
+      "no_brand_setting_notification_emails": ["admin@test.com"],
+      "no_brand_setting_notification": true,
+      "stats_report_notification_emails": ["admin@test.com"],
+      "stats_report_notification": false,
+      "bulk_data_process_limit": 5000
+    }
+  }
+]

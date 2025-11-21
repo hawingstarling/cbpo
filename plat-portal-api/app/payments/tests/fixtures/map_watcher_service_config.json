@@ -1,0 +1,114 @@
+[
+  {
+    "model": "payments.mapwatcherconfig",
+    "pk": "8be58ca0-7314-4bad-b650-d927512ca15f",
+    "fields": {
+      "created": "2021-09-07T05:14:03.809Z",
+      "modified": "2021-10-18T07:17:28.152Z",
+      "type": "PROFESSIONAL",
+      "plan_config": {
+        "data_lifetime": {
+          "unit": "DAY",
+          "value": 120
+        },
+        "plan_max_of_reports": 4,
+        "seller_enforcement_enabled": false,
+        "allowed_amazon_marketplaces": [
+          "amazon.com",
+          "amazon.co.uk"
+        ],
+        "allowed_walmart_marketplaces": [
+          "walmart.com"
+        ],
+        "plan_max_of_asin_for_amazon": 200,
+        "seller_investigation_dashboard": true,
+        "plan_max_of_reports_with_amazon": 4,
+        "plan_max_of_asin_for_google_shopping": 200,
+        "plan_max_of_asin_for_walmart": 200,
+        "plan_max_of_reports_with_google_shopping": 4,
+        "plan_max_of_reports_with_walmart": 4
+      },
+      "daily_limitation": {
+        "daily_max_of_screenshot": 2000,
+        "daily_max_amazon_scraping": 40,
+        "daily_max_amazon_screenshot": 40,
+        "daily_max_of_retry_per_report": 5,
+        "daily_max_google_shopping_scraping": 40,
+        "daily_max_amazon_inventory_scraping": 40,
+        "daily_max_google_shopping_screenshot": 40
+      }
+    }
+  },
+  {
+    "model": "payments.mapwatcherconfig",
+    "pk": "ab7463f3-8a12-48c6-8a81-815a99f2adbe",
+    "fields": {
+      "created": "2021-09-04T05:38:23.792Z",
+      "modified": "2021-10-18T07:16:14.782Z",
+      "type": "STANDARD",
+      "plan_config": {
+        "data_lifetime": {
+          "unit": "DAY",
+          "value": 90
+        },
+        "plan_max_of_reports": 2,
+        "seller_enforcement_enabled": false,
+        "allowed_amazon_marketplaces": [
+          "amazon.com",
+          "amazon.ca"
+        ],
+        "allowed_walmart_marketplaces": [
+          "walmart.com"
+        ],
+        "plan_max_of_asin_for_amazon": 100,
+        "seller_investigation_dashboard": false,
+        "plan_max_of_reports_with_amazon": 2,
+        "plan_max_of_asin_for_google_shopping": 100,
+        "plan_max_of_asin_for_walmart": 100,
+        "plan_max_of_reports_with_google_shopping": 2,
+        "plan_max_of_reports_with_walmart": 2
+      },
+      "daily_limitation": {
+        "daily_max_of_screenshot": 1000,
+        "daily_max_amazon_scraping": 20,
+        "daily_max_amazon_screenshot": 20,
+        "daily_max_of_retry_per_report": 4,
+        "daily_max_google_shopping_scraping": 20,
+        "daily_max_amazon_inventory_scraping": 20,
+        "daily_max_google_shopping_screenshot": 20
+      }
+    }
+  },
+  {
+    "model": "payments.mapwatcherconfig",
+    "pk": "e83383ce-7eb5-4691-8ee1-d4f5003416ce",
+    "fields": {
+      "created": "2021-08-06T05:54:36.622Z",
+      "modified": "2021-10-18T07:43:28.437Z",
+      "type": "CUSTOM",
+      "plan_config": {
+        "data_lifetime": null,
+        "plan_max_of_reports": null,
+        "seller_enforcement_enabled": false,
+        "allowed_amazon_marketplaces": [],
+        "allowed_walmart_marketplaces": [],
+        "plan_max_of_asin_for_amazon": 22,
+        "seller_investigation_dashboard": false,
+        "plan_max_of_reports_with_amazon": null,
+        "plan_max_of_asin_for_google_shopping": null,
+        "plan_max_of_asin_for_walmart": null,
+        "plan_max_of_reports_with_google_shopping": null,
+        "plan_max_of_reports_with_walmart": null
+      },
+      "daily_limitation": {
+        "daily_max_of_screenshot": null,
+        "daily_max_amazon_scraping": null,
+        "daily_max_amazon_screenshot": null,
+        "daily_max_of_retry_per_report": null,
+        "daily_max_google_shopping_scraping": null,
+        "daily_max_amazon_inventory_scraping": null,
+        "daily_max_google_shopping_screenshot": null
+      }
+    }
+  }
+]

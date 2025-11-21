@@ -1,0 +1,35 @@
+FROM python:3.13.1
+
+ENV PYTHONUNBUFFERED=1 \
+    POETRY_VIRTUALENVS_CREATE=false \
+    POETRY_VIRTUALENVS_IN_PROJECT=false
+
+WORKDIR /app
+RUN pip install --upgrade pip==24.3.1
+RUN pip install poetry==1.8.5
+
+# Requirements have to be pulled and installed here, otherwise caching won't work
+COPY poetry.* pyproject.toml ./
+RUN poetry install
+# RUN pip install django-allauth==0.41.0
+RUN pip install django-celery-beat==2.7.0
+
+COPY ./compose/django/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+COPY ./compose/django/gunicorn.sh /gunicorn.sh
+RUN chmod +x /gunicorn.sh
+
+COPY ./compose/django/start-dev.sh /start-dev.sh
+RUN chmod +x /start-dev.sh
+
+COPY ./compose/django/start-celery-worker.sh /start-celery-worker.sh
+RUN chmod +x /start-celery-worker.sh
+
+
+COPY ./compose/django/start-celery-beat.sh /start-celery-beat.sh
+RUN chmod +x /start-celery-beat.sh
+
+WORKDIR /app
+
+ENTRYPOINT ["/entrypoint.sh"]

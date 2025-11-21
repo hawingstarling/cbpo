@@ -1,0 +1,10 @@
+{% extends '_base_sending_email_template.html' %}
+{% block content %}
+
+    <p>You have recieved this email because you are on PF administration list.</p>
+
+    <p>There are new missing brands on the missing brand list.</p>
+
+    <p>Please check the list via <a href="{{ admin_missing_brand_page }}" target="_blank">Django Admin.</a></p>
+
+{% endblock %}

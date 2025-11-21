@@ -1,0 +1,15 @@
+[
+  {
+    "model": "payments.fundpackage",
+    "pk": "3c2d1502-ac27-405f-bcbc-3dee50e8d4e9",
+    "fields": {
+      "created": "2021-08-20T04:16:37.511Z",
+      "modified": "2021-09-07T04:20:51.285Z",
+      "is_removed": false,
+      "external_fund_package_id": "price_1JWvnZBhZLR2oJFVoa1FKdAy",
+      "name": "Package 1",
+      "balance": 100000,
+      "description": "100"
+    }
+  }
+]

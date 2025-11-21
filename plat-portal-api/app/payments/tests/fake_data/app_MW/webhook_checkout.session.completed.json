@@ -1,0 +1,52 @@
+{
+  "type": "checkout.session.completed",
+  "data": {
+    "object": {
+      "id": "cs_test_a1W4va8ZdRMyH9A7AUkcZsQ94a3LkCUT2dydb3o9hQokRENAhJXA1G7krQ",
+      "mode": "subscription",
+      "locale": null,
+      "object": "checkout.session",
+      "currency": "usd",
+      "customer": "cus_JNBsN0sJoCPAic",
+      "livemode": false,
+      "metadata": {
+        "plan_id": "bf71292e-ffd8-40a9-a9a6-5b05a04eb707",
+        "user_id": "119250a0-d5db-4a20-801c-581575305ef5",
+        "organization_id": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+        "external_plan_id": "price_1IVBc0BhZLR2oJFVjutXckbq",
+        "application": "mwrw",
+        "mode": "FULL_PACK",
+        "checkout_type": "CHECKOUT_SUBSCRIPTION"
+      },
+      "shipping": null,
+      "cancel_url": "http://localhost:8080/#/ps/organization-settings/1cd7855b-b3c9-4aa3-9d71-d1d9efb3b0e0/billing?status=cancel",
+      "submit_type": null,
+      "success_url": "http://localhost:8080/#/ps/organization-settings/1cd7855b-b3c9-4aa3-9d71-d1d9efb3b0e0/billing?status=success",
+      "amount_total": 1000,
+      "setup_intent": null,
+      "subscription": "sub_JRjzP3sflZEPJZ",
+      "total_details": {
+        "amount_tax": 0,
+        "amount_discount": 0,
+        "amount_shipping": 0
+      },
+      "customer_email": null,
+      "payment_intent": null,
+      "payment_status": "paid",
+      "amount_subtotal": 1000,
+      "customer_details": {
+        "email": "vnhd1@example.com",
+        "tax_ids": [],
+        "tax_exempt": "none"
+      },
+      "client_reference_id": "1cd7855b-b3c9-4aa3-9d71-d1d9efb3b0e0",
+      "payment_method_types": [
+        "card"
+      ],
+      "allow_promotion_codes": null,
+      "payment_method_options": {},
+      "billing_address_collection": null,
+      "shipping_address_collection": null
+    }
+  }
+}

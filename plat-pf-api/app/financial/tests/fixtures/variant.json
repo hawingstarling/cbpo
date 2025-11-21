@@ -1,0 +1,50 @@
+[
+  {
+    "model": "financial.variant",
+    "pk": "82bf23e3-87b1-4150-a9e1-dfe751fc1753",
+    "fields": {
+      "created": "2020-08-19 03:23:52.036795",
+      "modified": "2020-08-19 03:23:52.066784",
+      "is_removed": false,
+      "type": "Size",
+      "name": "10",
+      "value": "10"
+    }
+  },
+  {
+    "model": "financial.variant",
+    "pk": "13eb885b-0a03-4c86-bb5f-19d1b34ac439",
+    "fields": {
+      "created": "2020-08-19 03:23:52.036795",
+      "modified": "2020-08-19 03:23:52.066784",
+      "is_removed": false,
+      "type": "Size",
+      "name": "20",
+      "value": "20"
+    }
+  },
+  {
+    "model": "financial.variant",
+    "pk": "04ec180d-30be-4044-ac64-ba10b61f2ea0",
+    "fields": {
+      "created": "2020-08-19 03:23:59.777553",
+      "modified": "2020-08-19 03:23:59.801553",
+      "is_removed": false,
+      "type": "Style",
+      "name": "Summer",
+      "value": "Summer"
+    }
+  },
+  {
+    "model": "financial.variant",
+    "pk": "388a6882-0cca-4927-a8ec-c02b39390aca",
+    "fields": {
+      "created": "2020-08-19 03:23:59.777553",
+      "modified": "2020-08-19 03:23:59.801553",
+      "is_removed": false,
+      "type": "Style",
+      "name": "Winter",
+      "value": "Winter"
+    }
+  }
+]

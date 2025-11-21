@@ -1,0 +1,20 @@
+[
+  {
+    "model": "payments.subscription",
+    "pk": "ca3e0268-2090-4557-bbf5-f09ee544eff7",
+    "fields": {
+      "created": "2021-03-30T10:55:41.759Z",
+      "modified": "2021-06-09T07:09:08.920Z",
+      "is_removed": false,
+      "organization": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+      "user": "119250a0-d5db-4a20-801c-581575305ef5",
+      "plan": "4c571926-b6a0-4db0-81a2-829cfb246434",
+      "external_subscription_id": "sub_JRjzP3sflZEPJZ",
+      "expired_in": "2021-07-09T07:09:03Z",
+      "amount": null,
+      "status": "active",
+      "is_active": true,
+      "application": "mwrw"
+    }
+  }
+]

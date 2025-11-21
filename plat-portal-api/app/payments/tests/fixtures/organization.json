@@ -1,0 +1,14 @@
+[
+  {
+    "model": "tenancies.organization",
+    "pk": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+    "fields": {
+      "created": "2021-02-24T02:36:38.360Z",
+      "modified": "2021-02-24T02:36:38.360Z",
+      "is_removed": false,
+      "name": "DANG ORG",
+      "logo": "",
+      "owner": "119250a0-d5db-4a20-801c-581575305ef5"
+    }
+  }
+]

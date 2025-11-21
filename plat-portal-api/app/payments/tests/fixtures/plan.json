@@ -1,0 +1,136 @@
+[
+  {
+    "model": "payments.plan",
+    "pk": "02ef6340-a2a6-4837-9d45-6805c015aa03",
+    "fields": {
+      "created": "2021-04-07T08:32:14.597Z",
+      "modified": "2021-04-07T08:32:14.620Z",
+      "is_removed": false,
+      "external_plan_id": null,
+      "application": "transit",
+      "name": "Custom",
+      "type": "CUSTOM",
+      "description": "pdf",
+      "price": null,
+      "period": null,
+      "trial_days": 0,
+      "order": 4,
+      "max_internal_users": null,
+      "max_external_users": null,
+      "max_workspaces": null,
+      "enabled": true
+    }
+  },
+  {
+    "model": "payments.plan",
+    "pk": "4c571926-b6a0-4db0-81a2-829cfb246434",
+    "fields": {
+      "created": "2021-03-25T07:16:18.375Z",
+      "modified": "2021-03-25T07:16:18.415Z",
+      "is_removed": false,
+      "external_plan_id": "price_1IVBc0BhZLR2oJFVjutXckbq",
+      "application": "transit",
+      "name": "Standard",
+      "type": "STANDARD",
+      "description": "Standard",
+      "price": "10.00",
+      "period": "daily",
+      "trial_days": 7,
+      "order": 1,
+      "max_internal_users": null,
+      "max_external_users": null,
+      "max_workspaces": null,
+      "enabled": true
+    }
+  },
+  {
+    "model": "payments.plan",
+    "pk": "887b8c9e-3f62-4074-a2d5-f0b5db035a11",
+    "fields": {
+      "created": "2021-04-22T08:16:47.194Z",
+      "modified": "2021-04-23T03:53:13.633Z",
+      "is_removed": false,
+      "external_plan_id": "price_1IVtKaBhZLR2oJFVWIp0mFIz",
+      "application": "transit",
+      "name": "Business",
+      "type": "BUSINESS",
+      "description": "Bussss",
+      "price": "35.00",
+      "period": "monthly",
+      "trial_days": 2,
+      "order": 3,
+      "max_internal_users": null,
+      "max_external_users": null,
+      "max_workspaces": null,
+      "enabled": true
+    }
+  },
+  {
+    "model": "payments.plan",
+    "pk": "a1a3e088-3157-4462-9489-4e272e9c86c0",
+    "fields": {
+      "created": "2021-03-25T02:56:33.528Z",
+      "modified": "2021-04-22T08:15:55.802Z",
+      "is_removed": false,
+      "external_plan_id": "price_1IVC2ZBhZLR2oJFVE6uZxG9r",
+      "application": "transit",
+      "name": "Professional",
+      "type": "PROFESSIONAL",
+      "description": "This is best for customers who wants to have more than one user with unlimited shipments",
+      "price": "25.00",
+      "period": "monthly",
+      "trial_days": 0,
+      "order": 2,
+      "max_internal_users": null,
+      "max_external_users": null,
+      "max_workspaces": null,
+      "enabled": true
+    }
+  },
+  {
+    "model": "payments.plan",
+    "pk": "bf71292e-ffd8-40a9-a9a6-5b05a04eb707",
+    "fields": {
+      "created": "2021-08-20T04:15:38.477Z",
+      "modified": "2021-10-18T11:09:01.468Z",
+      "is_removed": false,
+      "external_plan_id": "price_1JVrYiBhZLR2oJFV140AF2hK",
+      "application": "mwrw",
+      "name": "Standard",
+      "type": "STANDARD",
+      "description": "",
+      "criteria": "[\"aaa\"]",
+      "price": "10.00",
+      "period": "monthly",
+      "trial_days": 0,
+      "order": 5,
+      "max_internal_users": 100,
+      "max_external_users": 100,
+      "max_workspaces": 100,
+      "enabled": true
+    }
+  },
+  {
+    "model": "payments.plan",
+    "pk": "e87449b5-8af8-4048-a82c-ec9086f120a7",
+    "fields": {
+      "created": "2021-09-07T05:12:41.386Z",
+      "modified": "2021-09-23T05:40:59.217Z",
+      "is_removed": false,
+      "external_plan_id": "price_1JWwbLBhZLR2oJFVqpXmDIT8",
+      "application": "mwrw",
+      "name": "Professional",
+      "type": "PROFESSIONAL",
+      "description": "profes",
+      "criteria": "[\"dfdf\"]",
+      "price": "200.00",
+      "period": "monthly",
+      "trial_days": 3,
+      "order": 6,
+      "max_internal_users": -1,
+      "max_external_users": -1,
+      "max_workspaces": -1,
+      "enabled": true
+    }
+  }
+]

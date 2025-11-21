@@ -1,0 +1,54 @@
+[
+  {
+    "model": "financial.sale",
+    "pk": 3000000,
+    "fields": {
+      "created": "2020-12-31T11:05:40.447Z",
+      "modified": "2020-12-31T11:05:40.454Z",
+      "is_removed": false,
+      "channel_sale_id": "112-2447595-VNHD",
+      "channel": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "sale_status": "a4d57188-aa29-4f16-9288-5365ebe2e4a7",
+      "profit_status": "9d41389c-ea0b-42a3-99bc-73be4f11ada8",
+      "date": "2015-12-12T18:22:12Z",
+      "city": null,
+      "state": "NY",
+      "country": "US",
+      "postal_code": "12953-1120",
+      "state_key": null,
+      "county_key": null,
+      "address_line_1": null,
+      "address_line_2": null,
+      "address_line_3": null,
+      "customer_name": null,
+      "is_prime": false
+    }
+  },
+  {
+    "model": "financial.sale",
+    "pk": 3000001,
+    "fields": {
+      "created": "2020-12-31T11:05:40.447Z",
+      "modified": "2020-12-31T11:05:40.454Z",
+      "is_removed": false,
+      "channel_sale_id": "112-2447595-VNH1",
+      "channel": "4c3c7cdc-4297-4ff5-aa35-aa388c1f4e14",
+      "client": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "sale_status": "a4d57188-aa29-4f16-9288-5365ebe2e4a7",
+      "profit_status": "9d41389c-ea0b-42a3-99bc-73be4f11ada8",
+      "date": "2015-12-12T18:22:12Z",
+      "city": null,
+      "state": "VA",
+      "country": "US",
+      "postal_code": "24016-4525",
+      "state_key": null,
+      "county_key": null,
+      "address_line_1": null,
+      "address_line_2": null,
+      "address_line_3": null,
+      "customer_name": null,
+      "is_prime": false
+    }
+  }
+]

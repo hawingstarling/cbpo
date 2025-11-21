@@ -1,0 +1,38 @@
+[
+  {
+    "model": "financial.profitstatus",
+    "pk": "9d41389c-ea0b-42a3-99bc-73be4f11ada8",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Projected",
+      "value": "Projected",
+      "order": 1000
+    }
+  },
+  {
+    "model": "financial.profitstatus",
+    "pk": "e6e19698-a20a-4f1e-b638-8bc2cbea71f9",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Audited",
+      "value": "Audited",
+      "order": 2000
+    }
+  },
+  {
+    "model": "financial.profitstatus",
+    "pk": "58cdedf5-473a-4a73-a27b-ccff5c3878ed",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Final",
+      "value": "Final",
+      "order": 3000
+    }
+  }
+]

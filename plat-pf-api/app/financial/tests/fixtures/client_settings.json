@@ -1,0 +1,28 @@
+[
+  {
+    "model": "financial.clientsettings",
+    "pk": "07fb3987-b1f3-4d3a-9684-891db98a4ff8",
+    "fields": {
+      "created": "2020-01-01T00:00:00.000Z",
+      "modified": "2020-01-01T00:00:00.000Z",
+      "is_removed": false,
+      "allow_sale_data_update_from": null,
+      "time_bulk_processing_notification": 0,
+      "client_id": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "ac_mws_access_key": "XXXXX",
+      "ac_mws_enabled": true,
+      "ac_mws_merchant_id": "XXXXX",
+      "ac_mws_merchant_name": "PF",
+      "ac_mws_secret_key": "XXXXX",
+      "ac_spapi_access_token": "XXXX",
+      "ac_spapi_refresh_token": "XXXX",
+      "ac_spapi_token_expired": 3600,
+      "ac_spapi_selling_partner_id": "XXXX",
+      "ac_spapi_auth_code": "XXXX",
+      "ac_spapi_state": "XXXX",
+      "ac_spapi_enabled": true,
+      "ac_cart_rover_enabled": true,
+      "cog_priority_source": {}
+    }
+  }
+]

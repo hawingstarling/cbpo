@@ -1,0 +1,42 @@
+[
+  {
+    "model": "tenancies.role",
+    "pk": "12609b65-070b-4373-bc7b-4c08052226da",
+    "fields": {
+      "created": "2021-01-05T08:45:17.343Z",
+      "modified": "2021-01-05T08:45:17.343Z",
+      "key": "STAFF",
+      "name": "Staff"
+    }
+  },
+  {
+    "model": "tenancies.role",
+    "pk": "577436ff-f4a4-45fa-9c40-4bebd68cc6a6",
+    "fields": {
+      "created": "2021-01-05T08:45:17.328Z",
+      "modified": "2021-01-05T08:45:17.328Z",
+      "key": "ADMIN",
+      "name": "Admin"
+    }
+  },
+  {
+    "model": "tenancies.role",
+    "pk": "72df44fe-91c9-42a6-8853-e8fc4461dad5",
+    "fields": {
+      "created": "2021-01-05T08:45:17.355Z",
+      "modified": "2021-01-05T08:45:17.355Z",
+      "key": "CLIENT",
+      "name": "Client"
+    }
+  },
+  {
+    "model": "tenancies.role",
+    "pk": "da454c6d-1e60-42d6-97fd-4cf19155af22",
+    "fields": {
+      "created": "2021-01-05T08:45:17.306Z",
+      "modified": "2021-01-05T08:45:17.306Z",
+      "key": "OWNER",
+      "name": "Owner"
+    }
+  }
+]

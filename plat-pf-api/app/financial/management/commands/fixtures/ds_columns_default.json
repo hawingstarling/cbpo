@@ -1,0 +1,4509 @@
+{
+  "type": "cbpo-element-table",
+  "config": {
+    "id": "id-de322e72-1192-4c8e-bf6b-ef3b637b1764",
+    "bins": [],
+    "filter": {
+      "type": "AND",
+      "conditions": [
+        {
+          "value": "DATE_START_OF(DATE_LAST(30,'day'), 'day')",
+          "column": "sale_date",
+          "operator": "$gte"
+        },
+        {
+          "value": "DATE_END_OF(TODAY(), 'day')",
+          "column": "sale_date",
+          "operator": "$lte"
+        },
+        {
+          "value": "amazon.com",
+          "column": "channel_name",
+          "operator": "$eq"
+        }
+      ]
+    },
+    "header": {
+      "draggable": false,
+      "multiline": true,
+      "resizeMinWidth": 5
+    },
+    "widget": {
+      "style": {
+        "border_width": null,
+        "border_radius": null,
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null
+      },
+      "title": {
+        "text": "Widget Title",
+        "edited": false,
+        "enabled": false
+      }
+    },
+    "columns": [
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_name",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 130,
+          "format": {
+            "type": "link",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "text": "{value}",
+              "target": "_blank",
+              "baseTemplate": "https://sellercentral.amazon.com/orders-v3/order/{value}"
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_id",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel Sale ID",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "fulfillment_type",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Fulfillment Type",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_sale_status",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale Status",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "state",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "State",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "temporal",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "format": "MM/DD/YYYY hh:mm A"
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "sale_date",
+        "type": "date",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale Date",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "brand",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Brand",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 140,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "sku",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "SKU",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "asin",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "ASIN",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "upc",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "UPC",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 300,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "title",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Title",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_sale_charged",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale Charged",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_tax_charged",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Tax Charged",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_total_charged",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Total Charged",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_shipping_charged",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Shipping Charged",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "cog",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "COGs",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "unit_cog",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Unit COGs",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "quantity",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Quantity",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "freight_cost",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Freight Costs",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_reimbursement_costs",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Reimbursement Costs",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_shipping_cost",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Shipping Cost",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "warehouse_processing_fee",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Warehouse Processing Fee",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_tax_withheld",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel Tax Withheld",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_channel_listing_fee",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel Commission Fee",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "refund_admin_fee",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Refund Admin Fee",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_other_channel_fees",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Other Channel Fees",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_total_cost",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Total Cost",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 105,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_profit_status",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Profit Status",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_profit",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Profit",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_margin",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Margin",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "notes",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Notes",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": null,
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "sale_id",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale ID",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_brand",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Brand (Channel)",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "bool",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "negative": {
+                "html": "<span class=\"d-bool-n\">No</span>",
+                "text": "No"
+              },
+              "positive": {
+                "html": "<span class=\"d-bool-p\">Yes</span>",
+                "text": "Yes"
+              }
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "is_prime",
+        "type": "boolean",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Prime",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "country",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Country",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "city",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "City",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "postal_code",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Postal Code",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "refunded_quantity",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Refunded Quantity",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "sale_charged_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale Charged Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_listing_fee_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel Listing Fee Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "precision": 2
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "shipping_cost_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Shipping Cost Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "warehouse_processing_fee_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Warehouse Processing Fee Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "channel_tax_withheld_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Channel Tax Withheld Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "sale_item_id",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Sale Item ID",
+        "isUniqueKey": true,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "brand_sku",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Brand SKU",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "size",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Size",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "style",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Style",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "temporal",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "format": "MM/DD/YYYY hh:mm A"
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "item_ship_date",
+        "type": "date",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Ship Date",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "temporal",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "format": "MM/DD/YYYY hh:mm A"
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "created",
+        "type": "date",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Created",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 120,
+          "format": {
+            "type": "temporal",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            },
+            "config": {
+              "format": "MM/DD/YYYY hh:mm A"
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "modified",
+        "type": "date",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Modified",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "segment",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Segment",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "fulfillment_type_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Fulfillment Type Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {
+            "text-align": "right"
+          },
+          "width": 105,
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "precision": 0
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "freight_cost_accuracy",
+        "type": "number",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Freight Cost Accuracy",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "ae_profile_name",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": false,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Repricing",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      },
+      {
+        "cell": {
+          "style": {},
+          "width": 120,
+          "format": {
+            "type": "text",
+            "common": {
+              "html": {
+                "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": null
+            }
+          },
+          "binFormats": null,
+          "aggrFormats": {
+            "int": {
+              "type": "numeric",
+              "common": {
+                "html": {
+                  "na": "<span class=\"dc-na-style d-na\">n/a</span>",
+                  "nil": "<span class=\"dc-null-style d-null\">null</span>",
+                  "empty": "<span class=\"dc-empty-style d-empty\">empty</span>"
+                },
+                "plain": {
+                  "na": "N/A",
+                  "nil": "NULL",
+                  "empty": "EMPTY"
+                },
+                "prefix": null,
+                "suffix": null
+              },
+              "config": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 0
+              }
+            }
+          }
+        },
+        "name": "tracking_fedex_id",
+        "type": "string",
+        "header": {
+          "style": {},
+          "format": null
+        },
+        "checked": false,
+        "visible": true,
+        "sortable": {
+          "enabled": true
+        },
+        "displayName": "Tracking ID",
+        "isUniqueKey": false,
+        "detailColIndex": 0
+      }
+    ],
+    "formats": {
+      "aggrs": {},
+      "binFormats": {}
+    },
+    "sorting": [
+      {
+        "column": "sale_date",
+        "direction": "desc"
+      }
+    ],
+    "grouping": {
+      "columns": [],
+      "aggregations": []
+    },
+    "messages": {
+      "no_data_found": "No data found",
+      "no_data_at_all": "No data"
+    },
+    "timezone": {
+      "utc": "America/Los_Angeles",
+      "enabled": true,
+      "visible": true
+    },
+    "drillDown": {
+      "config": {},
+      "enabled": false
+    },
+    "dataSource": "pf:1dd0bded-e981-4d2f-9bef-2874016661e7:sale_items",
+    "detailView": {
+      "mode": "inline",
+      "action": {
+        "icons": {
+          "closed": "fa-arrow-circle-o-down",
+          "opened": "fa-arrow-circle-o-right"
+        },
+        "label": "View",
+        "props": {
+          "size": "sm",
+          "variant": "primary"
+        },
+        "breakpoint": 768
+      },
+      "enabled": false,
+      "breakpoints": {
+        "320": 1,
+        "768": 2,
+        "1024": 3
+      }
+    },
+    "pagination": {
+      "type": "lazy",
+      "limit": 50,
+      "total": 1532,
+      "buttons": {
+        "last": {
+          "label": "Last",
+          "style": {},
+          "visibility": true
+        },
+        "next": {
+          "label": "Next",
+          "style": {},
+          "visibility": true
+        },
+        "prev": {
+          "label": "Previous",
+          "style": {},
+          "visibility": true
+        },
+        "first": {
+          "label": "First",
+          "style": {},
+          "visibility": true
+        }
+      },
+      "current": 1,
+      "default": "auto",
+      "numbers": {
+        "afterCurrent": 2,
+        "beforeCurrent": 2
+      }
+    },
+    "rowActions": {
+      "inline": 1,
+      "display": "always",
+      "enabled": true,
+      "colWidth": 110,
+      "controls": [
+        {
+          "icon": "fa-pencil",
+          "label": "Edit",
+          "props": {
+            "size": "sm",
+            "variant": "secondary"
+          },
+          "style": {
+            "padding": "0px 5px",
+            "borderRight": "2px solid #acb5bc"
+          },
+          "display": true
+        },
+        {
+          "icon": "fa-flag",
+          "label": "Change Log",
+          "props": {
+            "size": "sm"
+          },
+          "style": {},
+          "display": true
+        },
+        {
+          "icon": "fa-trash",
+          "label": "Delete",
+          "props": {
+            "size": "sm",
+            "variant": "danger"
+          },
+          "style": {},
+          "display": true
+        }
+      ],
+      "position": "left"
+    },
+    "bulkActions": {
+      "mode": "both",
+      "total": "76580",
+      "labels": {
+        "selectAll": "Select all $total items",
+        "allSelected": "All $total items selected",
+        "actionColumn": ""
+      },
+      "enabled": true,
+      "controls": [
+        {
+          "icon": "fa-pencil",
+          "label": "Edit",
+          "props": {
+            "size": "sm",
+            "variant": "secondary"
+          },
+          "style": {},
+          "display": true
+        },
+        {
+          "icon": "fa-clock-o",
+          "label": "History",
+          "props": {
+            "size": "sm",
+            "variant": "secondary"
+          },
+          "style": {},
+          "display": true
+        },
+        {
+          "icon": "fa-clock-o",
+          "label": "Return Log",
+          "props": {
+            "size": "sm",
+            "variant": "secondary"
+          },
+          "style": {},
+          "display": true
+        },
+        {
+          "icon": "fa-magic",
+          "label": "Sync",
+          "props": {
+            "size": "sm",
+            "variant": "secondary"
+          },
+          "style": {},
+          "display": true
+        },
+        {
+          "icon": "fa-trash",
+          "label": "Delete",
+          "props": {
+            "size": "sm",
+            "variant": "danger"
+          },
+          "style": {},
+          "display": true
+        }
+      ],
+      "filterMode": false,
+      "enableInlineAction": false
+    },
+    "compactMode": {
+      "mode": "high",
+      "enabled": false
+    },
+    "exportConfig": {
+      "query": {}
+    },
+    "sizeSettings": {
+      "warningText": "The area is too small for this visualization.",
+      "defaultMinSize": 250
+    },
+    "tableSummary": {
+      "enabled": true,
+      "position": "header",
+      "summaries": [
+        {
+          "id": "2c144948-4ce4-4e26-8e43-faaadd404443",
+          "expr": "SUMIF (@item_sale_charged, @item_sale_status in ['Pending', 'Unshipped', 'Shipped', 'Partially Refunded']) as 'item_sale_charged'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_sale_charged",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "4a909879-dd0d-4527-bfbf-85084f8583c6",
+          "expr": "SUM (@item_shipping_charged) as 'item_shipping_charged'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_shipping_charged",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "681ade86-fd6a-4444-b90c-2db52ca28783",
+          "expr": "SUM (@item_tax_charged) as 'item_tax_charged'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_tax_charged",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "42aadadc-9671-4a2c-874d-3d8a746703aa",
+          "expr": "SUM (@cog) as 'cog'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "cog",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "757f4664-14b3-4532-8e11-e2f5c7d5a503",
+          "expr": "SUM (@quantity) as 'quantity'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "quantity",
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "comma": true,
+              "siPrefix": false,
+              "precision": 0
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "9e511c89-4726-4587-9586-5e05d084901e",
+          "expr": "SUM (@item_shipping_cost) as 'item_shipping_cost'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_shipping_cost",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "4dd52e18-484f-42b3-9ad8-7f9cce7b869e",
+          "expr": "SUM (@item_total_charged) as 'item_total_charged'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_total_charged",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "ed682f9a-1e37-4f76-a00f-bb0c8356afc7",
+          "expr": "SUM (@item_total_cost) as 'item_total_cost'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_total_cost",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "15611727-805e-4154-8e2c-e742d4edd867",
+          "expr": "SUM (@item_profit) as 'item_profit'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_profit",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "a8d4b004-1197-4878-8165-33b8efd7cf89",
+          "expr": "SUM (@item_channel_listing_fee) as 'item_channel_listing_fee'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_channel_listing_fee",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "91fbca6b-ed65-4d2b-b258-410885b65ece",
+          "expr": "SUM (@item_other_channel_fees) as 'item_other_channel_fees'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_other_channel_fees",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "9fd94f52-a69e-49de-8b9d-5d7db4b4e37a",
+          "expr": "SUM (@item_reimbursement_costs) as 'item_reimbursement_costs'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_reimbursement_costs",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "615e1c51-d9a2-4044-a2a3-4227c1bd6919",
+          "expr": "SUM (@refund_admin_fee) as 'refund_admin_fee'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "refund_admin_fee",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "5a2d6da7-f06e-46bb-977a-d4b797f88d0e",
+          "expr": "SUM (@freight_cost) as 'freight_cost'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "freight_cost",
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "044748a7-dfde-4b48-a6d3-2a2625e9ab89",
+          "expr": "(SUM (@item_profit) / SUM (@item_sale_charged) * 100)as 'item_margin'",
+          "label": "",
+          "style": {
+            "justifyContent": "flex-end"
+          },
+          "column": "item_margin",
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null,
+              "suffix": "%"
+            },
+            "config": {
+              "comma": true,
+              "siPrefix": false,
+              "precision": 2
+            }
+          },
+          "noDataMessage": "No data"
+        }
+      ],
+      "labelActionColumn": "",
+      "labelColumnSummary": ""
+    },
+    "globalSummary": {
+      "enabled": true,
+      "summaries": [
+        {
+          "id": "1ce67670-a82c-4201-a405-ca75f0eddafa",
+          "expr": "",
+          "label": "In view",
+          "style": {},
+          "format": null,
+          "prefix": "",
+          "suffix": "",
+          "tooltip": {
+            "content": "Gross Sales and Unit Sales omit all returns and cancellations shown.",
+            "trigger": "<i class=\"fa fa-question-circle\" aria-hidden=\"true\"></i>",
+            "position": "top"
+          },
+          "position": "right",
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "8dc21b96-cb58-4431-8002-e5fb10e28997",
+          "expr": "SUMIF (@item_sale_charged, @'item_sale_status' != 'Returning' AND @'item_sale_status' != 'Partially Returning' AND @'item_sale_status' != 'Refunded' AND @'item_sale_status' != 'Partially Refunded' AND @'item_sale_status' != 'Cancelled') as 'item_sale_charged'",
+          "label": "Gross Sales",
+          "style": {},
+          "format": {
+            "type": "currency",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "numeric": {
+                "comma": true,
+                "siPrefix": false,
+                "precision": 2
+              },
+              "currency": {
+                "symbol": "$",
+                "inCents": false,
+                "symbolPrefix": true
+              }
+            }
+          },
+          "prefix": "",
+          "suffix": "",
+          "position": "right",
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "c1c245ac-31ec-4feb-b87f-941a5eae43cf",
+          "expr": "SUMIF (@quantity, @'item_sale_status' != 'Returning' AND @'item_sale_status' != 'Partially Returning' AND @'item_sale_status' != 'Refunded' AND @'item_sale_status' != 'Partially Refunded' AND @'item_sale_status' != 'Cancelled') as 'quantity'",
+          "label": "Unit Sales",
+          "style": {},
+          "format": {
+            "type": "numeric",
+            "common": {
+              "html": {
+                "na": "<span class=\"d-na\">n/a</span>",
+                "nil": "<span class=\"d-null\">null</span>",
+                "empty": "<span class=\"empty\">empty</span>"
+              },
+              "plain": {
+                "na": "N/A",
+                "nil": "NULL",
+                "empty": "EMPTY"
+              },
+              "prefix": null
+            },
+            "config": {
+              "comma": true,
+              "siPrefix": false,
+              "precision": 0
+            }
+          },
+          "prefix": "",
+          "suffix": "",
+          "position": "right",
+          "noDataMessage": "No data"
+        },
+        {
+          "id": "4dc65150-e703-4476-9058-5281ad39a54a",
+          "expr": "COUNT () as 'count_alias'",
+          "label": "Row Count",
+          "style": {},
+          "format": {
+            "type": "numeric",
+            "config": {
+              "comma": true,
+              "siPrefix": false,
+              "precision": 0
+            }
+          },
+          "prefix": "",
+          "suffix": "",
+          "position": "right",
+          "noDataMessage": "No data"
+        }
+      ]
+    },
+    "globalControlOptions": {
+      "id": "id-7252fca2-839b-4748-a63a-3793de68a009",
+      "editBin": {
+        "enabled": true
+      },
+      "grouping": {
+        "enabled": true
+      },
+      "editColumn": {
+        "enabled": true
+      },
+      "aggregation": {
+        "enabled": true
+      },
+      "globalGrouping": {
+        "config": {
+          "value": false
+        },
+        "enabled": false,
+        "position": "top"
+      },
+      "editColumnLabel": {
+        "enabled": true
+      },
+      "editColumnFormat": {
+        "enabled": true
+      }
+    }
+  }
+}

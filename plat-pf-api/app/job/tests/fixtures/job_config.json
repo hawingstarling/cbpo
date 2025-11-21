@@ -1,0 +1,306 @@
+[
+  {
+    "model": "job.jobconfig",
+    "pk": "27159379-7d1f-4824-98ff-4d5f309c683b",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "app.financial.jobs.event.handler_trigger_trans_event_sale_item_ws",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "2cc96c24-8fdf-4703-af87-ef59e702e811",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "app.financial.jobs.sale_event.handler_trans_event_data_to_sale_level",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "30f17ac1-a8c0-43a9-b082-35954f6eb335",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "app.financial.jobs.skuvault.handler_trigger_sku_vault_sale_item_ws",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "3ab5fd5e-b5f5-4547-bbb8-0a798803a56c",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "app.financial.jobs.live_feed.handler_trigger_live_feed_sale_item_ws",
+      "priority": 1,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "459c952e-cde2-4134-886a-956b21e0e86b",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_DATA_SOURCE",
+      "name": "default",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "4a095e30-f9e1-4c0b-8419-0b1542f0ce42",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "TIME_CONTROL",
+      "name": "app.financial.jobs.time_control.handler_time_control_process_type_is_ready_workspace",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "57781eea-c6d1-484c-9e4f-e44830529f26",
+    "fields": {
+      "created": "2023-02-08T04:47:14.869Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SELLING_PARTNER",
+      "name": "default",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "5a7cdb5f-2b66-4bfc-9278-c53e26e3b086",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "app.financial.jobs.informed.handler_trigger_informed_sale_item_ws",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "5eacea7f-c8be-4f49-9773-f1bc39a1c065",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "TIME_CONTROL",
+      "name": "default",
+      "priority": 7,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "6ab7ae58-5655-495b-abb7-7eae15469e56",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "BULK",
+      "name": "app.financial.jobs.bulk_process.processing_bulk_brand_setting",
+      "priority": 2,
+      "time_limit": 1805,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "6ef9c925-484a-40fa-8bd9-85fa58a4ac1f",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "COMMUNITY",
+      "name": "app.financial.jobs.alert.process_alert_refresh_rate_ws",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "7f22dfc1-0ea2-4609-a007-51494d277e51",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "BULK",
+      "name": "app.financial.jobs.bulk_process.processing_bulk_module_chunk",
+      "priority": 2,
+      "time_limit": 1805,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "a096e1f7-f5ab-4419-8f59-24edfec43d77",
+    "fields": {
+      "created": "2023-02-08T04:47:14.869Z",
+      "modified": "2023-02-08T04:47:14.870Z",
+      "category": "DATA_SOURCE_CALCULATION",
+      "name": "default",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "aaaf834b-1e95-49f7-8c01-a06beda2176d",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "COMMUNITY",
+      "name": "app.financial.jobs.alert.process_alert_throttling_period_ws",
+      "priority": 3,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "ec8fc357-5eb9-422c-855e-861d21d83174",
+    "fields": {
+      "created": "2023-02-08T04:47:14.868Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "SYNC_ANALYSIS",
+      "name": "default",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "ef7d19f0-5f33-4034-9895-36a2163d38bf",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "BULK",
+      "name": "default",
+      "priority": 2,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "f1bb7c96-2ed9-49bd-bff2-9714efee18df",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "COMMUNITY",
+      "name": "default",
+      "priority": 7,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "f36ec34d-be34-4fd4-8f86-832110f0efbd",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "IMPORT",
+      "name": "default",
+      "priority": 5,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  },
+  {
+    "model": "job.jobconfig",
+    "pk": "8102a022-37a9-4121-8789-231192fed3a7",
+    "fields": {
+      "created": "2023-02-08T04:47:14.867Z",
+      "modified": "2023-02-08T04:47:14.869Z",
+      "category": "COGS_MAPPING",
+      "name": "default",
+      "priority": 2,
+      "time_limit": 2400,
+      "retry": true,
+      "retry_policy": null,
+      "max_recursive": 0,
+      "disabled_sequentially": false
+    }
+  }
+]

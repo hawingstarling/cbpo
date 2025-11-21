@@ -1,0 +1,13 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+<p>
+    {{ sender_name }} invited you to join {{ client_name }} on {{ app_name }}.
+    <br/>
+    If it’s you, please click on the link below to accept the invitation.
+</p>
+
+<p><a href="{{ url }}">{{ url }}</a></p>
+
+    <p>You have {{ expired_days }} days to take a valid action before the link expiration.</p>
+<p>If it’s a mistake, please simply ignore this email.</p>
+{% endblock %}

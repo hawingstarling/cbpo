@@ -1,0 +1,19 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+<p>
+    {{ sender_name }} invited you to join {{ client_name }} on {{ app_name }}.
+</p>
+    {% if user_existed %}
+        <p> You can login using your existing password </p>
+    {% else %}
+        <p>
+        This is your account information. <br />
+        Email: {{user_email}} <br />
+        Password: {{password}} <br />
+        </p>
+        <p><b>You need to change your default password after logging in</b></p>
+    {% endif %}
+        <p> Open the app using this URL: <a href="{{ url }}">{{ url }}</a></p>
+
+<p>If it’s a mistake, please simply ignore this email.</p>
+{% endblock %}

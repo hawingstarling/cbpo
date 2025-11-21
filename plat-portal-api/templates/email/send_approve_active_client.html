@@ -1,0 +1,10 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+
+    <p>You've got this email because you are the owner of <strong>{{ organization_name }}</strong> on Channel Precision.
+    </p>
+
+    <p>Your organization member <strong>{{ user_email_create }}</strong> has created a new workspace
+        <strong>{{ client_name }}</strong>. It's pending for your approval.</p>
+
+{% endblock %}

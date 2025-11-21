@@ -1,0 +1,1 @@
+from .jobs.db_table_template import *

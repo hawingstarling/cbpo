@@ -1,0 +1,7 @@
+{% extends 'base_sending_email_template.html' %}
+{% block content %}
+    <div>
+        <p style="font-weight: bold">Your {{ plan_name }} trial expires in {{ remaining_hours }} hours !</p>
+        <p>Your payment will be charged automatically on {{ trial_end_date }} at {{ trial_end_time }}</p>
+    </div>
+{% endblock %}

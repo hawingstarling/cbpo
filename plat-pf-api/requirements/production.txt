@@ -1,0 +1,11 @@
+-r base.txt
+
+# WSGI Handler
+# ------------------------------------------------
+gunicorn==20.1.0
+# @TODO
+# ASGI Handler
+# uvicorn==0.20.0
+
+# Django CBPO import data
+# git+https://_PIL_TOKEN_NAME_:_PIL_TOKEN_@gitlab.com/hd-bpo/plat-import-lib-api-py.git

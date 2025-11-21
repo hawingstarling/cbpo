@@ -1,0 +1,23 @@
+[
+  {
+    "model": "financial.fedexshipment",
+    "pk": "093b6656-a8aa-4270-85cf-8d3b8f38a05b",
+    "fields": {
+      "created": "2021-01-13T06:19:26.919Z",
+      "modified": "2021-01-13T06:19:26.919Z",
+      "client": "1dd0bded-e981-4d2f-9bef-2874016661e7",
+      "shipment_date": "2015-12-12",
+      "invoice_date": "2015-12-12",
+      "net_charge_amount": "9.51",
+      "recipient_country": "US",
+      "recipient_state": "VA",
+      "recipient_zip_code": "24016-4525",
+      "recipient_name": "DERICK VADEN",
+      "recipient_address_line_1": "614 WALNUT AVE SW",
+      "recipient_address_line_2": null,
+      "status": "FEDEX_SHIPMENT_PENDING",
+      "matched_sales": "[]",
+      "tracking_id": "1234567890"
+    }
+  }
+]

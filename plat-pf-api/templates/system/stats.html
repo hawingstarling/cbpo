@@ -1,0 +1,132 @@
+{% extends '_base_sending_email_template.html' %}
+{% load humanize %}
+
+{% block content %}
+    <p>You have this email because you are monitoring PF PROD.</p>
+
+    <p>WS ID : {{items.ws_id}}</p>
+
+    <h3>In-completed 30 days</h3>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse; white-space: nowrap;">
+            {% for segment in items.in_completed_last_30_days %}
+                <tr>
+                    {% for key, value in segment.items %}
+                        <th style="padding: 5px; border: 1px solid black;">{{key}}</th>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for key, value in segment.items %}
+                        <td style="padding: 5px; border: 1px solid black;">
+                            {% for data in value %}
+                                <p><b>{{data.channel}}</b></p>
+                                <ul>
+                                    <li>Event: {{data.event}}</li>
+                                    <li>Sync: <b style="color: {{data.color_code}};">{{data.status}}</b></li>
+                                </ul>
+                            {% endfor %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <h3>Live-feed Order Status</h3>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse; white-space: nowrap;">
+            <tr>
+                {% for key, value in items.sale_order_status_7_days.items %}
+                    <th style="padding: 5px; border: 1px solid black;">{{key}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for key, value in items.sale_order_status_7_days.items %}
+                    <td style="padding: 5px; border: 1px solid black;">
+                        {% for data in value %}
+                            <p><b>{{data.channel}}</b></p>
+                            <ul>
+                                <li>Sync: <b style="color: {{data.color_code}};">{{data.status}}</b></li>
+                            </ul>
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+
+    <h3>Live-feed Financial Event Status</h3>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse; white-space: nowrap;">
+            <tr>
+                {% for key, value in items.financial_orders_status_7_days.items %}
+                    <th style="padding: 5px; border: 1px solid black;">{{key}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for key, value in items.financial_orders_status_7_days.items %}
+                    <td style="padding: 5px; border: 1px solid black;">
+                        {% for data in value %}
+                            <p><b>{{data.channel}}</b></p>
+                            <ul>
+                                <li>Sync: <b style="color: {{data.color_code}};">{{data.status}}</b></li>
+                            </ul>
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+    <h3>Daily Summary: recent 7 days’ sale</h3>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse; white-space: nowrap;">
+            <tr>
+                {% for key, value in items.sale_recent_7_days.items %}
+                    <th style="padding: 5px; border: 1px solid black;">{{key}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for key, value in items.sale_recent_7_days.items %}
+                    <td style="padding: 5px; border: 1px solid black;">
+                        {% for data in value %}
+                            <p><b>{{data.channel}}</b></p>
+                            <ul>
+                                <li>All Sales: {{data.all_sales|intcomma}}</li>
+                                <li>Valid Sales: {{data.valid_sales|intcomma}}</li>
+                                <li>Invalid Sales: {{data.invalid_sales|intcomma}}</li>
+                            </ul>
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+    <h3>Monthly Summary: recent 6 months</h3>
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse; white-space: nowrap;">
+            <tr>
+                {% for key, value in items.sale_recent_6_months.items %}
+                    <th style="padding: 5px; border: 1px solid black;">{{key}}</th>
+                {% endfor %}
+            </tr>
+            <tr>
+                {% for key, value in items.sale_recent_6_months.items %}
+                    <td style="padding: 5px; border: 1px solid black;">
+                        {% for data in value %}
+                            <p><b>{{data.channel}}</b></p>
+                            <ul>
+                                <li>All Sales: {{data.all_sales|intcomma}}</li>
+                                <li>Valid Sales: {{data.valid_sales|intcomma}}</li>
+                                <li>Invalid Sales: {{data.invalid_sales|intcomma}}</li>
+                            </ul>
+                        {% endfor %}
+                    </td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

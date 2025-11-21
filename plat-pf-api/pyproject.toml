@@ -1,0 +1,98 @@
+[tool.poetry]
+name = "plat-pf-api"
+version = "0.1.0"
+description = ""
+authors = ["hdwebsoft <devs@hdwebsoft.co>"]
+readme = "README.md"
+
+[[tool.poetry.source]]
+name = "channelprecision"
+url = "http://python-registry.channelprecision.com/simple"
+priority = "supplemental"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = "^3.10.13"
+django = "3.1.14"
+django-environ = "^0.10.0"
+django-better-admin-arrayfield = "^1.4.2"
+django-admin-rangefilter = "^0.10.0"
+django-bulk-update = "^2.2.0"
+psycopg2-binary = "^2.9.6"
+django-model-utils = "^4.2.0"
+python-dateutil = "^2.8.2"
+djangorestframework = "^3.14.0"
+django-oauth-toolkit = "^2.2.0"
+django-cors-middleware = "^1.5.0"
+django-rest-auth = "^0.9.5"
+pycryptodome = "^3.18.0"
+whitenoise = "^6.4.0"
+drf-yasg = "^1.21.5"
+celery = "5.3.4"
+celery-once = "3.0.1"
+redis = "^4.5.5"
+django-celery-beat = "2.5.0"
+django-celery-results = "2.2.0"
+google-cloud-storage = "^2.9.0"
+bugsnag = "^4.4.0"
+coverage = "^7.2.6"
+firebase-admin = "^6.1.0"
+django-redis = "^5.2.0"
+django-revproxy = "^0.10.0"
+elasticsearch = "7.15.0"
+pandas = "^2.0.1"
+dependency-injector = "^4.41.0"
+faker = "^18.9.0"
+dictdiffer = "^0.9.0"
+django-bulk-sync = "^3.3.0"
+django-auditlog = "2.1.1"
+gunicorn = "^20.1.0"
+django-plat-import-lib-api = "1.0.dev6"
+django-silk = "^4.4.1"
+django-filter = "^21.1"
+django-jsonfield = "^1.4.1"
+djangorestframework-simplejwt = "^5.2.2"
+colorama = "^0.4.6"
+twilio = "^7.16.3"
+ShopifyAPI = "8.2.0"
+more-itertools = "^8.12.0"
+django-timezone-field = "5.0"
+xlsxwriter = "^3.1.9"
+maya = "^0.6.1"
+openpyxl = "^3.1.2"
+
+[tool.poetry.group.dev.dependencies]
+flower = "2.0.1"
+django-extensions = "3.1.1"
+django-debug-toolbar = "3.2"
+isort = "^5.11.0"
+flake8 = "^5.0.0"
+black = "^23.3.0"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+force-exclude = '''
+(
+    .git
+  | .hg
+  | .mypy_cache
+  | .tox
+  | .venv
+  | venv
+  | .virtualenv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | migrations
+  | media
+  | logs
+)
+'''

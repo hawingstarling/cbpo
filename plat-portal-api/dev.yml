@@ -1,0 +1,88 @@
+version: '3'
+
+volumes:
+  postgres_data:
+  postgres_backup:
+  ipython_data:
+
+services:
+  postgres:
+    image: cbpo-postgres
+    build: ./compose/postgres
+    container_name: cbpo-postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backups:/backups
+    env_file:
+      - ./config/settings/.env
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+
+  django:
+    image: cbpo-django-dev
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile-dev
+    container_name: cbpo-django-dev
+    command: /start-dev.sh
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    env_file:
+      - ./config/settings/.env
+    volumes:
+      - .:/app
+      - ipython_data:/root/.ipython
+    ports:
+      - "8000:8000"
+
+    links:
+      - postgres
+      - redis
+
+  celeryworker:
+    image: cpbo-celeryworker-dev
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile-dev
+    command: /start-celery-worker.sh
+    container_name: cpbo-celeryworker-dev
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    env_file:
+      - ./config/settings/.env
+    volumes:
+      - .:/app
+    links:
+      - postgres
+      - redis
+
+  celerybeat:
+    image: cbpo-celerybear-dev
+    build:
+      context: .
+      dockerfile: compose/django/Dockerfile-dev
+    command: /start-celery-beat.sh
+    container_name: cbpo-celerybeat-dev
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DJANGO_SETTINGS_MODULE=config.settings.local
+    env_file:
+      - ./config/settings/.env
+    volumes:
+      - .:/app
+    links:
+      - postgres
+      - redis

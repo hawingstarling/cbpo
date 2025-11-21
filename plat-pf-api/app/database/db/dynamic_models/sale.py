@@ -1,0 +1,14 @@
+from ..objects_manage import MultiDbTableManagerBase, SoftDeleteMultiDbTableManagerBase
+from ...variable.schema_tables.financial import DB_TABLE_SALE_DEFAULT, DB_TABLE_SALE_TEMPLATE
+
+
+class SaleMultiTblManager(MultiDbTableManagerBase):
+    db_table_default = DB_TABLE_SALE_DEFAULT
+    db_table_template = DB_TABLE_SALE_TEMPLATE
+    using_db_table_template = True
+
+
+class SaleSoftDeleteMultiTblManager(SoftDeleteMultiDbTableManagerBase):
+    db_table_default = DB_TABLE_SALE_DEFAULT
+    db_table_template = DB_TABLE_SALE_TEMPLATE
+    using_db_table_template = True

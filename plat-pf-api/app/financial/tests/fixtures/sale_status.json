@@ -1,0 +1,184 @@
+[
+  {
+    "model": "financial.salestatus",
+    "pk": "521cfdd6-dcc0-4411-8ab5-52cb2de13ce7",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Refunded",
+      "value": "Refunded",
+      "order": 11000,
+      "description": "Returned item was received, processed, and refunded. Considered completed."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "971bc0b7-4dfa-420c-ab68-ed60d385a87f",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Partially Refunded",
+      "value": "Partially Refunded",
+      "order": 12000,
+      "description": "Same as above but only for some items."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "48caa53a-efc8-4342-bc75-435bf4b9de0e",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Other",
+      "value": "Other",
+      "order": 13000,
+      "description": "Exception sale status. See internal notes."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "3489fb22-f2ff-4c27-9043-0097b8eba04f",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Pending",
+      "value": "Pending",
+      "order": 1000,
+      "description": "Information not yet all received."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "ae0877ba-8268-4db0-bf0a-de16c564e200",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Unpaid",
+      "value": "Unpaid",
+      "order": 2000,
+      "description": "Customer has yet to pay."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "8edb85ee-62c1-41c6-92ce-116a300818ad",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Cancelled",
+      "value": "Cancelled",
+      "order": 3000,
+      "description": "Order has been cancelled."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "5d2536fa-077a-4027-b53a-700b65dae24f",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Unshipped",
+      "value": "Unshipped",
+      "order": 4000,
+      "description": "Order received and ready to be processed and shipped."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "a4d57188-aa29-4f16-9288-5365ebe2e4a7",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Partially Unshipped",
+      "value": "Partially Unshipped",
+      "order": 5000,
+      "description": "Some items have been shipped, but others have yet to be.Can also indicate an order that is to only be partially filled."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "ee38ee98-53db-4b2f-82b1-a3013526b554",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Partially Shipped",
+      "value": "Partially Shipped",
+      "order": 6000,
+      "description": "Some items have been shipped, are in transit, and no items remain to be shipped."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "b1222d0c-696f-4c3d-a6c5-ab590588826a",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Shipped",
+      "value": "Shipped",
+      "order": 7000,
+      "description": "All items that should have shipped, have been, and are in transit."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "b3e8b477-e29b-4b04-a46a-0b3e2368a580",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Completed",
+      "value": "Completed",
+      "order": 8000,
+      "description": "Carrier confirms all items have arrived."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "eb6aea1c-8b93-40df-8286-ed776d0a9f51",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Returning",
+      "value": "Returning",
+      "order": 9000,
+      "description": "Customer has made a valid claim for return and is sending the order back for a refund."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "f8cc2fd5-d735-43d1-b8d6-d38e92309f5b",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Partially Returning",
+      "value": "Partially Returning",
+      "order": 10000,
+      "description": "Same as above, but only for some items in the order."
+    }
+  },
+  {
+    "model": "financial.salestatus",
+    "pk": "57e7389e-2349-4adb-9e8a-9080652336c2",
+    "fields": {
+      "created": "2020-08-04T12:42:18.205Z",
+      "modified": "2020-08-04T12:42:18.205Z",
+      "is_removed": false,
+      "name": "Return Reversed",
+      "value": "Return Reversed",
+      "order": 14000,
+      "description": "Has Refund AND Has Adjustment.Reserval_Reimbursement."
+    }
+  }
+]

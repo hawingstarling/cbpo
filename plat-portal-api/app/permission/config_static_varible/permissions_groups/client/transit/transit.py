@@ -1,0 +1,188 @@
+MODULE_TR_KEY = "TR"
+MODULE_TR_NAME = "2D Transit"
+
+TR_2D_BARCODE_GROUP_KEY = "TR_2D_BARCODE_GROUP"
+TR_2D_BARCODE_GROUP_NAME = "2D BARCODE"
+
+TR_2D_BARCODE_GROUP_ENUM = (TR_2D_BARCODE_GROUP_KEY, TR_2D_BARCODE_GROUP_NAME)
+
+TR_2D_BARCODE_MANAGEMENT_KEY = "TR_2D_BARCODE_MANAGEMENT"
+TR_2D_BARCODE_VIEW_KEY = "TR_2D_BARCODE_VIEW"
+
+#
+TR_FNSKU_GROUP_KEY = "TR_FNSKU_GROUP"
+TR_FNSKU_GROUP_NAME = "FNSKU"
+
+TR_FNSKU_GROUP_ENUM = (TR_FNSKU_GROUP_KEY, TR_FNSKU_GROUP_NAME)
+
+TR_FNSKU_MANAGEMENT_KEY = "TR_FNSKU_MANAGEMENT"
+TR_FNSKU_VIEW_KEY = "TR_FNSKU_VIEW"
+
+#
+TR_HISTORY_GROUP_KEY = "TR_HISTORY_GROUP"
+TR_HISTORY_GROUP_NAME = "History"
+
+TR_HISTORY_GROUP_ENUM = (TR_HISTORY_GROUP_KEY, TR_HISTORY_GROUP_NAME)
+
+TR_HISTORY_VIEW_KEY = "TR_HISTORY_VIEW"
+TR_HISTORY_EXTRACT_DATA_KEY = "TR_HISTORY_EXTRACT_DATA"
+
+#
+TR_SETTING_GROUP_KEY = "TR_SETTING_GROUP"
+TR_SETTING_GROUP_NAME = "Setting"
+
+TR_SETTING_GROUP_ENUM = (TR_SETTING_GROUP_KEY, TR_SETTING_GROUP_NAME)
+
+TR_SETTING_MANAGEMENT_KEY = "TR_SETTING_MANAGEMENT"
+
+TR_SHIPMENT_PLAN_GROUP_KEY = "TR_SHIPMENT_PLAN_GROUP"
+TR_SHIPMENT_PLAN_GROUP_NAME = "Shipment Plan"
+
+TR_SHIPMENT_PLAN_GROUP_ENUM = (TR_SHIPMENT_PLAN_GROUP_KEY, TR_SHIPMENT_PLAN_GROUP_NAME)
+
+TR_SHIPMENT_PLAN_MANAGEMENT_STATUS_KEY = "TR_SHIPMENT_PLAN_MANAGEMENT_STATUS"
+TR_SHIPMENT_BOX_DELETE_KEY = "TR_SHIPMENT_BOX_DELETE"
+
+#
+TR_EFFICIENT_REPORT_GROUP_KEY = "TR_EFFICIENT_REPORT_GROUP"
+TR_EFFICIENT_REPORT_GROUP_NAME = "Efficient Report"
+TR_EFFICIENT_REPORT_GROUP_ENUM = (
+    TR_EFFICIENT_REPORT_GROUP_KEY,
+    TR_EFFICIENT_REPORT_GROUP_NAME,
+)
+
+TR_EFFICIENT_REPORT_MANAGEMENT_KEY = "TR_EFF_REPORT_MANAGEMENT"
+
+#
+TR_CUSTOM_SHIPMENT_GROUP_KEY = "TR_CUSTOM_SHIPMENT_GROUP"
+TR_CUSTOM_SHIPMENT_GROUP_NAME = "Custom Shipments"
+TR_CUSTOM_SHIPMENT_GROUP_ENUM = (
+    TR_CUSTOM_SHIPMENT_GROUP_KEY,
+    TR_CUSTOM_SHIPMENT_GROUP_NAME,
+)
+TR_CUSTOM_SHIPMENT_MANAGEMENT_KEY = "TR_CUSTOM_SHIPMENT_MANAGEMENT"
+TR_CUSTOM_SHIPMENT_BOX_DELETE_KEY = "TR_CUSTOM_SHIPMENT_BOX_DELETE"
+
+#
+TR_VENDOR_CENTRAL_GROUP_KEY = "TR_VENDOR_CENTRAL_GROUP"
+TR_VENDOR_CENTRAL_GROUP_NAME = "Vendor Central "
+TR_VENDOR_CENTRAL_GROUP_ENUM = (
+    TR_VENDOR_CENTRAL_GROUP_KEY,
+    TR_VENDOR_CENTRAL_GROUP_NAME,
+)
+TR_VENDOR_CENTRAL_MANAGEMENT_KEY = "TR_VENDOR_CENTRAL_MANAGEMENT"
+
+#
+TR_SHIPPING_LABEL_GROUP_KEY = "TR_SHIPPING_LABEL_GROUP"
+TR_SHIPPING_LABEL_GROUP_NAME = "Shipping Label"
+TR_SHIPPING_LABEL_GROUP_ENUM = (
+    TR_SHIPPING_LABEL_GROUP_KEY,
+    TR_SHIPPING_LABEL_GROUP_NAME,
+)
+TR_SHIPPING_LABEL_MANAGEMENT_KEY = "TR_SHIPPING_LABEL_MANAGEMENT"
+
+#
+TR_SHIPPING_LABEL_HISTORY_GROUP_KEY = "TR_SHIPPING_LABEL_HISTORY_GROUP"
+TR_SHIPPING_LABEL_HISTORY_GROUP_NAME = "Shipping Label History"
+TR_SHIPPING_LABEL_HISTORY_ENUM = (
+    TR_SHIPPING_LABEL_HISTORY_GROUP_KEY,
+    TR_SHIPPING_LABEL_HISTORY_GROUP_NAME,
+)
+TR_SHIPPING_LABEL_HISTORY_MANAGEMENT_KEY = "TR_SHIPPING_LABEL_HISTORY_MANAGEMENT"
+
+permission_module_tr_config = {
+    TR_2D_BARCODE_GROUP_KEY: {
+        "name": TR_2D_BARCODE_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {"key": TR_2D_BARCODE_MANAGEMENT_KEY, "name": "Management"},
+            {"key": TR_2D_BARCODE_VIEW_KEY, "name": "View"},
+        ],
+    },
+    TR_FNSKU_GROUP_KEY: {
+        "name": TR_FNSKU_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {"key": TR_FNSKU_MANAGEMENT_KEY, "name": "Management"},
+            {"key": TR_FNSKU_VIEW_KEY, "name": "View"},
+        ],
+    },
+    TR_HISTORY_GROUP_KEY: {
+        "name": TR_HISTORY_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {"key": TR_HISTORY_VIEW_KEY, "name": "View"},
+            {"key": TR_HISTORY_EXTRACT_DATA_KEY, "name": "Extract Data"},
+        ],
+    },
+    TR_SETTING_GROUP_KEY: {
+        "name": TR_SETTING_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [{"key": TR_SETTING_MANAGEMENT_KEY, "name": "Management"}],
+    },
+    TR_SHIPMENT_PLAN_GROUP_KEY: {
+        "name": TR_SHIPMENT_PLAN_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {
+                "key": TR_SHIPMENT_PLAN_MANAGEMENT_STATUS_KEY,
+                "name": "Manage shipment status",
+            },
+            {
+                "key": TR_SHIPMENT_BOX_DELETE_KEY,
+                "name": "Delete shipment box"
+            }
+        ],
+    },
+    TR_EFFICIENT_REPORT_GROUP_KEY: {
+        "name": TR_EFFICIENT_REPORT_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {
+                "key": TR_EFFICIENT_REPORT_MANAGEMENT_KEY,
+                "name": "Management",
+            },
+        ],
+    },
+    TR_CUSTOM_SHIPMENT_GROUP_KEY: {
+        "name": TR_CUSTOM_SHIPMENT_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {
+                "key": TR_CUSTOM_SHIPMENT_MANAGEMENT_KEY,
+                "name": "Management",
+            },
+            {
+                "key": TR_CUSTOM_SHIPMENT_BOX_DELETE_KEY,
+                "name": "Delete custom shipment box"
+            }
+        ],
+    },
+    TR_VENDOR_CENTRAL_GROUP_KEY: {
+        "name": TR_VENDOR_CENTRAL_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {
+                "key": TR_VENDOR_CENTRAL_MANAGEMENT_KEY,
+                "name": "Management",
+            },
+        ],
+    },
+    TR_SHIPPING_LABEL_GROUP_KEY: {
+        "name": TR_SHIPPING_LABEL_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {"key": TR_SHIPPING_LABEL_MANAGEMENT_KEY, "name": "Management"}
+        ],
+    },
+    TR_SHIPPING_LABEL_HISTORY_GROUP_KEY: {
+        "name": TR_SHIPPING_LABEL_HISTORY_GROUP_NAME,
+        "module": MODULE_TR_KEY,
+        "permissions": [
+            {
+                "key": TR_SHIPPING_LABEL_HISTORY_MANAGEMENT_KEY,
+                "name": "Management",
+            }
+        ],
+    },
+}

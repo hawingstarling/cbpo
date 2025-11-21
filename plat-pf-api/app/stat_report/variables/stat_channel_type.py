@@ -1,0 +1,11 @@
+STAT_REPORT_HOUR = 'hour'
+STAT_REPORT_DAILY = 'daily'
+STAT_REPORT_MONTHLY = 'monthly'
+STAT_REPORT_YEARLY = 'yearly'
+
+STAT_REPORT_TYPE = (
+    (STAT_REPORT_HOUR, 'Hourly'),
+    (STAT_REPORT_DAILY, 'Daily'),
+    (STAT_REPORT_MONTHLY, 'Monthly'),
+    (STAT_REPORT_YEARLY, 'Yearly'),
+)

@@ -1,0 +1,11 @@
+[
+  {
+    "model": "tenancies.setting",
+    "pk": 1,
+    "fields": {
+      "created": "2021-09-21T03:10:55.735Z",
+      "modified": "2021-09-21T03:10:55.735Z",
+      "emails": "[\"vnhd_admin@example.com\", \"vnhd_admin_2@example.com\"]"
+    }
+  }
+]

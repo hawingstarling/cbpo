@@ -1,0 +1,16 @@
+[
+  {
+    "model": "payments.approvalorganizationalpayment",
+    "pk": "c3d06043-6f9a-41c1-a59a-91b164668b8a",
+    "fields": {
+      "created": "2021-03-30T10:55:43.574Z",
+      "modified": "2021-06-09T07:09:11.355Z",
+      "is_removed": false,
+      "organization": "4e50aaab-78a8-4373-90b7-2690ae214d31",
+      "subscription": "ca3e0268-2090-4557-bbf5-f09ee544eff7",
+      "max_internal_users": null,
+      "max_external_users": null,
+      "max_workspaces": null
+    }
+  }
+]

@@ -1,0 +1,14 @@
+-r base.txt
+
+django_extensions==2.2.9
+django-debug-toolbar==2.2
+
+
+
+# VIM configuration for development
+neovim
+jedi
+flake8
+black
+isort
+doq

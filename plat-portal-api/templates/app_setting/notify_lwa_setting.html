@@ -1,0 +1,27 @@
+{% extends 'app_setting/base_sending_email_template.html' %}
+{% block content %}
+    <p>
+        I hope this email finds you well. We wanted to bring to your attention that the LWA credentials for
+        {{ app_lwa_name }} are set to expire soon.
+    </p>
+
+    <p><strong>App Name:</strong> {{ app_lwa_name }}</p>
+
+    <p><strong>App ID:</strong> {{ app_lwa_id }}</p>
+
+    <p><strong>Rotation Deadline:</strong> {{ date_expired }}</p>
+    <p>
+        To ensure a seamless user experience, and to prevent any disruption in service, we kindly request you
+        to take a moment to refresh the LWA credentials before the expiry date mentioned above.
+    </p>
+
+    <p>Here are the steps to refresh the credentials:</p>
+
+    <p>1. Log in to the Login with Amazon Developer Console.</p>
+    <p>2. Navigate to the <strong>Your Apps</strong> section.</p>
+    <p>3. Find <strong>{{ app_lwa_name }}</strong> in the list and click on it.</p>
+    <p>4. Locate the section for credentials or authentication.</p>
+    <p>5. Generate new credentials or refresh the existing ones.</p>
+    <p>6. Copy the new credentials and <strong><a href="{{ url_django_admin }}">Update your LWA Credential Settings</a></strong> in the Channel Precision Portal.</p>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends '_base_sending_email_template.html' %}
+{% block content %}
+
+    <p>This is an alert for <a href="{{ ref_link }}" target="_blank"> new sale(s) </a> found under your Precise Financial view “{{ view_name }}”. Below is/are the
+        sale(s):</p>
+
+    <div>
+        <table style="padding: 10px 20px; border-collapse: collapse">
+            <tr>
+                <th style="padding: 5px; border: 1px solid black;">Channel</th>
+                <th style="padding: 5px; border: 1px solid black;">Channel Sale ID</th>
+                <th style="padding: 5px; border: 1px solid black;">Sale Date</th>
+                <th style="padding: 5px; border: 1px solid black;">Brand</th>
+                <th style="padding: 5px; border: 1px solid black;">SKU</th>
+                <th style="padding: 5px; border: 1px solid black;">Total Charged</th>
+                <th style="padding: 5px; border: 1px solid black;">Profit</th>
+                <th style="padding: 5px; border: 1px solid black;">Margin</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.channel }}</td>
+                    <td style="padding: 5px; border: 1px solid black;"><a href="https://sellercentral.{{ item.channel }}/orders-v3/order/{{ item.channel_sale_id }}" target="_blank">{{ item.channel_sale_id }}</a></td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.sale_date }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.brand }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.sku }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.total_charged }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.profit }}</td>
+                    <td style="padding: 5px; border: 1px solid black;">{{ item.margin }} %</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+{% endblock %}

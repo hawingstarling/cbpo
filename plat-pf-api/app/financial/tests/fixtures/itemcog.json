@@ -1,0 +1,28 @@
+[
+  {
+    "model": "financial.itemcog",
+    "pk": "3ac71edf-4c70-45fd-bb2a-1992e347df28",
+    "fields": {
+      "created": "2022-06-08T04:37:04.148Z",
+      "modified": "2022-06-08T04:37:04.149Z",
+      "is_removed": false,
+      "item": "d7e93d88-ea0e-41f8-a909-f9a5e415234a",
+      "cog": "30.66",
+      "effect_start_date": "2020-08-25T00:00:00Z",
+      "effect_end_date": "2020-08-28T00:00:00Z"
+    }
+  },
+  {
+    "model": "financial.itemcog",
+    "pk": "5ca0110f-6fd0-46c8-a90b-4ca1efbea31a",
+    "fields": {
+      "created": "2022-06-08T04:37:04.148Z",
+      "modified": "2022-06-08T04:37:04.148Z",
+      "is_removed": false,
+      "item": "b657093e-dac6-4113-9f27-629bc520aaf8",
+      "cog": "89.40",
+      "effect_start_date": "2020-08-27T00:00:00Z",
+      "effect_end_date": "2020-08-29T00:00:00Z"
+    }
+  }
+]

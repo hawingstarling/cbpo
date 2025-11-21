@@ -1,0 +1,40 @@
+from django.urls import path
+
+from ..sub_views.rest_auth import (ChangeEmailView, ChangeEmailConfirmView,
+                                   CustomRegisterView, UserRegisterActivationView, UserReSendActivationCodeView,
+                                   AppLoginView, CustomPasswordResetView, UserResetPasswordIdentityView,
+                                   CustomRefreshJSONWebTokenView)
+
+urlpatterns = [
+
+    path('rest-auth/email/new/',
+         ChangeEmailView.as_view(),
+         name='change-email'),
+    path('rest-auth/email/new/confirm/',
+         ChangeEmailConfirmView.as_view(),
+         name='verify-changing-email'),
+    path('rest-auth/registration/',
+         CustomRegisterView.as_view(),
+         name='user-register'),
+    path('rest-auth/registration/activation/',
+         UserRegisterActivationView.as_view(),
+         name='user-activation'),
+    path('rest-auth/registration/activation/resend-code/',
+         UserReSendActivationCodeView.as_view(),
+         name='resend-activation'),
+    path('rest-auth/registration/activation/resend-code/',
+         UserReSendActivationCodeView.as_view(),
+         name='resend-activation'),
+    path('rest-auth/app/login/',
+         AppLoginView.as_view(),
+         name='login-app-token'),
+    path('rest-auth/app/jwt-refresh/',
+         CustomRefreshJSONWebTokenView.as_view(),
+         name='app-jwt-refresh'),
+    path('rest-auth/password/reset/',
+         CustomPasswordResetView.as_view(),
+         name='password-reset'),
+    path('rest-auth/password/reset/identity/',
+         UserResetPasswordIdentityView.as_view(),
+         name='password-reset-identity'),
+]

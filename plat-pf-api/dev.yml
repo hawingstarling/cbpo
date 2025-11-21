@@ -1,0 +1,176 @@
+version: "3"
+
+volumes:
+    postgres_data:
+    postgres_backup:
+    ipython_data:
+
+services:
+    postgres:
+        image: cbpo-postgres-financial
+        build: ./compose/postgres
+        container_name: cbpo-postgres-financial
+        volumes:
+            - postgres_data:/var/lib/postgresql/data
+            - ./backups:/backups
+        env_file:
+            - ./config/settings/.env
+        ports:
+            - "5432:5432"
+
+    redis:
+        image: redis:latest
+
+    django-pf:
+        image: cbpo-django-financial-dev
+        build:
+            context: .
+            dockerfile: compose/django/Dockerfile-dev
+        container_name: cbpo-django-pf-dev
+        command: /start-dev.sh
+        depends_on:
+            - postgres
+            - redis
+        environment:
+            - DJANGO_SETTINGS_MODULE=config.settings.local
+        env_file:
+            - ./config/settings/.env
+        volumes:
+            - .:/app
+            - ipython_data:/root/.ipython
+        ports:
+            - "8000:8000"
+
+        links:
+            - postgres
+            - redis
+
+    celeryworker-pf:
+        image: cbpo-django-financial-dev
+        build:
+            context: .
+            dockerfile: compose/django/Dockerfile-dev
+        command: /start-celery-worker.sh
+        container_name: cbpo-celeryworker-pf-dev
+        depends_on:
+            - postgres
+            - redis
+        environment:
+            - DJANGO_SETTINGS_MODULE=config.settings.local
+        env_file:
+            - ./config/settings/.env
+        volumes:
+            - .:/app
+        links:
+            - postgres
+            - redis
+    #    deploy:
+    #      replicas: 2
+
+    #  celeryworker-pf-analysis:
+    #    image: cbpo-django-financial-dev
+    #    build:
+    #      context: .
+    #      dockerfile: compose/django/Dockerfile-dev
+    #    command: /start-celery-worker-sync-analysis.sh
+    #    container_name: cbpo-celeryworker-pf-analysis-dev
+    #    depends_on:
+    #      - postgres
+    #      - redis
+    #    environment:
+    #      - DJANGO_SETTINGS_MODULE=config.settings.local
+    #    env_file:
+    #      - ./config/settings/.env
+    #    volumes:
+    #      - .:/app
+    #    links:
+    #      - postgres
+    #      - redis
+    #  #    deploy:
+    #  #      replicas: 2
+    #
+    #  celeryworker-pf-import-lib:
+    #    image: cbpo-django-financial-dev
+    #    build:
+    #      context: .
+    #      dockerfile: compose/django/Dockerfile-dev
+    #    command: /start-celery-worker-import-lib.sh
+    #    container_name: cbpo-celeryworker-pf-import-lib-dev
+    #    depends_on:
+    #      - postgres
+    #      - redis
+    #    environment:
+    #      - DJANGO_SETTINGS_MODULE=config.settings.local
+    #    env_file:
+    #      - ./config/settings/.env
+    #    volumes:
+    #      - .:/app
+    #    links:
+    #      - postgres
+    #      - redis
+    ##      deploy:
+    ##        replicas: 2
+    #
+    #
+    #  celeryworker-pf-bulk:
+    #    image: cbpo-django-financial-dev
+    #    build:
+    #      context: .
+    #      dockerfile: compose/django/Dockerfile-dev
+    #    command: /start-celery-worker-bulk.sh
+    #    container_name: cbpo-celeryworker-pf-bulk-dev
+    #    depends_on:
+    #      - postgres
+    #      - redis
+    #    environment:
+    #      - DJANGO_SETTINGS_MODULE=config.settings.local
+    #    env_file:
+    #      - ./config/settings/.env
+    #    volumes:
+    #      - .:/app
+    #    links:
+    #      - postgres
+    #      - redis
+    ##      deploy:
+    ##        replicas: 2
+
+    celerybeat-pf:
+        image: cbpo-django-financial-dev
+        build:
+            context: .
+            dockerfile: compose/django/Dockerfile-dev
+        command: /start-celery-beat.sh
+        container_name: cbpo-celerybeat-pf-dev
+        depends_on:
+            - postgres
+            - redis
+        environment:
+            - DJANGO_SETTINGS_MODULE=config.settings.local
+        env_file:
+            - ./config/settings/.env
+        volumes:
+            - .:/app
+        links:
+            - postgres
+            - redis
+
+    celeryflower-pf:
+        image: cbpo-django-financial-dev
+        build:
+            context: .
+            dockerfile: compose/django/Dockerfile-dev
+        command: celery -A app.core flower
+        container_name: cbpo-celeryflower-pf-dev
+        depends_on:
+            - celeryworker-pf
+            - redis
+        environment:
+            - DJANGO_SETTINGS_MODULE=config.settings.local
+        env_file:
+            - ./config/settings/.env
+        volumes:
+            - .:/app
+        ports:
+            - "5555:5555"
+        links:
+            - redis
