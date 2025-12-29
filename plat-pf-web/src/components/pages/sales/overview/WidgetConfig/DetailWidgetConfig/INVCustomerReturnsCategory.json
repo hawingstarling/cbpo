@@ -1,0 +1,502 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 140,
+      "w": 6,
+      "h": 20,
+      "i": 34
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "INV Customer Returns",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-423bf27f-e541-4e9f-8b7e-915d82d0297a",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "styles": {
+            "beautyScrollbar": true
+          },
+          "dataSource": "idreportingsdk",
+          "header": {
+            "resizeMinWidth": null,
+            "multiline": false,
+            "draggable": false
+          },
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "columns": [
+            {
+              "displayName": "Region",
+              "name": "Region",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "string",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Units Sold",
+              "name": "Units Sold",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "number",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Unit Price",
+              "name": "Unit Price",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "number",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Unit Cost",
+              "name": "Unit Cost",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "number",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Total Revenue",
+              "name": "Total Revenue",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "number",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Total Cost",
+              "name": "Total Cost",
+              "visible": true,
+              "cell": {
+                "width": 150.9,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "number",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            }
+          ],
+          "sorting": [],
+          "widget": {
+            "title": {
+              "text": "Table of [Region, Units Sold, Unit Price, Unit Cost, Total Revenue, Total Cost]",
+              "enabled": false,
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "globalControlOptions": {
+            "aggregation": {
+              "enabled": false
+            },
+            "globalGrouping": {
+              "enabled": false,
+              "config": {
+                "value": false
+              },
+              "position": "top"
+            },
+            "grouping": {
+              "enabled": false
+            },
+            "editColumn": {
+              "enabled": false
+            },
+            "editColumnLabel": {
+              "enabled": false
+            },
+            "editColumnFormat": {
+              "enabled": false
+            },
+            "editBin": {
+              "enabled": false
+            },
+            "id": "id-fa91107d-3d05-4e7f-a304-848d6211a090"
+          },
+          "grouping": {
+            "columns": [],
+            "aggregations": []
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 50,
+            "current": 1,
+            "total": 2,
+            "type": "auto",
+            "buttons": {
+              "first": {
+                "visibility": true,
+                "label": "First",
+                "style": {}
+              },
+              "last": {
+                "visibility": true,
+                "label": "Last",
+                "style": {}
+              },
+              "prev": {
+                "visibility": true,
+                "label": "Previous",
+                "style": {}
+              },
+              "next": {
+                "visibility": true,
+                "label": "Next",
+                "style": {}
+              }
+            },
+            "numbers": {
+              "beforeCurrent": 2,
+              "afterCurrent": 2
+            },
+            "default": "auto",
+            "id": "id-e6bb7446-e8bd-4159-8cab-0300577e0fe3",
+            "widget": {
+              "title": {
+                "enabled": true,
+                "text": ""
+              },
+              "class": "",
+              "style": {}
+            }
+          },
+          "formats": {
+            "binFormats": {},
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "compactMode": {
+            "enabled": false,
+            "mode": "normal"
+          },
+          "rowActions": {
+            "enabled": false,
+            "inline": 1,
+            "display": "always",
+            "position": "left",
+            "colWidth": 150,
+            "controls": []
+          },
+          "bulkActions": {
+            "enabled": false,
+            "enableInlineAction": true,
+            "mode": "checkbox",
+            "filterMode": false,
+            "total": 100,
+            "labels": {
+              "actionColumn": "Actions",
+              "selectAll": "Select all $total items",
+              "allSelected": "All $total items selected"
+            },
+            "controls": []
+          },
+          "detailView": {
+            "enabled": true,
+            "mode": "inline",
+            "action": {
+              "breakpoint": 768,
+              "props": {
+                "size": "sm",
+                "variant": "primary"
+              },
+              "icons": {
+                "closed": "fa-arrow-circle-o-down",
+                "opened": "fa-arrow-circle-o-right"
+              },
+              "label": "View"
+            },
+            "breakpoints": {
+              "320": 1,
+              "768": 2,
+              "1024": 3
+            }
+          },
+          "globalSummary": {
+            "enabled": false,
+            "summaries": []
+          },
+          "tableSummary": {
+            "enabled": false,
+            "position": "footer",
+            "labelActionColumn": "Summary",
+            "summaries": []
+          },
+          "filter": {},
+          "id": "id-6a88d93e-edec-4b1c-8c8d-e734fc2446ec"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-7ca886d6-af1f-409b-88ce-03ef63f93b4a"
+  }
+}

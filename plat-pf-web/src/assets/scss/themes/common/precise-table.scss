@@ -1,0 +1,27 @@
+$base-color-table: #fff !default;
+$font-color-table: #232F3E !default;
+$border-color-table: #E6E8F0 !default;
+$border-color-table: #E6E8F0 !default;
+
+.table {
+  background-color: $base-color-table;
+  color: $font-color-table !important;
+  border: 1px solid $border-color-table !important;
+  th {
+    background-color: #F5F8FF !important;
+    color: #080E2C !important;
+    border-color: $border-color-table !important;
+    border-bottom: none !important;
+    font-weight: 600;
+  }
+  td {
+    padding: 0.8rem 1rem;
+    .text-primary {
+      color: $font-color-table !important;
+    }
+  }
+  tbody tr:hover:not(.b-table-empty-row) {
+    color: darken($color: $font-color, $amount: 40%) !important;
+    background-color: lighten($color: $base-color-table, $amount: 4%) !important;
+  }
+}

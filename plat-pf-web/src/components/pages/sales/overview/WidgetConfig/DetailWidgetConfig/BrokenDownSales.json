@@ -1,0 +1,80 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "widget": {
+      "title": {
+        "enabled": false
+      }
+    },
+    "menu": {
+      "enabled": false
+    },
+    "exportConfig": {
+      "fileName": "broken-down-sales"
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "styles": {
+            "beautyScrollbar": true
+          },
+          "dataSource": "",
+          "widget": {
+            "title": {
+              "enabled": false
+            }
+          },
+          "timezone": {
+            "enable": false,
+            "utc": null
+          },
+          "exportConfig": {
+            "fileName": "broken-down-sales"
+          },
+          "columns": [
+            {
+              "name": "view_title",
+              "displayName": " ",
+              "cell": {
+                "width": 250
+              },
+              "sortable": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "item_unit_sales",
+              "displayName": "Units Sales",
+              "sortable": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "item_sale_charged",
+              "displayName": "Sales Charged",
+              "sortable": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "item_profit",
+              "displayName": "Profit",
+              "sortable": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "item_margin",
+              "displayName": "Margin",
+              "sortable": {
+                "enabled": false
+              }
+            }
+          ],
+          "id": "974ee0bd-c899-42bb-9e69-89094123964e"
+        }
+      }
+    ]
+  }
+}

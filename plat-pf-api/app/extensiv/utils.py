@@ -10,10 +10,57 @@ from app.financial.services.postgres_fulltext_search import ISortConfigPostgresF
 logger = logging.getLogger(__name__)
 
 
+def calculate_conflict_status(extensiv_cog=None, dc_cog=None, pf_cog=None):
+    """
+    Tính toán status conflict dựa trên tất cả các giá trị COG có sẵn.
+    
+    Args:
+        extensiv_cog: Giá trị Extensiv COG (có thể là None)
+        dc_cog: Giá trị Data Central COG (có thể là None)
+        pf_cog: Giá trị PF COG (có thể là None)
+    
+    Returns:
+        ConflictStatus: NO_CONFLICT nếu tất cả các giá trị (sau khi round) bằng nhau,
+                       CONFLICT nếu có ít nhất 2 giá trị khác nhau
+    """
+    # Lọc bỏ các giá trị None và convert sang float
+    values = []
+    if extensiv_cog is not None:
+        try:
+            values.append(round_currency(float(extensiv_cog)))
+        except (TypeError, ValueError):
+            pass
+    
+    if dc_cog is not None:
+        try:
+            values.append(round_currency(float(dc_cog)))
+        except (TypeError, ValueError):
+            pass
+    
+    if pf_cog is not None:
+        try:
+            values.append(round_currency(float(pf_cog)))
+        except (TypeError, ValueError):
+            pass
+    
+    # Nếu không có giá trị nào hoặc chỉ có 1 giá trị, không có conflict
+    if len(values) <= 1:
+        return ConflictStatus.NO_CONFLICT
+    
+    # Kiểm tra xem tất cả các giá trị có bằng nhau không
+    # Lấy giá trị đầu tiên làm chuẩn
+    first_value = values[0]
+    for value in values[1:]:
+        if value != first_value:
+            # Có ít nhất 2 giá trị khác nhau -> có conflict
+            return ConflictStatus.CONFLICT
+    
+    # Tất cả các giá trị đều bằng nhau -> không có conflict
+    return ConflictStatus.NO_CONFLICT
+
+
 def init_cog_conflict(item: any, configured_priority_source: str, old_value: Union[float, None], new_value: float):
     try:
-        status = ConflictStatus.CONFLICT if round_currency(old_value) != round_currency(new_value) \
-            else ConflictStatus.NO_CONFLICT
         conflict_data = {
             "client_id": item.client_id,
             "channel_id": item.sale.channel_id,
@@ -21,7 +68,7 @@ def init_cog_conflict(item: any, configured_priority_source: str, old_value: Uni
             "sale_ids": [item.sale_id],
             "channel_sale_ids": [item.sale.channel_sale_id],
             "used_cog": configured_priority_source,
-            "status": status,
+            "status": ConflictStatus.CONFLICT,  # Tạm thời set default, sẽ tính lại sau
             "extensiv_cog": None,
             "dc_cog": None,
             "pf_cog": None,
@@ -38,6 +85,13 @@ def init_cog_conflict(item: any, configured_priority_source: str, old_value: Uni
         # Set new value based on a priority source
         conflict_data[source_map.get(
             configured_priority_source, "pf_cog")] = new_value
+
+        # Tính lại status dựa trên tất cả các giá trị COG có sẵn
+        conflict_data["status"] = calculate_conflict_status(
+            extensiv_cog=conflict_data.get("extensiv_cog"),
+            dc_cog=conflict_data.get("dc_cog"),
+            pf_cog=conflict_data.get("pf_cog")
+        )
 
         logger.debug(f"[init_cog_conflict] {conflict_data}")
 

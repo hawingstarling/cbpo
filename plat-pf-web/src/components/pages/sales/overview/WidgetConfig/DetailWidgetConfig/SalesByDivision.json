@@ -1,0 +1,36 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "widget": {
+      "title": {
+        "text": "",
+        "enabled": false,
+        "edited": false
+      }
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-html-editor",
+        "builder": {
+          "enabled": true,
+          "visualization": false
+        },
+        "config": {
+          "id": "",
+          "content": "",
+          "timezone": {
+            "enabled": true,
+            "utc": "America/Los_Angeles",
+            "visible": true
+          },
+          "exportConfig": {
+            "fileName": "sales-by-division-widget"
+          }
+        }
+      }
+    ],
+    "exportConfig": {
+      "fileName": "sales-by-division-widget"
+    }
+  }
+}

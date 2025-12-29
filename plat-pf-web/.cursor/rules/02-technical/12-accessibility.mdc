@@ -1,0 +1,49 @@
+---
+description: |
+  Accessibility patterns and best practices for Vue.js applications with CoreUI, including ARIA attributes, keyboard navigation, and screen reader support.
+globs:
+  - src/**/*.vue
+  - src/assets/scss/**/*.scss
+alwaysApply: true
+rules:
+  # ARIA Attributes
+  - Use proper ARIA attributes for form elements
+  - Implement proper ARIA labels and descriptions
+  - Use proper ARIA roles and states
+  - Follow the established ARIA patterns
+
+  # Keyboard Navigation
+  - Implement proper keyboard navigation
+  - Use proper tab order and focus management
+  - Use proper keyboard event handling
+  - Follow the established keyboard navigation patterns
+
+  # Screen Reader Support
+  - Use proper semantic HTML elements
+  - Implement proper screen reader announcements
+  - Use proper alt text for images
+  - Follow the established screen reader patterns
+
+  # Form Accessibility
+  - Use proper form labels and associations
+  - Implement proper form validation announcements
+  - Use proper form error handling
+  - Follow the established form accessibility patterns
+
+  # Color and Contrast
+  - Use proper color contrast ratios
+  - Implement proper color accessibility
+  - Use proper color coding alternatives
+  - Follow the established color accessibility patterns
+
+  # Focus Management
+  - Use proper focus management
+  - Implement proper focus trapping
+  - Use proper focus indicators
+  - Follow the established focus management patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+  - CoreUI Bootstrap: `02-technical/03-coreui-bootstrap.mdc`
+---

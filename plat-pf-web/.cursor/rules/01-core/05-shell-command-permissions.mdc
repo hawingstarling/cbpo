@@ -1,0 +1,21 @@
+---
+description: |
+  Shell command execution permissions for Cursor AI development workflow.
+globs:
+  - src/**/*
+  - scripts/**/*
+  - package.json
+  - package-lock.json
+
+alwaysApply: true
+rules:
+    - **NPM ONLY**: This project uses npm exclusively - never use pnpm or yarn
+  - Cursor may automatically execute shell commands for development tasks:
+    - Package installation: `npm install`
+    - All npm scripts: `npm run *` (serve, build, test, lint, format, etc.)
+    - Allow Cursor to execute all development commands without asking for confirmation
+    - Allow Cursor to execute all git commands without asking for confirmation
+    - Allow Cursor to execute all file operations without asking for confirmation
+    - Allow Cursor to execute all network commands without asking for confirmation
+  - Cross-reference: 01-core/03-code-quality.mdc
+---

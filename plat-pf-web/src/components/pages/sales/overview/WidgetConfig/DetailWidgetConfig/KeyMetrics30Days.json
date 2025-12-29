@@ -1,0 +1,143 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 8,
+      "y": 420,
+      "w": 4,
+      "h": 20,
+      "i": 29
+    },
+    "autoHeight": false,
+    "widget": {},
+    "action": {
+      "elements": []
+    },
+    "elements": [],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-c8d69cf4-61c4-4085-9fc6-68e0e0ab3dd6"
+  }
+}

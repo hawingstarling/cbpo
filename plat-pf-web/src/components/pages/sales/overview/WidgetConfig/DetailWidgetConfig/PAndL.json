@@ -1,0 +1,141 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "menu": {
+      "enabled": false
+    },
+    "widget": {
+      "title": {
+        "enabled": false
+      }
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "",
+          "widget": {
+            "title": {
+              "enabled": false
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "sale_date",
+              "displayName": "Sale Date",
+              "type": "date",
+              "format": {
+                "type": "temporal",
+                "config": {
+                  "comma": true
+                }
+              }
+            },
+            {
+              "name": "item_sale_charged",
+              "displayName": "Gross Revenue",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              }
+            },
+            {
+              "name": "item_profit",
+              "displayName": "Profit",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              }
+            }
+          ],
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [
+                  {
+                    "id": "x_base",
+                    "type": "category",
+                    "display": true,
+                    "format": null,
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ],
+                "y": [
+                  {
+                    "id": "y_chart0",
+                    "type": "linear",
+                    "format": {
+                      "type": "numeric",
+                      "config": {
+                        "comma": true,
+                        "siPrefix": true
+                      }
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": false
+                },
+                "marker": {
+                  "enabled": false
+                }
+              },
+              "series": [
+                {
+                  "type": "line",
+                  "name": "Gross Revenue",
+                  "axis": {
+                    "x": "x_base",
+                    "y": "y_chart0"
+                  },
+                  "options": {
+                    "color": "#52C0E1"
+                  },
+                  "data": {
+                    "x": "sale_date",
+                    "y": "item_sale_charged"
+                  },
+                  "id": "chart0"
+                },
+                {
+                  "type": "line",
+                  "name": "Profit",
+                  "axis": {
+                    "x": "x_base",
+                    "y": "y_chart0"
+                  },
+                  "options": {
+                    "color": "#91E4AB"
+                  },
+                  "data": {
+                    "x": "sale_date",
+                    "y": "item_profit"
+                  },
+                  "id": "chart1"
+                }
+              ]
+            }
+          ],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          }
+        }
+      }
+    ]
+  }
+}

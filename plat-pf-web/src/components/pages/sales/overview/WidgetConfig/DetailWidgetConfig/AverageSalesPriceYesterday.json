@@ -1,0 +1,186 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 20,
+      "i": 0,
+      "id": "id-3a26e38e-b22c-439d-aa80-716ddf64ce35",
+      "moved": false
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Rich text content",
+        "enabled": false,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-015174f4-c4d5-4783-84c4-fd619b5093d5",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-html-editor",
+        "config": {
+          "timezone": {
+            "enabled": true,
+            "utc": "America/Los_Angeles"
+          },
+          "dataSource": "SALE_ITEMS",
+          "content": "<div style=\"width:100%; display:flex; justify-content:space-between; font-size:18px; height: auto; padding: 0 20px;\">\n        <div>\n          <div>Total Order Items Yesterday</div>\n          <div style=\"font-weight: bold;\">\n            [format expression=\"SUMIF(@quantity,(@sale_date >=DATE_START_OF(YESTERDAY(),'day')) & (@sale_date < DATE_START_OF(TODAY(),'day')) & (@channel_name = 'amazon.com') & (@item_sale_status in ['Pending', 'Unshipped', 'Shipped', 'Partially Refunded']))\" type=\"numeric\" format=',d' ][/format]\n          </div>\n            </div>\n                    <div>\n          <div>Ordered Product Sales Yesterday</div>\n          <div style=\"font-weight: bold;\">\n            [format expression=\"SUMIF(@item_sale_charged,(@sale_date >=DATE_START_OF(YESTERDAY(),'day')) & (@sale_date < DATE_START_OF(TODAY(),'day')) & (@channel_name = 'amazon.com') & (@item_sale_status in ['Pending', 'Unshipped', 'Shipped', 'Partially Refunded']))\" type=\"numeric\" format=',d' prefix=\"$\" ][/format]\n          </div>\n            </div>\n                    <div>\n          <div>Avg. Sales/Order Item Yesterday</div>\n          <div style=\"font-weight: bold;\">\n            [format expression=\"SUMIF(@item_sale_charged, (@sale_date >=DATE_START_OF(YESTERDAY(), 'day')) & (@sale_date < DATE_START_OF(TODAY(), 'day')) & (@channel_name = 'amazon.com') & (@item_sale_status in ['Pending', 'Unshipped', 'Shipped', 'Partially Refunded'])) / SUMIF(@quantity, (@sale_date >=DATE_START_OF(YESTERDAY(), 'day')) & (@sale_date < DATE_START_OF(TODAY(), 'day')) & (@channel_name = 'amazon.com') & (@item_sale_status in ['Pending', 'Unshipped', 'Shipped', 'Partially Refunded']))\" type=\"numeric\" format='.2f' prefix=\"$\" ][/format]\n          </div>\n            </div>\n                   </div>",
+          "id": "634110c0-4ee0-430b-ad96-cbeba90ff5f8",
+          "options": {
+            "plugins": [
+              "advlist autolink lists link image preview anchor",
+              "searchreplace visualblocks code",
+              "insertdatetime media table paste"
+            ],
+            "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment"
+          },
+          "sizeSettings": {
+            "defaultMinSize": 200,
+            "warningText": "The area is too small for this visualization."
+          }
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "label": "Data Source 1",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            },
+            {
+              "label": "Data Source 2",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "optional": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "18ef0dbf-cb56-4c02-8d7f-89b7663f13cb"
+  },
+  "visualizationId": "d4696371-3e62-4721-8651-5c0b4a88353d"
+}

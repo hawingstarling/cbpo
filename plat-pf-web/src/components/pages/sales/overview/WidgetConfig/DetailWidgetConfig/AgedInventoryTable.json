@@ -1,0 +1,928 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 340,
+      "w": 12,
+      "h": 20,
+      "i": 20
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Aged Inventory",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-60d6d666-e3ab-4c79-9f55-b443128a3216",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "styles": {
+            "beautyScrollbar": true
+          },
+          "dataSource": "allSales",
+          "header": {
+            "resizeMinWidth": null,
+            "multiline": false,
+            "draggable": false
+          },
+          "drillDown": {
+            "enabled": true,
+            "config": {
+              "modal": {
+                "id": "id-82bcf1fc-8972-42de-8a56-82f4334f94a2",
+                "header": {
+                  "text": "Drill Down"
+                },
+                "actions": {
+                  "applyButton": {
+                    "text": "Apply"
+                  },
+                  "cancelButton": {
+                    "text": "Cancel"
+                  }
+                }
+              },
+              "path": {
+                "enabled": true,
+                "settings": []
+              },
+              "id": "id-51765c0b-a8e9-4ae7-a019-2896ec333357"
+            }
+          },
+          "columns": [
+            {
+              "displayName": "Brand",
+              "name": "brand",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "string",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-12",
+              "name": "1-12",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-11",
+              "name": "1-11",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-10",
+              "name": "1-10",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-9",
+              "name": "1-9",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-8",
+              "name": "1-8",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-7",
+              "name": "1-7",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-6",
+              "name": "1-6",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-5",
+              "name": "1-5",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-4",
+              "name": "1-4",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "1-3",
+              "name": "1-3",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "30Day",
+              "name": "30day",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "30Avg",
+              "name": "30avg",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Dec",
+              "name": "dec",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Nov",
+              "name": "nov",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "Oct",
+              "name": "oct",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            }
+          ],
+          "sorting": [],
+          "widget": {
+            "title": {
+              "text": "Table of [brand, item_sale_charged, item_shipping_charged, item_shipping_cost, fulfillment_type]",
+              "enabled": true,
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "globalControlOptions": {
+            "aggregation": {
+              "enabled": false
+            },
+            "globalGrouping": {
+              "enabled": false,
+              "config": {
+                "value": false
+              },
+              "position": "top"
+            },
+            "grouping": {
+              "enabled": false
+            },
+            "editColumn": {
+              "enabled": false
+            },
+            "editColumnLabel": {
+              "enabled": false
+            },
+            "editColumnFormat": {
+              "enabled": false
+            },
+            "editBin": {
+              "enabled": false
+            },
+            "id": "id-3fdcca5c-9380-4eb1-a1c6-36f387d96d11"
+          },
+          "grouping": {
+            "columns": [],
+            "aggregations": []
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 50,
+            "current": 1,
+            "total": 80,
+            "type": "auto",
+            "buttons": {
+              "first": {
+                "visibility": true,
+                "label": "First",
+                "style": {}
+              },
+              "last": {
+                "visibility": true,
+                "label": "Last",
+                "style": {}
+              },
+              "prev": {
+                "visibility": true,
+                "label": "Previous",
+                "style": {}
+              },
+              "next": {
+                "visibility": true,
+                "label": "Next",
+                "style": {}
+              }
+            },
+            "numbers": {
+              "beforeCurrent": 2,
+              "afterCurrent": 2
+            },
+            "default": "auto",
+            "id": "id-d165c52e-0bc4-468c-a845-118dedffa820",
+            "widget": {
+              "title": {
+                "enabled": true,
+                "text": ""
+              },
+              "class": "",
+              "style": {}
+            }
+          },
+          "formats": {
+            "binFormats": {},
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "compactMode": {
+            "enabled": false,
+            "mode": "normal"
+          },
+          "rowActions": {
+            "enabled": false,
+            "inline": 1,
+            "display": "always",
+            "position": "left",
+            "colWidth": 150,
+            "controls": []
+          },
+          "bulkActions": {
+            "enabled": false,
+            "enableInlineAction": true,
+            "mode": "checkbox",
+            "filterMode": false,
+            "total": "4000",
+            "labels": {
+              "actionColumn": "Actions",
+              "selectAll": "Select all $total items",
+              "allSelected": "All $total items selected"
+            },
+            "controls": []
+          },
+          "detailView": {
+            "enabled": true,
+            "mode": "inline",
+            "action": {
+              "breakpoint": 768,
+              "props": {
+                "size": "sm",
+                "variant": "primary"
+              },
+              "icons": {
+                "closed": "fa-arrow-circle-o-down",
+                "opened": "fa-arrow-circle-o-right"
+              },
+              "label": "View"
+            },
+            "breakpoints": {
+              "320": 1,
+              "768": 2,
+              "1024": 3
+            }
+          },
+          "globalSummary": {
+            "enabled": false,
+            "summaries": []
+          },
+          "tableSummary": {
+            "enabled": false,
+            "position": "footer",
+            "labelActionColumn": "Summary",
+            "summaries": [
+              {
+                "label": "",
+                "position": "header",
+                "format": null,
+                "expr": "SUM (@item_shipping_cost)",
+                "style": {},
+                "id": "3449a66e-727e-4488-8ba7-316e0318657a",
+                "column": "Item Shipping Cost",
+                "noDataMessage": "No data"
+              }
+            ]
+          },
+          "filter": {},
+          "id": "id-d90c92bf-511e-4abe-997f-76763f1756y6"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [
+            {
+              "type": "cbpo-filter-control-select",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "brand",
+                    "type": "string",
+                    "displayName": "Brand"
+                  },
+                  "operator": "$eq",
+                  "sort": "asc",
+                  "format": null,
+                  "options": {
+                    "format": {
+                      "start": "YYYY-MM-DDT00:00:00Z",
+                      "end": "YYYY-MM-DDT23:59:59Z"
+                    }
+                  }
+                },
+                "label": {
+                  "text": "Brand"
+                },
+                "id": "id-ef901a69-12d2-415d-a01b-35abc32e5e9d",
+                "input": {
+                  "format": null
+                },
+                "dataSource": "pf:b8b3c433-de1b-4805-bf56-dae1e0e344b4:sale_items",
+                "selection": {
+                  "empty": {
+                    "label": "Please select",
+                    "enabled": true,
+                    "isEmptySelected": true
+                  },
+                  "format": null,
+                  "sort": "asc",
+                  "options": []
+                }
+              },
+              "id": "id-dadb414d-b2e6-4f4e-b21f-a35ec7db596b"
+            },
+            {
+              "type": "cbpo-filter-control-select",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "fulfillment_type",
+                    "type": "string",
+                    "displayName": "Fulfillment Type"
+                  },
+                  "operator": "$eq",
+                  "sort": "asc",
+                  "format": null,
+                  "options": {
+                    "format": {
+                      "start": "YYYY-MM-DDT00:00:00Z",
+                      "end": "YYYY-MM-DDT23:59:59Z"
+                    }
+                  }
+                },
+                "label": {
+                  "text": "Fulfillment"
+                },
+                "id": "id-2380da81-0bd6-4b44-b8bb-d57cf1b7e008",
+                "input": {
+                  "format": null
+                },
+                "dataSource": "pf:b8b3c433-de1b-4805-bf56-dae1e0e344b4:sale_items",
+                "selection": {
+                  "empty": {
+                    "label": "Please select",
+                    "enabled": true,
+                    "isEmptySelected": true
+                  },
+                  "format": null,
+                  "sort": "asc",
+                  "options": [
+                    {
+                      "label": "FBA",
+                      "value": "FBA"
+                    },
+                    {
+                      "label": "Empty",
+                      "value": null
+                    }
+                  ]
+                }
+              },
+              "id": "id-0b97fb30-8c68-40a0-9840-cb9e3797c953"
+            }
+          ],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-d093a80b-285b-4a0c-bef3-0064a59cd04d"
+  }
+}

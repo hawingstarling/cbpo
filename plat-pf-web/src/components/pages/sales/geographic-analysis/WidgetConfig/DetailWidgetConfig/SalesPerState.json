@@ -1,0 +1,455 @@
+{
+  "config": {
+    "menu": {
+      "config": {
+        "selection": {
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Download CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        },
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-v"
+        },
+        "dataSource": null
+      },
+      "enabled": true
+    },
+    "grid": {
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 50,
+      "i": 0,
+      "id": "id-4425642f-c84f-4729-8ca0-c9af67767dbf",
+      "moved": false
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Sales per State",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-671d3d1a-77cd-4690-940a-3ff0b498f758",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-heat-map",
+        "config": {
+          "dataSource": "SALE_ITEMS",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Widget Title",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "columns": [
+            {
+              "name": "quantity",
+              "displayName": "Quantity",
+              "type": "number",
+              "format": {
+                "common": {
+                  "plain": {
+                    "nil": "NULL",
+                    "empty": "EMPTY",
+                    "na": "N/A"
+                  },
+                  "html": {
+                    "nil": "<span class=\"d-sdk-nil\">null</span>",
+                    "empty": "<span class=\"d-sdk-empty\">empty</span>",
+                    "na": "<span class=\"d-sdk-na\">N/A</span>"
+                  },
+                  "prefix": null,
+                  "suffix": null
+                },
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 0,
+                  "siPrefix": false
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "sale_date",
+              "displayName": "Sale Date",
+              "type": "date",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "state_key",
+              "displayName": "State Key",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "fulfillment_type",
+              "displayName": "Fulfillment Type",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "county_key",
+              "displayName": "County Key",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "sku",
+              "displayName": "SKU",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "spmr",
+              "displayName": "SpMR",
+              "type": "number",
+              "format": {
+                "common": {
+                  "plain": {
+                    "nil": "NULL",
+                    "empty": "EMPTY",
+                    "na": "N/A"
+                  },
+                  "html": {
+                    "nil": "<span class=\"d-sdk-nil\">null</span>",
+                    "empty": "<span class=\"d-sdk-empty\">empty</span>",
+                    "na": "<span class=\"d-sdk-na\">N/A</span>"
+                  },
+                  "prefix": null,
+                  "suffix": null
+                },
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 2,
+                  "siPrefix": false
+                }
+              },
+              "aggrFormats": null
+            }
+          ],
+          "drillDown": {
+            "enabled": true,
+            "path": {
+              "settings": [
+                {
+                  "column": "county_key",
+                  "binConfig": {
+                    "binningType": null
+                  }
+                }
+              ]
+            },
+            "config": {
+              "modal": {
+                "id": "id-7937865e-2e25-4a82-9c8f-9baae0e81790",
+                "header": {
+                  "text": "Drill Down"
+                },
+                "actions": {
+                  "applyButton": {
+                    "text": "Apply"
+                  },
+                  "cancelButton": {
+                    "text": "Cancel"
+                  }
+                }
+              },
+              "path": {
+                "enabled": false,
+                "settings": []
+              }
+            }
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "axis": {
+                "x": [
+                  {
+                    "id": "x_438f7b7c-1161-4ecd-b231-25dea5c5bf1b",
+                    "format": null
+                  }
+                ],
+                "y": [
+                  {
+                    "id": "y_438f7b7c-1161-4ecd-b231-25dea5c5bf1b",
+                    "ticks": {
+                      "maxTicksLimit": 5,
+                      "minColor": "#f0f4f7",
+                      "maxColor": "#00589C",
+                      "format": null
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "mapNavigation": {
+                  "enabled": true
+                },
+                "legend": {
+                  "enabled": true,
+                  "isHorizontal": true,
+                  "position": "right"
+                },
+                "dataLabelColor": "#000000",
+                "labelDrillUpButton": "Back to State Map"
+              },
+              "series": [
+                {
+                  "id": "438f7b7c-1161-4ecd-b231-25dea5c5bf1b",
+                  "type": "heat-map",
+                  "axis": {
+                    "x": "x_438f7b7c-1161-4ecd-b231-25dea5c5bf1b",
+                    "y": "y_438f7b7c-1161-4ecd-b231-25dea5c5bf1b"
+                  },
+                  "data": {
+                    "x": "state_key",
+                    "y": "quantity",
+                    "name": "",
+                    "country": {
+                      "geo": "us",
+                      "geoDetail": "us"
+                    },
+                    "tooltip": {
+                      "columns": [
+                        "spmr",
+                        "quantity"
+                      ],
+                      "template": "\n                                <div>$series_name</div>\n                                <div>Unit Sales: $quantity</div>\n                                <div>SpMR: $spmr</div>\n                              "
+                    }
+                  },
+                  "name": "Quantity"
+                }
+              ]
+            }
+          ],
+          "sorting": [
+            {
+              "column": "state_key",
+              "direction": "asc"
+            }
+          ],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "quantity",
+                "aggregation": "sum",
+                "alias": "quantity_sum_438f7b7c-1161-4ecd-b231-25dea5c5bf1b"
+              },
+              {
+                "column": "spmr",
+                "aggregation": "sum",
+                "alias": "spmr_sum_438f7b7c-1161-4ecd-b231-25dea5c5bf1b"
+              }
+            ],
+            "columns": [
+              {
+                "name": "state_key"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 50000,
+            "current": 1,
+            "total": null,
+            "type": "auto",
+            "buttons": {
+              "first": {
+                "visibility": true,
+                "label": "First"
+              },
+              "last": {
+                "visibility": true,
+                "label": "Last"
+              },
+              "prev": {
+                "visibility": true,
+                "label": "Previous"
+              },
+              "next": {
+                "visibility": true,
+                "label": "Next"
+              }
+            },
+            "numbers": {
+              "beforeCurrent": 2,
+              "afterCurrent": 2
+            },
+            "default": "auto"
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": true,
+            "utc": "America/Los_Angeles",
+            "visible": false
+          },
+          "library": "highcharts",
+          "id": "chartabc"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": []
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {
+              "date": "YYYY-MM-DD",
+              "datetime": "YYYY-MM-DD hh:mm"
+            }
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": "",
+      "base": {
+        "config": {
+          "query": {
+            "id": "id-a3e6421e-18f0-4e0b-8471-083947848bdc",
+            "level": 0,
+            "type": "AND",
+            "conditions": [
+              {
+                "id": "id-b797da72-5624-4324-af21-7f91d28a8998",
+                "level": 1,
+                "column": "state_key",
+                "value": "",
+                "operator": "not_null",
+                "parentId": "id-a3e6421e-18f0-4e0b-8471-083947848bdc"
+              }
+            ],
+            "parentId": null
+          }
+        }
+      }
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "waitingForGlobalFilter": false,
+    "id": "90119109-4985-4501-9a31-86b2bc5689d2"
+  }
+  }

@@ -1,0 +1,129 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "widget": {
+      "title": {
+        "enabled": false
+      }
+    },
+    "menu": {
+      "enabled": false
+    },
+    "exportConfig": {
+      "fileName": "overall-sales"
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "dataSource": "OVERALL_SALES",
+          "widget": {
+            "title": {
+              "enabled": false
+            }
+          },
+          "timezone": {
+            "enable": false,
+            "utc": null
+          },
+          "exportConfig": {
+            "fileName": "overall-sales"
+          },
+          "columns": [
+            {
+              "name": "division",
+              "displayName": "Division",
+              "cell": {
+                "width": 250
+              },
+              "sortable": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "total",
+              "displayName": "Total",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": false
+                }
+              }
+            },
+            {
+              "name": "percent_vs_yesterday",
+              "displayName": "Percent vs yesterday",
+              "sortable": {
+                "enabled": false
+              },
+              "cell": {
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": false,
+                    "precision": 2,
+                    "siPrefix": false
+                  },
+                  "common": {
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            {
+              "name": "percent_vs_last_week",
+              "displayName": "Percent vs last week",
+              "sortable": {
+                "enabled": false
+              },
+              "cell": {
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": false,
+                    "precision": 2,
+                    "siPrefix": false
+                  },
+                  "common": {
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            {
+              "name": "percent_vs_last_month",
+              "displayName": "Percent vs last month",
+              "sortable": {
+                "enabled": false
+              },
+              "cell": {
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": false,
+                    "precision": 2,
+                    "siPrefix": false
+                  },
+                  "common": {
+                    "suffix": "%"
+                  }
+                }
+              }
+            },
+            {
+              "name": "modified",
+              "displayName": "modified",
+              "visible": false,
+              "type": "date"
+            }
+          ],
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "id": "974ee0bd-c899-42bb-9e69-89094123964i"
+        }
+      }
+    ]
+  }
+}

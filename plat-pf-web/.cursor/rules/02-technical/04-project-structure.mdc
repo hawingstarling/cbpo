@@ -1,0 +1,66 @@
+---
+description: |
+  Project structure and organization patterns for Vue.js application with CoreUI, services, and modular architecture.
+globs:
+  - src/**/*
+  - src/components/**/*
+  - src/services/**/*
+  - src/store/**/*
+  - src/router/**/*
+  - src/assets/**/*
+alwaysApply: true
+rules:
+  # Directory Structure
+  - `/src/components/` - Reusable components
+    - `/common/` - Shared/common components
+    - `/pages/` - Page-specific components organized by feature
+  - `/src/containers/` - Container components
+  - `/src/services/` - API services and utilities
+  - `/src/store/` - Vuex store modules
+  - `/src/router/` - Router configuration
+  - `/src/assets/` - Static assets (images, styles)
+  - `/src/mixins/` - Vue mixins for shared logic
+
+  # Component Organization
+  - Create reusable components in `/src/components/common/`
+  - Create page-specific components in `/src/components/pages/`
+  - Organize components by feature/domain
+  - Use proper component naming conventions
+
+  # Service Layer
+  - Use `/src/services/` for API services and utilities
+  - Follow the established axios instance patterns (pfAxios, dsAxios)
+  - Use the established interceptor patterns
+  - Implement proper error handling in services
+
+  # Store Organization
+  - Use `/src/store/` for Vuex store modules
+  - Follow the established module structure
+  - Use namespaced modules for better organization
+  - Keep store modules focused on specific domains
+
+  # Router Configuration
+  - Use `/src/router/` for router configuration
+  - Follow the established route structure with meta properties
+  - Use route guards for authentication and permissions
+  - Implement proper route parameters and query handling
+
+  # Asset Organization
+  - Use `/src/assets/` for static assets
+  - Organize images by type/feature
+  - Use SCSS for styling with proper structure
+  - Follow the established asset import patterns
+
+  # File Naming Conventions
+  - Components: PascalCase (e.g., `UserProfile.vue`)
+  - Files: kebab-case (e.g., `user-profile.vue`)
+  - Variables: camelCase
+  - Constants: UPPER_SNAKE_CASE
+  - CSS classes: kebab-case
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Vuex patterns: `02-technical/02-vuex-patterns.mdc`
+  - API standards: `02-technical/05-api-standards.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+---

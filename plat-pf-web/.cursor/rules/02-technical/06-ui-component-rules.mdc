@@ -1,0 +1,58 @@
+---
+description: |
+  UI component development rules and patterns for Vue.js components with CoreUI and Bootstrap Vue integration.
+globs:
+  - src/components/**/*.vue
+  - src/containers/**/*.vue
+  - src/pages/**/*.vue
+alwaysApply: true
+rules:
+  # Component Development
+  - Create reusable components in `/src/components/common/`
+  - Create page-specific components in `/src/components/pages/`
+  - Use props for component communication
+  - Use events for child-to-parent communication
+  - Use the event bus (`$bus`) for global communication
+
+  # Component Structure
+  - Use single-file components (.vue) with template, script, and style sections
+  - Follow Vue 2 Options API patterns
+  - Use proper component lifecycle management
+  - Implement proper component state management
+
+  # Props and Events
+  - Use props for parent-to-child communication
+  - Use events for child-to-parent communication
+  - Use the event bus for global communication
+  - Follow the established event naming conventions
+
+  # Styling and Theming
+  - Use SCSS for styling with proper nesting
+  - Follow the established theme patterns
+  - Use CoreUI components for consistent UI
+  - Use Bootstrap Vue components for form elements
+  - Implement responsive design patterns
+
+  # Component Patterns
+  - Use the established component patterns
+  - Follow the established component lifecycle patterns
+  - Use the established component state patterns
+  - Implement proper component error handling
+
+  # Performance
+  - Use proper component lifecycle management
+  - Implement proper component state management
+  - Use computed properties for expensive operations
+  - Follow the established performance patterns
+
+  # Accessibility
+  - Use proper ARIA attributes
+  - Implement proper keyboard navigation
+  - Use proper semantic HTML
+  - Follow the established accessibility patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - CoreUI Bootstrap: `02-technical/03-coreui-bootstrap.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+---

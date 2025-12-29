@@ -1,0 +1,443 @@
+{
+  "config": {
+    "menu": {
+      "config": {
+        "selection": {
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Download CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            }
+          ]
+        },
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null
+      },
+      "enabled": false
+    },
+    "grid": {
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 50,
+      "i": 0,
+      "id": "id-41cb5de4-46ef-4d34-8149-d3dcec8ac0ae",
+      "moved": false
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Global filter",
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-ca61c50b-58c3-4909-88c2-38ff94c74eed",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-global-filter",
+        "config": {
+          "dataSource": "SALE_ITEMS",
+          "widget": {
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "id": "e52d25b7-f3e6-49c2-a0ac-c1360330e78c"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [
+            {
+              "type": "cbpo-filter-control-range-select",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "sale_date",
+                    "type": "date",
+                    "label": "Sale Date",
+                    "displayName": "Sale Date"
+                  },
+                  "operator": "in_range",
+                  "value": [
+                    null,
+                    null
+                  ],
+                  "sort": "desc",
+                  "format": {
+                    "common": {
+                      "plain": {
+                        "nil": "NULL",
+                        "empty": "EMPTY",
+                        "na": "N/A"
+                      },
+                      "html": {
+                        "nil": "<span class=\"d-sdk-nil\">null</span>",
+                        "empty": "<span class=\"d-sdk-empty\">empty</span>",
+                        "na": "<span class=\"d-sdk-na\">N/A</span>"
+                      },
+                      "prefix": null,
+                      "suffix": null
+                    },
+                    "type": "temporal",
+                    "config": {
+                      "format": "L",
+                      "date": {
+                        "format": "L"
+                      },
+                      "time": {
+                        "format": "LT"
+                      },
+                      "options": {
+                        "year": "YYYY",
+                        "quarter": "YYYY [Q]Q",
+                        "month": "YYYY MMM",
+                        "week": "YYYY [w]w",
+                        "day": "YYYY-MM-DD",
+                        "hour": "YYYY-MM-DD kk",
+                        "minute": "YYYY-MM-DD kk:mm",
+                        "second": "YYYY-MM-DD kk:mm:ss"
+                      }
+                    }
+                  }
+                },
+                "label": {
+                  "text": "Date"
+                },
+                "range": {
+                  "type": "date",
+                  "formatLabel": "MM/DD/YYYY",
+                  "formatValue": "YYYY-MM-DD"
+                },
+                "selection": {
+                  "empty": {
+                    "label": "Select Date Range",
+                    "enabled": true,
+                    "isEmptySelected": true,
+                    "isDefaultOption": true
+                  },
+                  "sort": "asc",
+                  "options": [
+                    {
+                      "label": "Last 7 days",
+                      "value": [
+                        "DATE_LAST(7,'days')",
+                        "TODAY()"
+                      ],
+                      "isDefault": false
+                    },
+                    {
+                      "label": "Last 30 days",
+                      "value": [
+                        "DATE_LAST(30,'days')",
+                        "TODAY()"
+                      ],
+                      "isDefault": true
+                    },
+                    {
+                      "label": "Last 60 days",
+                      "value": [
+                        "DATE_LAST(60,'days')",
+                        "TODAY()"
+                      ],
+                      "isDefault": false
+                    },
+                    {
+                      "label": "This month",
+                      "value": [
+                        "DATE_START_OF(TODAY(), 'month')",
+                        "DATE_END_OF(TODAY(), 'month')"
+                      ],
+                      "isDefault": false
+                    },
+                    {
+                      "label": "Last month",
+                      "value": [
+                        "DATE_START_OF(DATE_LAST(1,'month'), 'month')",
+                        "DATE_END_OF(DATE_LAST(1,'month'), 'month')"
+                      ],
+                      "isDefault": false
+                    },
+                    {
+                      "label": "Lifetime",
+                      "value": [
+                        null,
+                        null
+                      ],
+                      "isDefault": false
+                    }
+                  ]
+                }
+              },
+              "id": "id-567d6733-a862-4aea-8b33-e8f3ae194620"
+            },
+            {
+              "type": "cbpo-filter-control-range",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "sale_date",
+                    "type": "date",
+                    "label": "Sale Date",
+                    "displayName": "Sale Date"
+                  },
+                  "operator": "time_range",
+                  "value": [],
+                  "sort": "desc",
+                  "format": {
+                    "common": {
+                      "plain": {
+                        "nil": "NULL",
+                        "empty": "EMPTY",
+                        "na": "N/A"
+                      },
+                      "html": {
+                        "nil": "<span class=\"d-sdk-nil\">null</span>",
+                        "empty": "<span class=\"d-sdk-empty\">empty</span>",
+                        "na": "<span class=\"d-sdk-na\">N/A</span>"
+                      },
+                      "prefix": null,
+                      "suffix": null
+                    },
+                    "type": "temporal",
+                    "config": {
+                      "format": "L",
+                      "date": {
+                        "format": "L"
+                      },
+                      "time": {
+                        "format": "LT"
+                      },
+                      "options": {
+                        "year": "YYYY",
+                        "quarter": "YYYY [Q]Q",
+                        "month": "YYYY MMM",
+                        "week": "YYYY [w]w",
+                        "day": "YYYY-MM-DD",
+                        "hour": "YYYY-MM-DD kk",
+                        "minute": "YYYY-MM-DD kk:mm",
+                        "second": "YYYY-MM-DD kk:mm:ss"
+                      }
+                    }
+                  }
+                },
+                "label": {
+                  "text": "Time"
+                },
+                "range": {
+                  "type": "time",
+                  "formatLabel": "hh:mm A",
+                  "formatValue": "HH:mm"
+                }
+              },
+              "id": "id-1bb30397-2d4f-471a-a8eb-3bc80c3c7aaa"
+            },
+            {
+              "type": "cbpo-filter-control-select",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "brand",
+                    "type": "string",
+                    "label": "Brand",
+                    "displayName": "Brand"
+                  },
+                  "operator": "$eq",
+                  "sort": "asc",
+                  "format": null,
+                  "options": {
+                    "format": {
+                      "start": "YYYY-MM-DDT00:00:00Z",
+                      "end": "YYYY-MM-DDT23:59:59Z"
+                    }
+                  }
+                },
+                "label": {
+                  "text": "Brand"
+                },
+                "dataSource": "SALE_ITEMS",
+                "selection": {
+                  "empty": {
+                    "label": "Please select",
+                    "enabled": true,
+                    "isEmptySelected": true
+                  },
+                  "format": null,
+                  "sort": "asc",
+                  "options": []
+                }
+              },
+              "id": "id-3acc3c0e-55c7-4bcf-86c8-31bfdc41b94d"
+            },
+            {
+                "type": "cbpo-filter-control-select",
+                "config": {
+                  "common": {
+                    "column": {
+                      "name": "fulfillment_type",
+                      "type": "string",
+                      "label": "Fulfillment Type",
+                      "displayName": "Fulfillment Type"
+                    },
+                    "operator": "$eq",
+                    "sort": "asc",
+                    "format": null,
+                    "options": {
+                      "format": {
+                        "start": "YYYY-MM-DDT00:00:00Z",
+                        "end": "YYYY-MM-DDT23:59:59Z"
+                      }
+                    }
+                  },
+                  "label": {
+                    "text": "Fulfillment Type"
+                  },
+                  "dataSource": "SALE_ITEMS",
+                  "selection": {
+                    "empty": {
+                      "label": "Please select",
+                      "enabled": true,
+                      "isEmptySelected": true
+                    },
+                    "format": null,
+                    "sort": "asc",
+                    "options": []
+                  }
+                },
+                "id": "id-3acc3c0e-55c7-4bcf-86c8-31bfdc41b94d"
+            },
+            {
+              "type": "cbpo-filter-control-input",
+              "config": {
+                "common": {
+                  "column": {
+                    "name": "sku",
+                    "type": "string",
+                    "label": "SKU",
+                    "displayName": "SKU"
+                  },
+                  "operator": "contains",
+                  "value": "",
+                  "sort": "asc",
+                  "format": null
+                },
+                "label": {
+                  "text": "SKU"
+                },
+                "input": {
+                  "format": null
+                }
+              },
+              "id": "id-f89229b2-62d4-4164-be1b-b211d53abd86"
+            }
+          ]
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": true
+      },
+      "alignment": "center"
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "waitingForGlobalFilter": false,
+    "id": "f289ba9d-b626-42c9-8a45-7acdd95dbf1d"
+  }
+}

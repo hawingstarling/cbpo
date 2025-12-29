@@ -1,0 +1,483 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 6,
+      "y": 60,
+      "w": 6,
+      "h": 20,
+      "i": 4
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "30 Day Sales",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      }
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "YOY_30_DAY_SALE",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Quantitation of [Total Cost, Total Profit, Total Revenue, Total Cost, Total Profit] over [Item Type]",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "date",
+              "displayName": "Date",
+              "type": "date",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "prior_month_date",
+              "displayName": "Prior Month Date",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "prior_month",
+              "displayName": "Prior Month",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "y0",
+              "displayName": "y0",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "y1",
+              "displayName": "y1",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "y2",
+              "displayName": "y2",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "y3",
+              "displayName": "y3",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            }
+          ],
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [],
+                "y": [
+                  {
+                    "id": "y_id-740dd88d-0740-475a-a629-75a99d1762e6",
+                    "type": "linear",
+                    "format": {
+                      "type": "numeric",
+                      "config": {
+                        "comma": true,
+                        "siPrefix": true
+                      }
+                    },
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-15757603-255d-41cb-8a53-be328e7dbc46",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": true,
+                  "position": "top",
+                  "widthPercent": 40,
+                  "isHorizontal": true
+                },
+                "step": "right"
+              },
+              "series": [
+                {
+                  "type": "line",
+                  "name": "Prior Month",
+                  "axis": {
+                    "x": "x_id-740dd88d-0740-475a-a629-75a99d1762e6",
+                    "y": "y_id-740dd88d-0740-475a-a629-75a99d1762e6"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "prior_month"
+                  },
+                  "id": "id-740dd88d-0740-475a-a629-75a99d1762e6"
+                },
+                {
+                  "type": "line",
+                  "name": "y0",
+                  "axis": {
+                    "x": "x_id-15757603-255d-41cb-8a53-be328e7dbc46",
+                    "y": "y_id-15757603-255d-41cb-8a53-be328e7dbc46"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "y0"
+                  },
+                  "id": "id-15757603-255d-41cb-8a53-be328e7dbc46"
+                },
+                {
+                  "type": "line",
+                  "name": "y1",
+                  "axis": {
+                    "x": "x_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c",
+                    "y": "y_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "y1"
+                  },
+                  "id": "id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c"
+                },
+                {
+                  "type": "line",
+                  "name": "y2",
+                  "axis": {
+                    "x": "x_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256",
+                    "y": "y_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "y2"
+                  },
+                  "id": "id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256"
+                },
+                {
+                  "type": "line",
+                  "name": "y3",
+                  "axis": {
+                    "x": "x_id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f",
+                    "y": "y_id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "y3"
+                  },
+                  "id": "id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f"
+                }
+              ]
+            }
+          ],
+          "sorting": [],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "prior_month",
+                "aggregation": "sum",
+                "alias": "prior_month_sum_id-740dd88d-0740-475a-a629-75a99d1762e6"
+              },
+              {
+                "column": "y0",
+                "aggregation": "sum",
+                "alias": "y0_sum_id-15757603-255d-41cb-8a53-be328e7dbc46"
+              },
+              {
+                "column": "y1",
+                "aggregation": "sum",
+                "alias": "y1_sum_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c"
+              },
+              {
+                "column": "y2",
+                "aggregation": "sum",
+                "alias": "y2_sum_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256"
+              },
+              {
+                "column": "y3",
+                "aggregation": "sum",
+                "alias": "y3_sum_id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f"
+              }
+            ],
+            "columns": [
+              {
+                "name": "date"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          },
+          "color_scheme": "Google",
+          "formats": {
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "id": "id-0a02017c-097c-421d-aec5-d15980807ec6"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {}
+    },
+    "waitingForGlobalFilter": false
+  }
+}

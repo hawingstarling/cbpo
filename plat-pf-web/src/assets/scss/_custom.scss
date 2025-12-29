@@ -1,0 +1,285 @@
+.empty {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.btn-loader {
+    width: 12px;
+    height: 12px;
+    border-width: 1px;
+}
+
+.spinner {
+    .slow {
+        border-width: 1px;
+        width: 14px;
+        height: 14px;
+    }
+    span {
+        vertical-align: middle;
+        font-size: 80%;
+    }
+}
+
+.custom_icon {
+    font-size: 20px;
+}
+
+.icon-fixed i {
+    color: #20a8d8
+}
+
+button:active .icon-fixed i{
+    color: #fff;
+}
+
+.custom_icon_small {
+    font-size: 0.8rem;
+    margin-top: 2px;
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+
+.search.cancel-action {
+    position: relative;
+
+    input.form-control {
+        padding-right: 35px !important;
+    }
+
+    i.cancel-icon {
+        position: absolute;
+        cursor: pointer;
+        right: 50px;
+        top: 50%;
+        z-index: 20;
+        transform: translateY(-50%);
+    }
+
+
+    &.small-search {
+        input.form-control.form-control-sm {
+            padding-right: 35px !important;
+        }
+
+        i.cancel-icon {
+            right: 40px;
+        }
+    }
+}
+
+.mw-20 {
+    width: 20%;
+}
+
+.mw-10 {
+    width: 10%;
+}
+
+.mw-5 {
+    width: 5%;
+}
+
+.mw-30 {
+    width: 30%;
+}
+
+.mw-35 {
+    width: 35%;
+}
+
+.mw-15 {
+    width: 15%;
+}
+
+.mw-40 {
+  width: 40%;
+}
+
+.mw-25 {
+    width: 25%;
+}
+
+.d-flex-direct-column {
+    flex-direction: column;
+    text-align: right;
+    text-align: -moz-right;
+    text-align: -webkit-right;
+}
+
+.ml-20 {
+    margin-left: -20px;
+}
+
+.cursor-pointer {
+    cursor: pointer!important;
+}
+
+.column-set-expr {
+    font-family: 'Courier New', Courier, monospace;
+    .column-label{
+        color: #a367cd;
+    }
+    .hide-label{
+        font-weight: bold;
+    }
+}
+.filter-expr {
+    font-family: 'Courier New', Courier, monospace;
+}
+.expr-table {
+    color: #830404;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    border-color: #888;
+    box-shadow: 0 0 2px #888;
+    margin-bottom: 0;
+    .filter-expr-table {
+        box-shadow: 0 0 0 0;
+    }
+}
+
+.main[name='PFShippingInvoice'] {
+    // display: table;
+    display: grid;
+    align-content: start;
+    overflow-x: auto;
+}
+
+.title-filter {
+    color: #667085;
+    padding-bottom: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.custom-arrow-down {
+    background: url("~@/assets/img/icon/table-arrow-down-icon.svg") no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+}
+
+.custom-arrow-up {
+    background: url("~@/assets/img/icon/table-arrow-up-icon.svg") no-repeat;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 10px 10px;
+}
+
+[id^="column-manager-modal-id"], [id^="widget-manager-modal-id"] {
+    .cbpo-custom-modal {
+        @mixin button($color, $bg-color, $hover-color, $hover-bg-color) {
+            padding: 8px 14px!important;
+            font-size: 14px!important;
+            font-weight: 600!important;
+            border-radius: 1px!important;
+
+            @if $color != null {
+                color: $color!important;
+                background-color: $bg-color!important;
+                border: 1px solid $color!important;
+            }
+
+            @if $hover-color != null {
+                color: $hover-color!important;
+                background-color: $hover-bg-color!important;
+                border: 1px solid $hover-bg-color!important;
+            }
+        }
+
+        footer {
+            .btn-reset {
+                margin-left: auto!important;
+                margin-right: 5px!important;
+                color: #146EB4!important;
+                background-color: #FFFFFF!important;
+                border: 1px solid #146EB4!important;
+                padding: 8px 14px!important;
+                font-size: 14px!important;
+                font-weight: 600!important;
+                border-radius: 1px!important;
+                box-shadow: none!important;
+
+                &:focus {
+                    background: unset!important;
+                }
+
+                &:not(:disabled) {
+                    &:hover {
+                        color: #FFFFFF!important;
+                        background-color: #146EB4!important;
+                        border-color: #146EB4!important;
+                    }
+                }
+                &:disabled {
+                    color: #A5CCE9 !important;
+                    border: 1px solid #A5CCE9 !important;
+                }
+            }
+
+            .btn-apply {
+                color: #FFFFFF!important;
+                background-color: #254164!important;
+                border: 1px solid #254164!important;
+                padding: 8px 14px!important;
+                font-size: 14px!important;
+                font-weight: 600!important;
+                border-radius: 1px!important;
+
+                &:hover {
+                    color: #254164!important;
+                    background-color: #FFFFFF!important;
+                    border-color: #254164!important;
+                }
+            }
+
+            .btn-cancel {
+                padding: 8px 14px!important;
+                font-size: 14px!important;
+                font-weight: 600!important;
+                border-radius: 1px!important;
+            }
+        }
+    }
+}
+
+.tab-header {
+    .nav-link {
+    color: #080E2C !important;
+    font-weight: 500 !important;
+    opacity: 0.44;
+    }
+    .active-tab {
+        opacity: unset;
+    }
+}
+
+.custom-columns-modal {
+    .wrapper-row {
+        > div:not(.--hidden) {
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        .cbpo__row  > div {
+            font-size: 14px!important;
+            font-weight: normal!important;
+        }
+
+        .cbpo__name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

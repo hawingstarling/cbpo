@@ -1,0 +1,4 @@
+export const DSType = {
+  STANDARD_LAYOUT: 'SALE_ITEMS',
+  FINANCIAL_LAYOUT: 'SALE_FINANCIAL'
+}

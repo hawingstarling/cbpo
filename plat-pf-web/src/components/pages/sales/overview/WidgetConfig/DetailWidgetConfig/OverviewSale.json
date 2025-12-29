@@ -1,0 +1,636 @@
+[
+  {
+    "type": "cbpo-widget",
+    "config": {
+      "grid": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 20,
+        "i": 0,
+        "id": "id-3a26e38e-b22c-439d-aa80-716ddf64ce35",
+        "moved": false
+      },
+      "autoHeight": false,
+      "widget": {
+        "title": {
+          "text": "Rich text content",
+          "enabled": false,
+          "edited": false
+        },
+        "style": {
+          "background_color": null,
+          "foreground_color": null,
+          "header_background_color": null,
+          "header_foreground_color": null,
+          "border_width": null,
+          "border_radius": null
+        },
+        "id": "id-015174f4-c4d5-4783-84c4-fd619b5093d5",
+        "class": ""
+      },
+      "action": {
+        "elements": []
+      },
+      "elements": [
+        {
+          "type": "cbpo-element-html-editor",
+          "config": {
+            "dataSource": "anyTest",
+            "content": "<table style=\"width:100%\">\n        <tr>\n          <th>INV Sales</th>\n          <th>MFN Sales</th>\n          <th>Onsite/Prime Sales</th>\n          <th>Store Sales</th>\n          <th>Store Online Sales</th>\n          <th>Total Sales</th>\n        </tr>\n        <tr>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n          <td>\n            [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n          </td>\n        </tr>\n        <tr>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs yesterday</td>\n        </tr>\n        <tr>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last week</td>\n        </tr>\n        <tr>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n          <td>[format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"black\": \"value >=0\", \"black\": \"value < 0\"}'][/format] vs last month</td>\n        </tr>\n      </table>",
+            "id": "634110c0-4ee0-430b-ad96-cbeba90ff5f8",
+            "options": {
+              "plugins": [
+                "advlist autolink lists link image preview anchor",
+                "searchreplace visualblocks code",
+                "insertdatetime media table paste"
+              ],
+              "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment"
+            },
+            "sizeSettings": {
+              "defaultMinSize": 200,
+              "warningText": "The area is too small for this visualization."
+            }
+          }
+        }
+      ],
+      "filter": {
+        "form": {
+          "config": {
+            "controls": [],
+            "query": {}
+          }
+        },
+        "base": {
+          "config": {
+            "query": {}
+          }
+        },
+        "builder": {
+          "enabled": false,
+          "readable": {
+            "enabled": false
+          },
+          "config": {
+            "trigger": {
+              "label": "Setting Filter"
+            },
+            "modal": {
+              "title": "Query Builder"
+            },
+            "format": {
+              "temporal": {}
+            },
+            "threshold": {
+              "maxLevel": 5
+            },
+            "ignore": {
+              "global": {
+                "visible": false,
+                "value": false
+              },
+              "base": {
+                "visible": false,
+                "value": false
+              }
+            },
+            "query": {
+              "id": null,
+              "level": 0,
+              "type": "AND",
+              "conditions": []
+            },
+            "form": {
+              "columns": []
+            }
+          }
+        },
+        "globalFilter": {
+          "enabled": false
+        },
+        "alignment": ""
+      },
+      "columnManager": {
+        "enabled": false,
+        "config": {
+          "trigger": {
+            "label": "Manage Columns"
+          },
+          "modal": {
+            "title": "Manage Columns"
+          },
+          "hiddenColumns": [],
+          "managedColumns": []
+        }
+      },
+      "calculatedColumn": {
+        "enabled": false
+      },
+      "menu": {
+        "enabled": true,
+        "config": {
+          "label": {
+            "text": ""
+          },
+          "icons": {
+            "css": "fa fa-ellipsis-h"
+          },
+          "dataSource": null,
+          "selection": {
+            "dsUrl": "",
+            "options": [
+              {
+                "label": "Widget Settings",
+                "icon": "fa fa-cog",
+                "value": "widget-settings",
+                "type": "item"
+              },
+              {
+                "label": "Element Settings",
+                "icon": "fa fa-cog",
+                "value": "element-settings",
+                "type": "item"
+              },
+              {
+                "label": "Remove",
+                "icon": "fa fa-times",
+                "value": "remove",
+                "type": "item"
+              },
+              {
+                "label": "Data Source 1",
+                "icon": "fa fa-database",
+                "value": "",
+                "link": true,
+                "type": "item"
+              },
+              {
+                "label": "Data Source 2",
+                "icon": "fa fa-database",
+                "value": "",
+                "link": true,
+                "optional": true,
+                "type": "item"
+              }
+            ]
+          }
+        }
+      },
+      "waitingForGlobalFilter": false,
+      "id": "18ef0dbf-cb56-4c02-8d7f-89b7663f13cb"
+    },
+    "visualizationId": "d4696371-3e62-4721-8651-5c0b4a88353d"
+  },
+  {
+    "type": "cbpo-widget",
+    "config": {
+      "grid": {
+        "x": 0,
+        "y": 20,
+        "w": 12,
+        "h": 20,
+        "i": 1,
+        "id": "id-46580e06-119e-4326-bd38-f0568c7e2b24",
+        "moved": false
+      },
+      "autoHeight": false,
+      "widget": {
+        "title": {
+          "text": "Rich text content",
+          "enabled": false,
+          "edited": false
+        },
+        "style": {
+          "background_color": null,
+          "foreground_color": null,
+          "header_background_color": null,
+          "header_foreground_color": null,
+          "border_width": null,
+          "border_radius": null
+        },
+        "id": "id-b19c40dc-cae9-4bf4-a3d3-17b320e72def",
+        "class": ""
+      },
+      "action": {
+        "elements": []
+      },
+      "elements": [
+        {
+          "type": "cbpo-element-html-editor",
+          "config": {
+            "dataSource": "idreportingsdk",
+            "builder": {
+              "enabled": true
+            },
+            "content": "<p>[kpi chart-type=\"bar\" class-css=\"m-auto\" width=\"1000\" height=\"150\" current=\"3635258\" min=\"0\" max=\"119959241\" target=\"4059050\" format-string=\",d\" format-tooltip=\",d\" goal-legend=\"Goal\" target-legend=\"Target\"][/kpi]</p>",
+            "pagination": {
+              "limit": 50,
+              "current": 1,
+              "total": null,
+              "type": "auto",
+              "buttons": {
+                "first": {
+                  "visibility": true,
+                  "label": "First",
+                  "style": {}
+                },
+                "last": {
+                  "visibility": true,
+                  "label": "Last",
+                  "style": {}
+                },
+                "prev": {
+                  "visibility": true,
+                  "label": "Previous",
+                  "style": {}
+                },
+                "next": {
+                  "visibility": true,
+                  "label": "Next",
+                  "style": {}
+                }
+              },
+              "numbers": {
+                "beforeCurrent": 2,
+                "afterCurrent": 2
+              },
+              "default": "auto"
+            },
+            "sorting": [],
+            "columns": [],
+            "grouping": {
+              "columns": [],
+              "aggregations": []
+            },
+            "bins": [],
+            "timezone": {
+              "enabled": false,
+              "utc": null,
+              "visible": true
+            },
+            "options": {
+              "plugins": [
+                "advlist autolink lists link image preview anchor",
+                "searchreplace visualblocks code",
+                "insertdatetime media table paste"
+              ],
+              "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment"
+            },
+            "sizeSettings": {
+              "defaultMinSize": 200,
+              "warningText": "The area is too small for this visualization."
+            },
+            "id": "d6646cdf-1b6d-4bc3-87b7-da546a021e30"
+          }
+        }
+      ],
+      "filter": {
+        "form": {
+          "config": {
+            "controls": [],
+            "query": {}
+          }
+        },
+        "base": {
+          "config": {
+            "query": {}
+          }
+        },
+        "builder": {
+          "enabled": false,
+          "readable": {
+            "enabled": false
+          },
+          "config": {
+            "trigger": {
+              "label": "Setting Filter"
+            },
+            "modal": {
+              "title": "Query Builder"
+            },
+            "format": {
+              "temporal": {}
+            },
+            "threshold": {
+              "maxLevel": 5
+            },
+            "ignore": {
+              "global": {
+                "visible": false,
+                "value": false
+              },
+              "base": {
+                "visible": false,
+                "value": false
+              }
+            },
+            "query": {
+              "id": null,
+              "level": 0,
+              "type": "AND",
+              "conditions": []
+            },
+            "form": {
+              "columns": []
+            }
+          }
+        },
+        "globalFilter": {
+          "enabled": false
+        },
+        "alignment": ""
+      },
+      "columnManager": {
+        "enabled": false,
+        "config": {
+          "trigger": {
+            "label": "Manage Columns"
+          },
+          "modal": {
+            "title": "Manage Columns"
+          },
+          "hiddenColumns": [],
+          "managedColumns": []
+        }
+      },
+      "calculatedColumn": {
+        "enabled": false
+      },
+      "menu": {
+        "enabled": true,
+        "config": {
+          "label": {
+            "text": ""
+          },
+          "icons": {
+            "css": "fa fa-ellipsis-h"
+          },
+          "dataSource": null,
+          "selection": {
+            "dsUrl": "",
+            "options": [
+              {
+                "label": "Widget Settings",
+                "icon": "fa fa-cog",
+                "value": "widget-settings",
+                "type": "item"
+              },
+              {
+                "label": "Element Settings",
+                "icon": "fa fa-cog",
+                "value": "element-settings",
+                "type": "item"
+              },
+              {
+                "label": "Remove",
+                "icon": "fa fa-times",
+                "value": "remove",
+                "type": "item"
+              },
+              {
+                "label": "Data Source",
+                "icon": "fa fa-database",
+                "value": "",
+                "link": true,
+                "type": "item"
+              }
+            ]
+          }
+        }
+      },
+      "waitingForGlobalFilter": false,
+      "id": "ee858ab8-4065-46fe-992e-c610fc1334e8"
+    },
+    "visualizationId": "d0c4c521-53d9-4148-994d-427ff702447c"
+  },
+  {
+    "type": "cbpo-widget",
+    "config": {
+      "grid": {
+        "x": 0,
+        "y": 40,
+        "w": 12,
+        "h": 20,
+        "i": 2,
+        "id": "id-f30f5fb7-205b-40ae-9307-db7bf0fa4585",
+        "moved": false
+      },
+      "autoHeight": false,
+      "widget": {
+        "title": {
+          "text": "Rich text content",
+          "enabled": false,
+          "edited": false
+        },
+        "style": {
+          "background_color": null,
+          "foreground_color": null,
+          "header_background_color": null,
+          "header_foreground_color": null,
+          "border_width": null,
+          "border_radius": null
+        },
+        "id": "id-e6226094-bf7f-4584-a1ae-1f0624f1a6b5",
+        "class": ""
+      },
+      "action": {
+        "elements": []
+      },
+      "elements": [
+        {
+          "type": "cbpo-element-html-editor",
+          "config": {
+            "dataSource": "dataSource",
+            "builder": {
+              "enabled": true
+            },
+            "content": "\n        <table style=\"width:100%\">\n        <tr>\n        <th></th>\n        <th style=\"text-align: center\">ACTIVE</th>\n        <th style=\"text-align: center\">OUTDOOR</th>\n        <th style=\"text-align: center\">LIFESTYLE</th>\n        <th style=\"text-align: center\">WORK</th>\n      </tr>\n      <tr>\n        <td>\n          YTD\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n      </tr>\n      <tr>\n        <td>\n          MTD\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n        <td>\n          <table>\n            <tr>\n              [kpi chart-type=\"radial\" class-css=\"m-auto\" width=\"300\" height=\"250\" current=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" min=\"0\" max=\"{SUMIF(@total_amount, (@date <=DATE_END_OF(DATE_LAST(1,'years'),'years')) & (@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" target=\"{SUMIF(@total_amount, (@date < TODAY()) & (@date >=DATE_START_OF(TODAY(),'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e')}\" format-string=\"$,d\" format-tooltip=\",d\"][/kpi]\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as 'current'\" type=\"numeric\" format=',d' prefix=\"$\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n            <tr>\n              <div style=\"text-align: center\">\n              [format expression=\"(((SUMIF(@total_amount,(@date >=DATE_START_OF(TODAY(),'years')) & (@date < TODAY()), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c1 - SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c2)) / SUMIF(@total_amount,(@date >=DATE_START_OF(DATE_LAST(1,'years'),'years')) & (@date < DATE_LAST(1,'years')), 'c00d0693-9cc3-414e-8a51-2c07b0d5f24e') as c3) as c4 * 100\"  format='{\"config\":{\"segmentType\":\"custom\"}, \"common\":{\"suffix\":\"%\"}}' type=\"segments\" color='{\"green\": \"value >=0\", \"red\": \"value < 0\"}'][/format]\n              </div>\n            </tr>\n          </table>\n        </td>\n      </tr>\n      </table>",
+            "id": "ce629105-373e-4ee5-b173-734af3af2890",
+            "pagination": {
+              "limit": 50,
+              "current": 1,
+              "total": null,
+              "type": "auto",
+              "buttons": {
+                "first": {
+                  "visibility": true,
+                  "label": "First",
+                  "style": {}
+                },
+                "last": {
+                  "visibility": true,
+                  "label": "Last",
+                  "style": {}
+                },
+                "prev": {
+                  "visibility": true,
+                  "label": "Previous",
+                  "style": {}
+                },
+                "next": {
+                  "visibility": true,
+                  "label": "Next",
+                  "style": {}
+                }
+              },
+              "numbers": {
+                "beforeCurrent": 2,
+                "afterCurrent": 2
+              },
+              "default": "auto"
+            },
+            "sorting": [],
+            "columns": [],
+            "grouping": {
+              "columns": [],
+              "aggregations": []
+            },
+            "bins": [],
+            "timezone": {
+              "enabled": false,
+              "utc": null,
+              "visible": true
+            },
+            "options": {
+              "plugins": [
+                "advlist autolink lists link image preview anchor",
+                "searchreplace visualblocks code",
+                "insertdatetime media table paste"
+              ],
+              "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment"
+            },
+            "sizeSettings": {
+              "defaultMinSize": 200,
+              "warningText": "The area is too small for this visualization."
+            }
+          }
+        }
+      ],
+      "filter": {
+        "form": {
+          "config": {
+            "controls": [],
+            "query": {}
+          }
+        },
+        "base": {
+          "config": {
+            "query": {}
+          }
+        },
+        "builder": {
+          "enabled": false,
+          "readable": {
+            "enabled": false
+          },
+          "config": {
+            "trigger": {
+              "label": "Setting Filter"
+            },
+            "modal": {
+              "title": "Query Builder"
+            },
+            "format": {
+              "temporal": {}
+            },
+            "threshold": {
+              "maxLevel": 5
+            },
+            "ignore": {
+              "global": {
+                "visible": false,
+                "value": false
+              },
+              "base": {
+                "visible": false,
+                "value": false
+              }
+            },
+            "query": {
+              "id": null,
+              "level": 0,
+              "type": "AND",
+              "conditions": []
+            },
+            "form": {
+              "columns": []
+            }
+          }
+        },
+        "globalFilter": {
+          "enabled": false
+        },
+        "alignment": ""
+      },
+      "columnManager": {
+        "enabled": false,
+        "config": {
+          "trigger": {
+            "label": "Manage Columns"
+          },
+          "modal": {
+            "title": "Manage Columns"
+          },
+          "hiddenColumns": [],
+          "managedColumns": []
+        }
+      },
+      "calculatedColumn": {
+        "enabled": false
+      },
+      "menu": {
+        "enabled": true,
+        "config": {
+          "label": {
+            "text": ""
+          },
+          "icons": {
+            "css": "fa fa-ellipsis-h"
+          },
+          "dataSource": null,
+          "selection": {
+            "dsUrl": "",
+            "options": [
+              {
+                "label": "Widget Settings",
+                "icon": "fa fa-cog",
+                "value": "widget-settings",
+                "type": "item"
+              },
+              {
+                "label": "Element Settings",
+                "icon": "fa fa-cog",
+                "value": "element-settings",
+                "type": "item"
+              },
+              {
+                "label": "Remove",
+                "icon": "fa fa-times",
+                "value": "remove",
+                "type": "item"
+              },
+              {
+                "label": "Data Source 1",
+                "icon": "fa fa-database",
+                "value": "",
+                "link": true,
+                "type": "item"
+              },
+              {
+                "label": "Data Source 2",
+                "icon": "fa fa-database",
+                "value": "",
+                "link": true,
+                "optional": true,
+                "type": "item"
+              }
+            ]
+          }
+        }
+      },
+      "waitingForGlobalFilter": false,
+      "id": "ec2c1721-4d85-47fb-b448-f0c4f89dcc48"
+    },
+    "visualizationId": "dac7f0ac-41e7-4442-b74e-c02e8e94d562"
+  }
+]

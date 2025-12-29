@@ -1,0 +1,50 @@
+---
+description: |
+  Vue Router 3.0.3 patterns and best practices for routing, navigation, and route guards in Vue.js application.
+globs:
+  - src/router/**/*.js
+  - src/components/**/*.vue
+  - src/containers/**/*.vue
+alwaysApply: true
+rules:
+  # Router Configuration
+  - Use the router configuration in `/src/router/_routerConfig.js`
+  - Follow the established route structure with meta properties
+  - Use route guards for authentication and permissions
+  - Implement proper route parameters and query handling
+
+  # Route Structure
+  - Use nested routes for complex page structures
+  - Follow the established route naming conventions
+  - Use proper route meta properties for permissions and titles
+  - Implement proper route parameter handling
+
+  # Navigation Patterns
+  - Use programmatic navigation with `this.$router.push()`
+  - Use route parameters for dynamic routing
+  - Implement proper route query handling
+  - Use the established navigation patterns
+
+  # Route Guards
+  - Use beforeEach guard for authentication checks
+  - Implement proper permission-based routing
+  - Use the established route guard patterns
+  - Handle route redirects properly
+
+  # Route Meta Properties
+  - Use meta properties for route configuration
+  - Implement proper permission checking
+  - Use title and label properties for navigation
+  - Follow the established meta property patterns
+
+  # Dynamic Routes
+  - Use dynamic route parameters properly
+  - Implement proper route parameter validation
+  - Use the established dynamic routing patterns
+  - Handle route parameter changes properly
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+  - Security principles: `01-core/02-security-principles.mdc`
+---

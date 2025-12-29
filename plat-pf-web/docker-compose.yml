@@ -1,0 +1,13 @@
+version: '3'
+services:
+  plat-mt-web:
+    container_name: plat-mt-web
+    image: plat-mt-web
+    build:
+      context: .
+      dockerfile: ./docker_compose/Dockerfile
+    command: ./start.sh
+    environment:
+      - VUE_APP_MT_API_BASE_URL=http://mt.api.dev.channelprecision.com/
+    ports:
+      - "5000:5000"

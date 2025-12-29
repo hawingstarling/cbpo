@@ -1,0 +1,25 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "widget": {
+      "title": {
+        "text": "",
+        "enabled": false,
+        "edited": false
+      }
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-html-editor",
+        "config": {
+          "content": "",
+          "timezone": {
+            "enabled": true,
+            "utc": "America/Los_Angeles",
+            "visible": true
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+$base-color-white: #fff !default;
+$base-color: black !default;
+
+.modal-content:not(.cbpo-form) {
+  background-color: $base-color-white;
+  color: $base-color;
+  border: 1px solid darken($color: $base-color-white, $amount: 30%);
+  .modal-header {
+      background-color: transparent !important;
+      border: none !important;
+      border-bottom: 1px solid darken($color: $base-color-white, $amount: 30%) !important;
+  }
+  // .modal-footer {
+  //     background-color: transparent !important;
+  //     border: none !important;
+  //     border-top: 1px solid darken($color: $base-color-white, $amount: 30%) !important;
+  // }
+}

@@ -1,0 +1,91 @@
+.progress-detail {
+  margin: 0 15px;
+  font-size: 13px;
+  /deep/ .total-td {
+    min-width: 200px;
+  }
+  /deep/ .condition-td {
+    min-width: 250px;
+  }
+  &__avatar {
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    .email {
+      color: #555;
+      font-weight: normal;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+  }
+  &__created {
+    font-size: 12px;
+    color: #5f6368;
+  }
+  &__progress {
+    min-width: 200px;
+    background-color: #d0d0d0;
+    /deep/ .progress-bar {
+      span {
+        padding: 0 10px;
+      }
+    }
+  }
+  &__list {
+    padding-left: 20px;
+    margin-bottom: 5px;
+  }
+  &__item-list {
+    /deep/ 
+    .card-header {
+      background-color: #fff;
+      padding: 8px 20px;
+    }
+    .card-body {
+      max-height: 150px;
+      overflow-y: scroll;
+    }
+  }
+  /deep/ .expression {
+    color: blue;
+    &__column {
+      color: #a367cd;
+    }
+    &__action {
+      color: #20a8d8;
+    }
+    &__value {
+      color: #ff8830;
+    }
+  }
+  .text-danger {
+    color: #f86c6b;
+  }
+  .label-wrapper {
+    .command-label {
+      width: 70px
+    }
+    .progress-label {
+      width: 70px;
+    }
+  }
+}
+.badge {
+  display: inline-block;
+  font-size: 9px;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 2px;
+  &--primary {
+    background-color: #4bade8;
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 460,
+      "w": 6,
+      "h": 20,
+      "i": 27
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Total RA Order 30 Days (NC v Utah)",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-e312f37d-62df-4332-86f6-f53e360215ac",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "totalRAOrder30Days",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Quantitation of [Unit Price, Unit Cost] over [Region]",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "date",
+              "displayName": "date",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "NC",
+              "displayName": "NC",
+              "type": "number",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "Utah",
+              "displayName": "Utah",
+              "type": "number",
+              "format": null,
+              "aggrFormats": null
+            }
+          ],
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [],
+                "y": [
+                  {
+                    "id": "y_id-973e8519-2470-4b10-a237-3df011db57a5",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-f3bd1833-e48d-48ac-8d04-b73a77b87d3f",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": true,
+                  "position": "bottom",
+                  "widthPercent": 40,
+                  "isHorizontal": true
+                },
+                "stacking": "",
+                "isHorizontal": false,
+                "pointPadding": 0,
+                "borderColor": null
+              },
+              "series": [
+                {
+                  "type": "bar",
+                  "name": "NC",
+                  "axis": {
+                    "x": "x_id-973e8519-2470-4b10-a237-3df011db57a5",
+                    "y": "y_id-973e8519-2470-4b10-a237-3df011db57a5"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "NC"
+                  },
+                  "id": "id-973e8519-2470-4b10-a237-3df011db57a5"
+                },
+                {
+                  "type": "bar",
+                  "name": "Utah",
+                  "axis": {
+                    "x": "x_id-f3bd1833-e48d-48ac-8d04-b73a77b87d3f",
+                    "y": "y_id-f3bd1833-e48d-48ac-8d04-b73a77b87d3f"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "Utah"
+                  },
+                  "id": "id-f3bd1833-e48d-48ac-8d04-b73a77b87d3f"
+                }
+              ]
+            }
+          ],
+          "sorting": [],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "NC",
+                "aggregation": "sum",
+                "alias": "NC_sum_id-973e8519-2470-4b10-a237-3df011db57a5"
+              },
+              {
+                "column": "Utah",
+                "aggregation": "sum",
+                "alias": "Utah_sum_id-f3bd1833-e48d-48ac-8d04-b73a77b87d3f"
+              }
+            ],
+            "columns": [
+              {
+                "name": "date"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          },
+          "color_scheme": "Google",
+          "formats": {
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "id": "id-469dbbf9-6785-454f-8382-5b830d17b310"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-c8d69cf4-61c4-4085-9fc6-68e0e0ab3dd6"
+  }
+}

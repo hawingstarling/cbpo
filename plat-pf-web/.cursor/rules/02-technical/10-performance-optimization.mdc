@@ -1,0 +1,51 @@
+---
+description: |
+  Performance optimization patterns and best practices for Vue.js applications with CoreUI, including bundle optimization, lazy loading, and rendering performance.
+globs:
+  - src/**/*.vue
+  - src/**/*.js
+  - src/router/**/*.js
+  - webpack.config.js
+  - vue.config.js
+alwaysApply: true
+rules:
+  # Bundle Optimization
+  - Use dynamic imports for code splitting
+  - Implement proper lazy loading for routes
+  - Use proper webpack optimization settings
+  - Follow the established bundle optimization patterns
+
+  # Component Performance
+  - Use v-once for static content that never changes
+  - Implement proper component lifecycle management
+  - Use computed properties for expensive operations
+
+  # Lazy Loading
+  - Use lazy loading for routes with proper loading states
+  - Implement proper component lazy loading
+  - Use the established lazy loading patterns
+  - Follow the established loading state management
+
+  # Rendering Performance
+  - Use proper v-if vs v-show patterns
+  - Implement proper list rendering with keys
+  - Use proper component re-rendering patterns
+  - Follow the established rendering optimization patterns
+
+  # Memory Management
+  - Use proper component cleanup in beforeDestroy
+  - Implement proper event listener cleanup
+  - Use proper subscription cleanup
+  - Follow the established memory management patterns
+
+  # API Performance
+  - Use proper API caching strategies
+  - Implement proper request debouncing
+  - Use the established API optimization patterns
+  - Follow the established request optimization patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Routing patterns: `02-technical/07-routing-patterns.mdc`
+  - API standards: `02-technical/05-api-standards.mdc`
+---

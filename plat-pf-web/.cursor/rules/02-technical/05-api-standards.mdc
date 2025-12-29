@@ -1,0 +1,57 @@
+---
+description: |
+  API integration patterns and standards for axios instances, interceptors, error handling, and authentication.
+globs:
+  - src/services/**/*.js
+  - src/components/**/*.vue
+  - src/store/**/*.js
+alwaysApply: true
+rules:
+  # Axios Instances
+  - Use the established axios instances (pfAxios, dsAxios)
+  - Follow the established interceptor patterns for authentication
+  - Use proper base URL configuration
+  - Implement proper request/response interceptors
+
+  # Authentication
+  - Use the established token handling patterns
+  - Implement proper client ID handling
+  - Use the established authentication headers
+  - Follow the established token refresh patterns
+
+  # Error Handling
+  - Use the established error handling patterns
+  - Implement proper loading states
+  - Use the toast notification system for user feedback
+  - Handle network errors gracefully
+  - Follow the established retry patterns
+
+  # Loading States
+  - Use the established loading state patterns
+  - Implement proper loading indicators
+  - Use the established loading message patterns
+  - Follow the established loading state management
+
+  # API Service Patterns
+  - Create service functions for API calls
+  - Use proper error handling in service functions
+  - Implement proper response transformation
+  - Use the established service patterns
+
+  # Request Configuration
+  - Use proper request headers and authentication
+  - Implement proper request timeout handling
+  - Use the established request configuration patterns
+  - Follow the established request interceptor patterns
+
+  # Response Handling
+  - Use proper response transformation
+  - Implement proper error response handling
+  - Use the established response interceptor patterns
+  - Follow the established response handling patterns
+
+  # Cross-References
+  - Vuex patterns: `02-technical/02-vuex-patterns.mdc`
+  - Security principles: `01-core/02-security-principles.mdc`
+  - Code quality: `01-core/03-code-quality.mdc`
+---

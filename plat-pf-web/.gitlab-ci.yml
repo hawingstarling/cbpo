@@ -1,0 +1,53 @@
+image: node:10.2.1
+
+stages:
+  - test
+  - build-lib
+
+variables:
+  VERSION: 'v1.0.0-dev0'
+  RS_SDK_VERSION: 'v1.0.1-qa67'
+  CONTAINER_DEV_IMAGE: $REGISTRY/$PROJECT_ID/$PROJECT_APP
+  DEPLOYMENT_TYPE: 'dev'
+  CLUSTER_NAME: uat-hd-bpo-cluster
+  DEV_CLUSTER_NAME: dev-hd-cbpo-cluster
+  QA_CLUSTER_NAME: qa-hd-bpo-cluster
+  REPLICAS: '1'
+  PORT: '5000'
+  DEV_ZONE: 'us-central1-f'
+  QA_ZONE: 'us-central1-a'
+  APP_NAME: 'plat-pf-lib'
+
+.setup-registry: &setup-registry
+  - echo "registry=http://npm-registry.channelprecision.com" > .npmrc
+  - echo "//npm-registry.channelprecision.com/:_authToken=$NPM_TOKEN" >> .npmrc
+
+test:
+  stage: test
+  script:
+#    - sed -ie $'s/.*plat-rs-sdk.*/\t'"\"plat-rs-sdk\"":" \"${RS_SDK_VERSION:1}\","'/g;' package.json
+    - *setup-registry
+    - npm install --registry http://npm-registry.channelprecision.com/
+    - npm run build
+    - npm run lintsrc
+    - rm .npmrc
+#    - npm run test:coverage
+
+build-lib:
+  stage: build-lib
+  # tags:
+  #   - deploy
+  script:
+#    - sed -ie $'s/.*plat-rs-sdk.*/\t'"\"plat-rs-sdk\"":" \"${RS_SDK_VERSION:1}\","'/g;' package.json
+    - *setup-registry
+    - cp scripts/run-build-lib.sh run-build-lib.sh
+    - chmod +x run-build-lib.sh
+    - export LIB_VERSION_CHECKED=$(npm view $APP_NAME versions | grep ${VERSION:1} | wc -l)
+    - if [ ${LIB_VERSION_CHECKED} == 0 ]; then ./run-build-lib.sh; else echo "$VERSION has existed"; fi
+    - rm .npmrc
+  only:
+    - develop
+    - build/dev
+    - build/qa-lib
+    - build/uat
+    - build/release

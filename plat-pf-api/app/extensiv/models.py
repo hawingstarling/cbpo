@@ -53,10 +53,22 @@ class COGSConflict(TimeStampedModel):
     def __str__(self):
         return f"COGS Conflict for SKU {self.sku} (Sale #{self.sale_ids})"
 
+    def recalculate_status(self):
+        """
+        Tính lại status dựa trên tất cả các giá trị COG hiện có.
+        Cập nhật status của instance này.
+        """
+        self.status = calculate_conflict_status(
+            extensiv_cog=self.extensiv_cog,
+            dc_cog=self.dc_cog,
+            pf_cog=self.pf_cog
+        )
+        return self.status
+
     def difference(self):
         """Return the absolute difference in COGS."""
-        if self.extensiv_cogs is not None and self.data_central_cogs is not None:
-            return abs(self.extensiv_cogs - self.data_central_cogs)
+        if self.extensiv_cog is not None and self.dc_cog is not None:
+            return abs(self.extensiv_cog - self.dc_cog)
         return None
 
 # class ExtensivProductCache(TimeStampedModel):

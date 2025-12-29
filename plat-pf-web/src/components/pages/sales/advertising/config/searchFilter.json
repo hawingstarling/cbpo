@@ -1,0 +1,38 @@
+{
+    "type": "cbpo-filter-control-select",
+    "config": {
+        "common": {
+            "column": {
+                "name": "brand_name",
+                "type": "string",
+                "label": "Brand Name",
+                "displayName": "Brand Name"
+            },
+            "operator": "$eq",
+            "sort": "asc",
+            "format": null,
+            "options": {
+                "format": {
+                    "start": "YYYY-MM-DDT00:00:00Z",
+                    "end": "YYYY-MM-DDT23:59:59Z"
+                }
+            }
+        },
+        "label": {
+            "text": "Brand Name"
+        },
+        "dataSource": "",
+        "selection": {
+            "empty": {
+                "label": "Please select",
+                "enabled": true,
+                "isEmptySelected": true
+            },
+            "format": null,
+            "sort": "asc",
+            "options": []
+        },
+        "id": "id-4908fcd0-530f-46de-8245-a05e81b1e78d"
+    },
+    "id": "id-ee8368c4-02a4-4bfd-980c-429dfda33c80"
+}

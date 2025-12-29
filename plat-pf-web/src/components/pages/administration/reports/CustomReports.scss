@@ -1,0 +1,100 @@
+@import '@/assets/scss/button.scss';
+
+.progress-table {
+  font-size: 13px;
+  &__name {
+    font-weight: 500;
+  }
+  &__list {
+    margin: 0 0 5px;
+    padding-left: 5px;
+    li {
+      list-style: none;
+    }
+    text-align: center ; 
+    vertical-align: middle ;
+  }
+  &__id-list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #b5b5b5;
+    padding-top: 1px;
+    margin-left: 5px;
+    cursor: pointer;
+    .condition-td{
+      vertical-align: middle
+    }
+  }
+}
+
+.status {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #23282C;
+
+  &.reported {
+    color: #027A48;
+  }
+
+  &.reporting {
+    color: #20A8D8;
+  }
+
+  &.error {
+    color: #F86C6b;
+  }
+}
+
+::v-deep .expression {
+  color: blue;
+  &__column {
+    color: #a367cd;
+  }
+  &__action {
+    color: #20a8d8;
+  }
+  &__value {
+    color: #ff8830;
+  }
+}
+
+.spinner-container {
+  height: 50px;
+
+  .thin-spinner {
+    border-width: 1px;
+  }
+}
+
+::v-deep .preview-modal.modal-content .modal-header {
+  border: 0 !important;
+  padding: 1rem 1rem 0;
+
+  .close {
+    margin: 0;
+    padding: 0;
+
+    img {
+      width: 28px;
+    }
+  }
+}
+
+.btn-preview {
+  @include button-icon(false, 'chevron-down.svg', 14px, 14px);
+}
+
+.btn-refresh {
+  @include button-icon(true, 'refresh-icon.svg', 20px, 20px);
+  height: 40px;
+}
+.form-search-custom {
+  .form-search-input {
+    padding-right: 30px !important;
+  }
+}

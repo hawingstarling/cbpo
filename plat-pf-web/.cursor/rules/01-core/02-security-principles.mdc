@@ -1,0 +1,40 @@
+---
+description: |
+  Core security principles for all code and features. Enforces authentication, authorization, input validation, and secure coding practices across the entire application.
+globs:
+  - src/services/**/*
+  - src/store/**/*
+  - src/components/**/*
+  - src/router/**/*
+  - .env*
+alwaysApply: true
+rules:
+  # Authentication & Authorization
+  - Use the established axios instances (pfAxios, dsAxios) with proper authentication headers
+  - Implement proper token handling with the established patterns
+  - Use the established client ID handling patterns
+  - Follow the established authentication interceptor patterns
+
+  # Input Validation & Sanitization
+  - All user input must be sanitized and validated on the server side.
+  - Security headers (CSP, HSTS, XSS Protection) must be set in middleware for all responses.
+  - Implement proper data validation on both client and server sides.
+  - API integration must include retry logic, timeout handling, and circuit breakers.
+
+  # Data Protection & Privacy
+  - All example data in documentation and specs must use sample/masked values (e.g., "John Doe", "192.168.1.100") instead of real PII.
+  - Never commit actual user data, IP addresses, emails, or sensitive information to version control.
+  - Runtime values should be loaded from environment variables, user input, or secure sources only.
+  - Implement proper secrets management (never commit secrets to repository).
+
+  # Proxy & External Integrations
+  - Use proxy pattern for all external API integrations (lib/proxy), with retry and circuit breaker logic.
+  - All API errors must include correlation IDs for traceability.
+  - Implement health check endpoints for all services (/api/health).
+
+  # Cross-References
+  - Implementation patterns: `03-domains/authentication.mdc`
+  - Deployment security: `02-technical/08-deployment.mdc`
+  - API security: `02-technical/05-api-standards.mdc`
+  - Data privacy: `01-core/06-data-privacy.mdc`
+---

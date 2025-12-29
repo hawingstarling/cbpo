@@ -1,0 +1,51 @@
+---
+description: |
+  Testing standards and patterns for Vue.js components using Jest and Vue Test Utils with proper test coverage and quality.
+globs:
+  - tests/**/*.js
+  - src/components/**/*.vue
+  - src/store/**/*.js
+  - src/services/**/*.js
+alwaysApply: true
+rules:
+  # Testing Framework
+  - Use Jest for unit testing
+  - Use Vue Test Utils for component testing
+  - Follow the established testing patterns
+  - Implement proper test coverage
+
+  # Component Testing
+  - Test component props and events
+  - Test component lifecycle methods
+  - Test component state changes
+  - Test component user interactions
+
+  # Store Testing
+  - Test store actions and mutations
+  - Test store getters and state
+  - Test store modules integration
+  - Test store error handling
+
+  # Service Testing
+  - Test API service functions
+  - Test error handling in services
+  - Test service integration
+  - Test service error responses
+
+  # Test Organization
+  - Co-locate tests with source files
+  - Use descriptive test names
+  - Follow the established test structure
+  - Implement proper test setup and teardown
+
+  # Test Quality
+  - Write meaningful test assertions
+  - Test edge cases and error conditions
+  - Use proper test mocking
+  - Follow the established testing patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Code quality: `01-core/03-code-quality.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+---

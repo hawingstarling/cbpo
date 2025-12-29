@@ -1,0 +1,328 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 4,
+      "i": 0
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Quantitation of [item_sale_charged] over [sale_date] per 1 d uniform interval",
+        "enabled": false,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      }
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "SALE_ITEMS",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Quantitation of [item_sale_charged] over [sale_date] per 1 d uniform interval",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "sale_date",
+              "displayName": "Sale Date",
+              "type": "date",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "item_sale_charged",
+              "displayName": "Item Sale Charged",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            }
+          ],
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [
+                  {
+                    "id": "x_id-4d43655c-8b60-4572-bfce-e517af771092",
+                    "type": "category",
+                    "display": true,
+                    "format": null,
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    },
+                    "ticks": {
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    }
+                  }
+                ],
+                "y": [
+                  {
+                    "id": "y_id-4d43655c-8b60-4572-bfce-e517af771092",
+                    "type": "linear",
+                    "format": {
+                      "type": "numeric",
+                      "config": {
+                        "comma": true,
+                        "siPrefix": true
+                  }
+                    },
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": true,
+                  "position": "bottom",
+                  "widthPercent": 40,
+                  "isHorizontal": true
+                },
+                "step": "right"
+              },
+              "series": [
+                {
+                  "type": "line",
+                  "name": "Item Sale Charged (Sum)",
+                  "axis": {
+                    "x": "x_id-4d43655c-8b60-4572-bfce-e517af771092",
+                    "y": "y_id-4d43655c-8b60-4572-bfce-e517af771092"
+                  },
+                  "options": {},
+                  "data": {
+                    "x": "sale_date",
+                    "y": "item_sale_charged"
+                  },
+                  "id": "id-4d43655c-8b60-4572-bfce-e517af771092"
+                }
+              ]
+            }
+          ],
+          "sorting": [],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "sale_date",
+                "aggregation": "count",
+                "alias": "sale_date"
+              },
+              {
+                "column": "item_sale_charged",
+                "aggregation": "sum",
+                "alias": "item_sale_charged_sum_id-4d43655c-8b60-4572-bfce-e517af771092"
+              }
+            ],
+            "columns": [
+              {
+                "name": "sale_date_bin"
+              }
+            ]
+          },
+          "bins": [
+            {
+              "column": {
+                "name": "sale_date",
+                "type": "date"
+              },
+              "alias": "sale_date_bin",
+              "options": {
+                "alg": "uniform",
+                "uniform": {
+                  "width": 1,
+                  "unit": "d"
+                }
+              }
+            }
+          ],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          },
+          "color_scheme": "Google",
+          "formats": {
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": true,
+            "utc": "America/Los_Angeles"
+          },
+          "id": "id-11b8e041-bc8d-49e1-a171-bd0532879192"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {
+            "id": "id-213f4fc6-0f94-4dfa-81b3-f5eb983c9390",
+            "level": 0,
+            "type": "AND",
+            "conditions": [
+              {
+                "id": "id-8f52ff7e-6b9b-4930-9c93-4afa714a58d5",
+                "level": 1,
+                "column": "item_sale_charged",
+                "value": "",
+                "operator": "not_null",
+                "parentId": "id-213f4fc6-0f94-4dfa-81b3-f5eb983c9390"
+              },
+              {
+                "id": "id-65b2a339-13a6-4e6c-8aff-c9a8ba8b8bb7",
+                "level": 1,
+                "column": "sale_date",
+                "value": [
+                  "DATE_LAST(31, \"days\")",
+                  "YESTERDAY()"
+                ],
+                "operator": "in_range",
+                "parentId": "id-213f4fc6-0f94-4dfa-81b3-f5eb983c9390"
+              },
+              {
+                "id": "id-4d43655c-8b60-4572-bfce-e517af771092",
+                "value": ["Pending", "Unshipped", "Shipped", "Partially Refunded"],
+                "operator": "in",
+                "column": "item_sale_status",
+                "level": 1,
+                "parentId": "id-213f4fc6-0f94-4dfa-81b3-f5eb983c9390"
+              },
+              {
+                "column": "channel_name",
+                "operator": "$eq",
+                "value": "amazon.com"
+              }
+            ],
+            "parentId": null
+          }
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {}
+    },
+    "waitingForGlobalFilter": false
+  }
+}

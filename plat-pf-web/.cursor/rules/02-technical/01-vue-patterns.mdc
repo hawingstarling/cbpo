@@ -1,0 +1,51 @@
+---
+description: |
+  Vue.js 2.6.10 specific development patterns and best practices for components, directives, and lifecycle management. Enforces Vue.js patterns and performance optimizations.
+globs:
+  - src/components/**/*.vue
+  - src/containers/**/*.vue
+  - src/pages/**/*.vue
+  - src/mixins/**/*.vue
+  - src/App.vue
+  - src/main.js
+alwaysApply: true
+rules:
+  # Vue Component Patterns
+  - Use single-file components (.vue) with template, script, and style sections
+  - Follow Vue 2 Options API patterns (data, computed, methods, watch, lifecycle hooks)
+  - Use PascalCase for component names and kebab-case for component files
+  - Always include a `name` property in components for debugging
+  - Use scoped styles when possible to avoid CSS conflicts
+
+  # Template Guidelines
+  - Use kebab-case for HTML attributes and event names
+  - Prefer v-if over v-show for conditional rendering
+  - Use v-for with :key for list rendering
+  - Use template refs for DOM access instead of direct DOM manipulation
+  - Keep templates clean and readable with proper indentation
+
+  # Script Guidelines
+  - Use ES6+ features (arrow functions, destructuring, template literals)
+  - Import components at the top of the script section
+  - Use computed properties for derived data
+  - Use methods for event handlers and business logic
+  - Use watchers for reactive data changes
+  - Follow the established store patterns with modules
+
+  # Lifecycle Hooks
+  - Use created() for initial data setup
+  - Use mounted() for DOM manipulation and third-party library initialization
+  - Use beforeDestroy() for cleanup (timers, event listeners, subscriptions)
+  - Use updated() sparingly, prefer computed properties or watchers
+
+  # Performance Optimization
+  - Use v-once for static content that never changes
+  - Implement proper component lifecycle management
+  - Use computed properties for expensive operations
+  - Follow the established loading state patterns
+
+  # Cross-References
+  - Project structure: `02-technical/04-project-structure.mdc`
+  - Code quality: `01-core/03-code-quality.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+---

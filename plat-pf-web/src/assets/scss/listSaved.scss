@@ -1,0 +1,178 @@
+@import '@/assets/scss/button.scss';
+
+.search.cancel-action {
+  position: relative;
+  input.form-control {
+      padding-right: 35px;
+  }
+  i.cancel-icon {
+      position: absolute;
+      cursor: pointer;
+      right: 50px;
+      top: 50%;
+      z-index: 20;
+      transform: translateY(-50%);
+  }
+  .input-search {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.spinner-container {
+  height: 50px;
+
+  .thin-spinner {
+    border-width: .14em;
+  }
+}
+::v-deep .action-col {
+  width: 411px;
+  max-width: 411px;
+}
+.load-save-condition {
+  overflow: hidden;
+  >span {
+    height: 26px;
+    display: flex;
+    align-items: center;
+  }
+}
+::v-deep .expr-table {
+  max-width: 400px;
+  max-height: 200px;
+  border-width: 0px;
+  box-shadow: none;
+  cursor: pointer;
+  .filter-expr {
+    white-space: normal;
+  }
+  padding-right: 30px;
+}
+.preview-content {
+  display: block;
+  max-height: 170px;
+  width: 307px;
+  font-size: 12px;
+}
+::v-deep .filter-expr-container .filter-expr {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  /* autoprefixer: on */
+}
+.customPopover {
+  max-height: 90vh;
+  overflow: auto;
+}
+::v-deep .customName {
+  max-width: 170px;
+}
+.input-tag {
+  &:focus,&:hover {
+    background-color: none;
+    border-color: none;
+    box-shadow: none;
+  }
+  border: none;
+  font-weight: 400;
+  font-size: 0.875rem;
+  padding-left: 5.6px;
+  margin-top: 5px;
+  line-height: 4.5;
+}
+.label-tag {
+  font-size: 0.875rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+.b-form-tag-remove {
+  color: inherit;
+  font-size: 125%;
+  line-height: 1;
+  float: none;
+  margin-left: 0.25rem;
+}
+
+.col-start {
+  .fa-star {
+    font-size: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+::v-deep .th-name {
+  padding-left: 52px;
+}
+
+.btn-open {
+  &:hover {
+    img {
+      filter: invert(70%);
+    }
+  }
+}
+
+::v-deep .dropdown.manage-tag-dropdown {
+  .dropdown-item {
+    color: $primary;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 15px;
+  }
+
+  .dropdown-divider {
+    margin: 0;
+  }
+}
+
+.title-preview {
+  color: #232f3e;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-remove {
+  margin: 0.8rem 0 0 0;
+  width: fit-content;
+  color: #d92d20;
+  font-size: 10px;
+  cursor: pointer;
+}
+.text-preview{
+  display: inline-flex;
+  padding-right: 46px;
+  color: $primary;
+
+  &::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin: 4px 0 0 10px;
+    -webkit-mask-image: url('~@/assets/img/icon/chevron-down.svg');
+    mask-image: url('~@/assets/img/icon/chevron-down.svg');
+    -webkit-mask-size: 100%;
+    mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: $primary;
+    transform: rotate(270deg);
+  }
+}
+
+.btn-delete-tag {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.badge {
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 1px;
+}

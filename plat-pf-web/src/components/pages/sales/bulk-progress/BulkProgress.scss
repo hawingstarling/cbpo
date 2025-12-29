@@ -1,0 +1,89 @@
+@import '@/assets/scss/button.scss';
+
+.progress-table {
+  font-size: 13px;
+  ::v-deep .total-td {
+    min-width: 200px;
+  }
+  ::v-deep .action-td {
+    min-width: 155px;
+  }
+  ::v-deep .condition-td, ::v-deep .status-td, ::v-deep .action-td, ::v-deep .progress-td{
+    vertical-align: middle;
+  }
+  &__avatar {
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+  }
+  &__name {
+    font-weight: 500;
+  }
+  &__list {
+    margin: 0 0 5px;
+    padding-left: 5px;
+    li {
+      list-style: none;
+    }
+    text-align: center ; 
+    vertical-align: middle ;
+  }
+  &__id-list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #b5b5b5;
+    padding-top: 1px;
+    margin-left: 5px;
+    cursor: pointer;
+    .condition-td{
+      vertical-align: middle
+    }
+  }
+  .badge {
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 2px;
+    &--success {
+      background-color: #4dbd74;
+    }
+    &--error {
+      background-color: #f86c6b;
+    }
+  }
+}
+::v-deep .expression {
+  color: blue;
+  &__column {
+    color: #a367cd;
+  }
+  &__action {
+    color: #20a8d8;
+  }
+  &__value {
+    color: #ff8830;
+  }
+}
+.spinner-container {
+  height: 50px;
+
+  .thin-spinner {
+    border-width: 1px;
+  }
+}
+
+.btn-view {
+  @include button-icon(true, 'open-icon.svg', 20px, 20px);
+}
+
+.form-search-custom .form-cancel-icon {
+  top: 52% !important;
+}

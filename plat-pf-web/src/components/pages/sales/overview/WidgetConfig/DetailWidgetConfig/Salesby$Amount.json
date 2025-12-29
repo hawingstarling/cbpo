@@ -1,0 +1,1070 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 240,
+      "w": 12,
+      "h": 20,
+      "i": 11
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Sales by $ Amount",
+        "enabled": false,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-60d6d666-e3ab-4c79-9f55-b443128a3216",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "styles": {
+            "beautyScrollbar": true
+          },
+          "dataSource": "SALE_BY_DOLLAR",
+          "header": {
+            "resizeMinWidth": null,
+            "multiline": false,
+            "draggable": false
+          },
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "columns": [
+            {
+              "displayName": "Brand",
+              "name": "brand",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "string",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d0_day",
+              "name": "d0",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d1_day",
+              "name": "d1",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d2_day",
+              "name": "d2",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d3_day",
+              "name": "d3",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d4_day",
+              "name": "d4",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d5_day",
+              "name": "d5",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d6_day",
+              "name": "d6",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d7_day",
+              "name": "d7",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d8_day",
+              "name": "d8",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d9_day",
+              "name": "d9",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "d10_day",
+              "name": "d10",
+              "visible": false,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "m0",
+              "name": "m0",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "m1",
+              "name": "m1",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "m2",
+              "name": "m2",
+              "visible": true,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "displayName": "m3",
+              "name": "m3",
+              "visible": false,
+              "cell": {
+                "width": 181.07999999999998,
+                "style": {},
+                "format": {
+                  "type": "segments",
+                  "config": {}
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": null
+              },
+              "type": "int",
+              "sortable": {
+                "enabled": true
+              },
+              "detailColIndex": 0,
+              "isUniqueKey": false
+            },
+            {
+              "name": "modified",
+              "displayName": "modified",
+              "visible": false,
+              "type": "date"
+            }
+          ],
+          "sorting": [],
+          "widget": {
+            "title": {
+              "text": "Table of [brand, item_sale_charged, item_shipping_charged, item_shipping_cost, fulfillment_type]",
+              "enabled": false,
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "globalControlOptions": {
+            "aggregation": {
+              "enabled": false
+            },
+            "globalGrouping": {
+              "enabled": false,
+              "config": {
+                "value": false
+              },
+              "position": "top"
+            },
+            "grouping": {
+              "enabled": false
+            },
+            "editColumn": {
+              "enabled": false
+            },
+            "editColumnLabel": {
+              "enabled": false
+            },
+            "editColumnFormat": {
+              "enabled": false
+            },
+            "editBin": {
+              "enabled": false
+            },
+            "id": "id-3fdcca5c-9380-4eb1-a1c6-36f387d96d11"
+          },
+          "grouping": {
+            "columns": [
+              {
+                "name": "brand"
+              },
+              {
+                "name": "modified"
+              }
+            ],
+            "aggregations": [
+              {
+                "column": "d0",
+                "alias": "d0",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d1",
+                "alias": "d1",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d2",
+                "alias": "d2",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d3",
+                "alias": "d3",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d4",
+                "alias": "d4",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d5",
+                "alias": "d5",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d6",
+                "alias": "d6",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d7",
+                "alias": "d7",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d8",
+                "alias": "d8",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d9",
+                "alias": "d9",
+                "aggregation": "sum"
+              },
+              {
+                "column": "d10",
+                "alias": "d10",
+                "aggregation": "sum"
+              },
+              {
+                "column": "m0",
+                "alias": "m0",
+                "aggregation": "sum"
+              },
+              {
+                "column": "m1",
+                "alias": "m1",
+                "aggregation": "sum"
+              },
+              {
+                "column": "m2",
+                "alias": "m2",
+                "aggregation": "sum"
+              },
+              {
+                "column": "m3",
+                "alias": "m3",
+                "aggregation": "sum"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 50,
+            "current": 1,
+            "total": 80,
+            "type": "lazy",
+            "buttons": {
+              "first": {
+                "visibility": true,
+                "label": "First",
+                "style": {}
+              },
+              "last": {
+                "visibility": true,
+                "label": "Last",
+                "style": {}
+              },
+              "prev": {
+                "visibility": true,
+                "label": "Previous",
+                "style": {}
+              },
+              "next": {
+                "visibility": true,
+                "label": "Next",
+                "style": {}
+              }
+            },
+            "numbers": {
+              "beforeCurrent": 2,
+              "afterCurrent": 2
+            },
+            "default": "auto",
+            "id": "id-d165c52e-0bc4-468c-a845-118dedffa820",
+            "widget": {
+              "title": {
+                "enabled": true,
+                "text": ""
+              },
+              "class": "",
+              "style": {}
+            }
+          },
+          "formats": {
+            "binFormats": {},
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "compactMode": {
+            "enabled": false,
+            "mode": "normal"
+          },
+          "rowActions": {
+            "enabled": false,
+            "inline": 1,
+            "display": "always",
+            "position": "left",
+            "colWidth": 150,
+            "controls": []
+          },
+          "bulkActions": {
+            "enabled": false,
+            "enableInlineAction": true,
+            "mode": "checkbox",
+            "filterMode": false,
+            "total": "4000",
+            "labels": {
+              "actionColumn": "Actions",
+              "selectAll": "Select all $total items",
+              "allSelected": "All $total items selected"
+            },
+            "controls": []
+          },
+          "detailView": {
+            "enabled": true,
+            "mode": "inline",
+            "action": {
+              "breakpoint": 768,
+              "props": {
+                "size": "sm",
+                "variant": "primary"
+              },
+              "icons": {
+                "closed": "fa-arrow-circle-o-down",
+                "opened": "fa-arrow-circle-o-right"
+              },
+              "label": "View"
+            },
+            "breakpoints": {
+              "320": 1,
+              "768": 2,
+              "1024": 3
+            }
+          },
+          "globalSummary": {
+            "enabled": false,
+            "summaries": []
+          },
+          "tableSummary": {
+            "enabled": true,
+            "position": "footer",
+            "labelActionColumn": "",
+            "summaries": [
+              {
+                "label": "",
+                "column": "brand",
+                "format": {
+                  "type": "override",
+                  "config": {
+                    "format": {
+                      "text": "Total:"
+                    }
+                  }
+                },
+                "expr": "COUNT () as 'brand'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d0",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d0) as 'd0'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d1",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d1) as 'd1'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d2",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d2) as 'd2'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d3",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d3) as 'd3'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d4",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d4) as 'd4'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d5",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d5) as 'd5'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d6",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d6) as 'd6'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d7",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d7) as 'd7'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d8",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d8) as 'd8'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "d9",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@d9) as 'd9'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "m0",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@m0) as 'm0'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "m1",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@m1) as 'm1'",
+                "style": null
+              },
+              {
+                "label": "",
+                "column": "m2",
+                "format": {
+                  "type": "numeric",
+                  "config": {
+                    "comma": true
+                  }
+                },
+                "expr": "SUM (@m2) as 'm2'",
+                "style": null
+              }
+            ]
+          },
+          "exportConfig": {
+            "fileName": "sales-by-$-amount"
+          },
+          "filter": {},
+          "id": "id-737dc87b-1e1e-4a13-809d-2dee14f25a5a"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": false,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-v"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-d093a80b-285b-4a0c-bef3-0064a59cd04d"
+  }
+}

@@ -1,0 +1,52 @@
+---
+description: |
+  Vuex 3.0.1 store patterns and best practices for state management, actions, mutations, and getters. Enforces modular store architecture.
+globs:
+  - src/store/**/*.js
+  - src/store/store.js
+  - src/components/**/*.vue
+alwaysApply: true
+rules:
+  # Store Architecture
+  - Use modules for store organization in `/src/store/`
+  - Follow the established module structure with namespaced actions/mutations
+  - Use actions for async operations (API calls, complex logic)
+  - Use mutations for synchronous state changes
+  - Use getters for computed state and data transformation
+
+  # Module Structure
+  - Each module should have: state, mutations, actions, getters
+  - Use namespaced modules to avoid naming conflicts
+  - Follow the established naming conventions for store modules
+  - Keep modules focused on specific domains (user, loading, globalToast, etc.)
+
+  # Actions Patterns
+  - Use async/await for API calls
+  - Handle errors properly with try/catch blocks
+  - Use the established axios instances (pfAxios, dsAxios)
+  - Follow the established loading state patterns
+  - Use the established error handling patterns
+
+  # Mutations Patterns
+  - Keep mutations simple and synchronous
+  - Use descriptive mutation names
+  - Follow the established mutation naming conventions
+  - Use proper state immutability patterns
+
+  # Getters Patterns
+  - Use getters for computed state
+  - Cache expensive computations
+  - Follow the established getter naming conventions
+  - Use getters for data transformation and filtering
+
+  # Component Integration
+  - Use mapState, mapGetters, mapActions, mapMutations for component integration
+  - Use the established store patterns in components
+  - Follow the established error handling patterns
+  - Use the established loading state patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - API standards: `02-technical/05-api-standards.mdc`
+  - Code quality: `01-core/03-code-quality.mdc`
+---

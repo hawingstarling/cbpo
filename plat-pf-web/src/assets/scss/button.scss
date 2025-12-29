@@ -1,0 +1,154 @@
+$primary: #254164;
+$primary-disabled-color: darken(#E6E8F0, 10%);
+$primary-disabled-background-color: #F4F6F9;
+$primary-disabled-border-color: #F4F6F9;
+
+$secondary: #254164;
+$secondary-disabled-color: darken(#E6E8F0, 10%);
+$secondary-disabled-background-color: #F8FAFC;
+$secondary-disabled-border-color: darken(#E6E8F0, 10%);
+
+@mixin icon($icon, $width, $height) {
+  content: '';
+  width: $width !important;
+  height: $height !important;
+  background-image: none !important;
+  mask-image: url(#{'~@/assets/img/icon/' + $icon});
+  mask-size: 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+   /*! autoprefixer: off */
+  -webkit-mask-image: url(#{'~@/assets/img/icon/' + $icon});
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  /* autoprefixer: on */
+}
+
+@mixin button-icon($isBefore, $icon, $width, $height) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  @if $isBefore {
+    &::before {
+      @include icon($icon, $width, $height);
+      margin: 0 8px 0 0;
+    }
+  } @else {
+    &::after {
+      @include icon($icon, $width, $height);
+      margin: 0 0 0 8px;
+    }
+  }
+}
+
+@mixin button-color($color) {
+  &.btn-primary,
+  &.btn-secondary {
+    &:focus,
+    &:active:focus {
+      box-shadow: 0 0 0 0.2rem #{$color + '7F'}; // suffix '7F' = color's alpha/opacity 50%
+    }
+  }
+
+  &.btn-primary:not(.disabled):not(:disabled) {
+    color: #FFFFFF !important;
+    background-color: $color !important;
+    border-color: $color !important;
+
+    &::before,
+    &::after {
+      background-color: #FFFFFF;
+    }
+
+    &:hover {
+      color: $color !important;
+      background-color: #FFFFFF !important;
+      border-color: $color !important;
+
+      &::before,
+      &::after {
+        background-color: $color !important;
+      }
+    }
+  }
+
+  &.btn-secondary:not(.disabled):not(:disabled) {
+    color: $color !important;
+    background-color: #FFFFFF !important;
+    border-color: $color !important;
+
+    &::before,
+    &::after {
+      background-color: $color;
+    }
+
+    &:hover {
+      color: #FFFFFF !important;
+      background-color: $color !important;
+      border-color: $color !important;
+
+      &::before,
+      &::after {
+        background-color: #FFFFFF !important;
+      }
+    }
+  }
+}
+
+::v-deep .btn:not(.not-button) {
+  font-weight: 600;
+
+  &.btn-primary {
+    @include button-color($primary);
+
+    &.disabled,
+    &:disabled {
+      color: $primary-disabled-color;
+      background-color: $primary-disabled-background-color;
+      border-color: $primary-disabled-border-color;
+
+      &::after {
+        background-color: $primary-disabled-color !important;
+      }
+    }
+  }
+
+  &.btn-secondary {
+    @include button-color($secondary);
+
+    &.disabled,
+    &:disabled {
+      color: $secondary-disabled-color !important;
+      background-color: $secondary-disabled-background-color !important;
+      border-color: $secondary-disabled-border-color !important;
+
+      &::after {
+        background-color: $secondary-disabled-color !important;
+      }
+    }
+  }
+
+  &.disabled,
+  &[disabled="disabled"] {
+    pointer-events: none;
+  }
+}
+
+// Style for Manage dropdown button.
+::v-deep .dropdown-manage {
+  &.show .btn {
+    color: #FFFFFF;
+    background-color: $secondary;
+    border-color: $secondary;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+
+  .btn {
+    @include button-icon(false, 'chevron-down.svg', 14px, 14px);
+  }
+}

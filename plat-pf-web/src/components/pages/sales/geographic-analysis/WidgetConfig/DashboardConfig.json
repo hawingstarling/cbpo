@@ -1,0 +1,73 @@
+{
+  "widgetLayout": {
+    "widgets": [],
+    "gridConfig": {   
+      "defaultHeight": 20,
+      "rowHeight": 10,
+      "colNum": 12,
+      "margin": [
+        8,
+        8
+      ],
+      "minHeight": 10,
+      "responsive": {
+        "enabled": false,
+        "breakpoints": {
+          "lg": 1200,
+          "md": 996,
+          "sm": 768,
+          "xs": 480,
+          "xxs": 0
+        },
+        "cols": {
+          "lg": 12,
+          "md": 10,
+          "sm": 6,
+          "xs": 4,
+          "xxs": 2
+        }
+      }
+    },
+    "id": "id-a036a61c-a5c3-4e9b-a2f3-aa9bf0018ab6",
+    "layout": []
+  },
+  "id": "id-1c091ab8-9f02-4297-8bd7-fff40b5197ef",
+  "style": {
+    "background_color": null,
+    "foreground_color": null,
+    "header_background_color": null,
+    "header_foreground_color": null,
+    "border_width": null,
+    "border_radius": null
+  },
+  "widget": {
+    "title": {
+      "enabled": true,
+      "text": "Dashboard Builder"
+    },
+    "class": "",
+    "style": {}
+  },
+  "menu": {
+    "enabled": true,
+    "config": {
+      "label": {
+        "text": ""
+      },
+      "icons": {
+        "css": "fa fa-ellipsis-h"
+      },
+      "dataSource": null,
+      "selection": {
+        "options": [
+          {
+            "label": "Dashboard Settings",
+            "icon": "fa fa-cog",
+            "value": "widget-settings",
+            "type": "item"
+          }
+        ]
+      }
+    }
+  }
+}

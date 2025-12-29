@@ -1,0 +1,84 @@
+---
+description: |
+  Comprehensive AI development workflow. Combines all workflow steps into a single rule for better Cursor adherence.
+globs:
+  - docs/features/**
+  - docs/features/**/*/**
+  - src/**
+  - docs/api/**
+  - docs/general/**
+
+alwaysApply: true
+rules:
+  # AI Development Workflow - 5-Step Process
+  
+  ## Step 1: Requirements & Specifications
+  - Auto-apply when prompt contains: "create specs", "requirements", "write specs", "update specs", or similar
+  - **CRITICAL**: Research existing codebase patterns before writing specs
+  - Check existing components, services, and patterns in the project
+  - Identify existing functionality that can be reused or extended
+  - Save requirements as 01-<feature-name>-specs.md in appropriate feature directory:
+    - **Direct**: `docs/features/<feature>/` (e.g., `docs/features/sales/`)
+    - **Grouped**: `docs/features/<feature-group>/<feature>/` (e.g., `docs/features/sales/overview/`)
+  - For complex features: also create 01-<feature-name>-overview-specs.md
+  - Proactively ask clarifying questions before drafting:
+    - Primary users/roles and permissions
+    - Data model fields and API contracts
+    - Edge cases and non-functional constraints
+    - Acceptance criteria and visual references
+  - Reference existing patterns from Vue.js components and CoreUI documentation
+  
+  ## Step 2: Technical Design Document (TDD)
+  - Auto-apply when prompt contains: "create tdd", "update tdd", "revise tdd", "create technical design", "write tdd", "write technical design", "design architecture", "technical design document", or similar
+  - **CRITICAL**: Research existing codebase patterns before writing TDD
+  - Check existing components, services, and patterns in the project
+  - Identify existing functionality that can be reused or extended
+  - Follow existing patterns and conventions
+  - Save TDD as 02-<feature-name>-tdd.md in appropriate feature directory
+  - For complex features: also create 02-<feature-name>-overview-tdd.md
+  - Include shared architecture decisions, test scenarios, and acceptance criteria
+  
+  ## Step 3: Implementation Tasks
+  - Auto-apply when prompt contains: "create tasks", "update tasks", "break down tasks", "write tasks", "task planning", "implementation plan", "development tasks", or similar
+  - **CRITICAL**: Research existing codebase patterns before writing tasks
+  - Check existing components, services, and patterns in the project
+  - Identify existing functionality that can be reused or extended
+  - Follow existing patterns and conventions
+  - Save task breakdown as 03-<feature-name>-tasks.md in appropriate feature directory
+  - For complex features: create individual 03-<sub-feature>-tasks.md files
+  - Include clear acceptance criteria, effort estimates, and dependencies
+  - Cross-reference: Project structure (02-technical/04-project-structure.mdc)
+  
+  ## Step 4: Code Implementation
+  - Implement Vue.js components, pages, services, and store modules per conventions
+  - Follow rules: Vue.js 2.6.10, CoreUI + Bootstrap Vue, security patterns, and structure
+  - Apply cursor rules: Code quality, Security, UI standards
+  - Display API success/error via vue-toasted (Toaster mounted once at app root)
+  - Add header comment referencing source feature documentation:
+    - **Single feature**: `// Ref: docs/features/my-feature/`
+    - **Multiple features**: `// Ref: docs/features/feature1/` (one per line)
+    - **Complex features**: `// Ref: docs/features/feature/ (overview: 01-feature-overview-specs.md)`
+  
+  ## Step 5: Testing
+  - Write unit/integration tests (Vue Test Utils, Jest)
+  - Cover core flows, validation, error states, accessibility
+  - Co-locate tests with sources or in **tests** with clear coverage
+  
+  # Documentation Updates
+  - When implementing code fixes in `src/**`, review corresponding feature documentation
+  - If fix changes functionality, assumptions, or implementation details, revise relevant files
+  - For any fix to `docs/features/<feature>/` or `docs/features/<feature-group>/<feature>/`, review and update:
+    - `01-<feature-name>-overview-specs.md` (if exists)
+    - `01-<feature-name>-specs.md`
+    - `02-<feature-name>-overview-tdd.md` (if exists)
+    - `02-<feature-name>-tdd.md`
+    - `03-<feature-name>-tasks.md`
+  - Use clear commit message linking code fix to documentation updates
+  
+  # Cross-References
+  - Detailed workflow documentation: `AI-WORKFLOW.md`
+  - Code quality standards: `01-core/03-code-quality.mdc`
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+---

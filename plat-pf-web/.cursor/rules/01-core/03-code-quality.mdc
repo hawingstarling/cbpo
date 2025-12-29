@@ -1,0 +1,57 @@
+---
+description: |
+  Comprehensive code quality standards. Combines linting, formatting, naming conventions, and quality overview into one rule.
+globs:
+  - src/**/*
+  - scripts/**/*
+  - .prettierrc
+  - eslint.config.mjs
+  - tsconfig.json
+  - package.json
+
+alwaysApply: true
+rules:
+  # Code Quality Overview
+  - Cursor should run lint, prettier, format after each series of changes
+  - Verify JavaScript/Vue.js code before building: `npm run build`
+  - All code must pass ESLint, Prettier, and Vue.js checks before commit
+  - Use Conventional Commits for all commit messages:
+    - Commit messages must follow format: `type(scope): description`
+  
+  # Linting and Formatting Standards
+  - All code must pass ESLint checks before commit
+  - All code must pass Prettier formatting checks before commit
+  - All code must pass Vue.js linting checks before commit
+  - Use `npm run lintfix` to automatically fix ESLint issues
+  - Use `npm run lint` to check for linting errors
+  - Use `npm run build` to verify build process
+  
+  # Naming Conventions
+  - **Files**: Use kebab-case (`user-profile.vue`, `access-log.vue`)
+  - **Components**: Use PascalCase (`UserProfile`, `AccessLog`)
+  - **Mixins**: Use camelCase with descriptive names (`userProfileMixin`, `accessLogMixin`)
+  - **Store Modules**: Use camelCase (`userModule`, `accessLogModule`)
+  - **Constants**: Use SCREAMING_SNAKE_CASE (`API_ENDPOINTS`, `MAX_RETRY_COUNT`)
+  - **Functions**: Use camelCase with descriptive names (`getUserProfile`, `validateAccessLog`)
+  
+  # JavaScript/Vue.js Standards
+  - Use ES6+ features (arrow functions, destructuring, template literals)
+  - Use proper Vue.js component structure (template, script, style)
+  - Use proper Vue.js lifecycle hooks and methods
+  - Use proper Vue.js data, computed, and watch patterns
+  - Use proper Vue.js props and events
+  - Define proper return types for all functions
+  
+  # Code Organization
+  - Keep component files under 200 lines; split into smaller components if larger
+  - Use index.js files for clean imports from folders with multiple exports
+  - Co-locate test files with their corresponding source files
+  - Group related files in feature-based folders when they exceed 5 files
+  - Use proper Vue.js component structure and organization
+  
+  # Cross-References
+  - Shell command permissions: `01-core/05-shell-command-permissions.mdc`
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+  - Testing standards: `02-technical/09-testing-standards.mdc`
+---

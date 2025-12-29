@@ -1,0 +1,133 @@
+.modal.editable-modal {
+  .modal-dialog.modal-lgx {
+    max-width: 1100px;
+  }
+  .card-group {
+    .card {
+      .card-body {
+        padding: 0;
+      }
+      .card {
+        border-width: 1px 0 0 0;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.edit-modal {
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__group-title {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  &__hr {
+    flex-grow: 1;
+    margin: 0 10px;
+    hr {
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+  }
+  &__button {
+    background-color: white;
+    color: #20a8d8;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__row-group {
+    padding: 1.25rem; // from bootstrap
+    margin-bottom: 10px;
+  }
+  &__col {
+    margin-bottom: 15px;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+    .form-control {
+      height: 40px;
+    }
+  }
+  &__heading {
+    font-weight: bold;
+    color: #888;
+  }
+  .collapsed > .when-opened,
+  :not(.collapsed) > .when-closed {
+    display: none;
+  }
+  .timezone-title {
+    font-weight: normal;
+    font-size: 10px;
+  }
+}
+
+.bulk-edit-modal {
+  &__header {
+    &.collapsed .when-opened,
+    &:not(.collapsed) .when-closed {
+        display: none;
+    }
+    &.card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1.25rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+  .card-body {
+    padding: 1.25rem 0.25rem;
+  }
+  .bulk-card-group {
+    .card {
+      border: 0;
+      .card-header {
+        background: transparent;
+        padding: 0 1rem;
+        border-bottom: 0;
+      }
+      .edit-modal__row-group {
+        padding: 0.3rem 0;
+        margin: 0;
+        .col-md-12 {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+  &__remove-button.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7px;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+  @media (min-width: 576px) {
+    .col-sm-1\/5 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+}

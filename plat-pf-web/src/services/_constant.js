@@ -1,0 +1,6 @@
+// -------------------------------------Error Handle----------------------------------- //
+export const GET_GLOBAL_TOAST_INFO = 'GET_GLOBAL_TOAST_INFO'
+export const SAVE_GLOBAL_TOAST_INFO = 'SAVE_GLOBAL_TOAST_INFO'
+export const SAVE_ERROR_NETWORK_TOAST_INFO = 'SAVE_ERROR_NETWORK_TOAST_INFO'
+export const RESET_ERROR_NETWORK_TOAST_INFO = 'RESET_ERROR_NETWORK_TOAST_INFO'
+export const HIDE_NETWORK_ERROR_IF_SHOWING = 'HIDE_NETWORK_ERROR_IF_SHOWING'

@@ -1,0 +1,339 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 9,
+      "y": 120,
+      "w": 3,
+      "h": 20,
+      "i": 7
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "Today",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-60d6d666-e3ab-4c79-9f55-b443128a3216",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "PRODUCT_SALE",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Quantitation of [item_total_cost] over [fulfillment_type]",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "fulfillment_type",
+              "displayName": "Fulfillment Type",
+              "type": "string",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "amount_dd",
+              "displayName": "",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "modified",
+              "displayName": "modified",
+              "visible": false,
+              "type": "date"
+            }
+          ],
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [
+                  {
+                    "id": "x_id-60442fe8-2b0d-46be-b1f5-2d2f630c087f",
+                    "type": "category",
+                    "display": true,
+                    "format": null,
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    },
+                    "ticks": {
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    }
+                  }
+                ],
+                "y": [
+                  {
+                    "id": "y_id-60442fe8-2b0d-46be-b1f5-2d2f630c087f",
+                    "type": "linear",
+                    "format": {
+                      "type": "numeric",
+                      "config": {
+                        "comma": true,
+                        "siPrefix": true
+                      }
+                    },
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": false,
+                  "position": "bottom",
+                  "widthPercent": 40,
+                  "isHorizontal": true
+                },
+                "stacking": "",
+                "isHorizontal": true,
+                "pointPadding": 0,
+                "borderColor": null,
+                "colorByPoint": true
+              },
+              "series": [
+                {
+                  "type": "bar",
+                  "name": "Fulfillment Type",
+                  "axis": {
+                    "x": "x_id-60442fe8-2b0d-46be-b1f5-2d2f630c087f",
+                    "y": "y_id-60442fe8-2b0d-46be-b1f5-2d2f630c087f"
+                  },
+                  "options": {},
+                  "data": {
+                    "x": "fulfillment_type",
+                    "y": "amount_d"
+                  },
+                  "id": "id-60442fe8-2b0d-46be-b1f5-2d2f630c087f"
+                }
+              ]
+            }
+          ],
+          "sorting": [
+            {
+              "column": "fulfillment_type",
+              "direction": "asc"
+            }
+          ],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "amount_d",
+                "aggregation": "sum",
+                "alias": "amount_d_sum_id-60442fe8-2b0d-46be-b1f5-2d2f630c087f"
+              }
+            ],
+            "columns": [
+              {
+                "name": "modified"
+              },
+              {
+                "name": "fulfillment_type"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          },
+          "color_scheme": ["#73E2A3", "#05A0D1", "#52C0E1"],
+          "formats": {
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "id": "id-e0ce9c77-4f2b-4c18-bb80-048914540ed1",
+          "filter": {}
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": false,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-v"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-d093a80b-285b-4a0c-bef3-0064a59cd04d"
+  }
+}

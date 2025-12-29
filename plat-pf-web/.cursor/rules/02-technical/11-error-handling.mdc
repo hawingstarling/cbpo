@@ -1,0 +1,51 @@
+---
+description: |
+  Error handling patterns and best practices for Vue.js applications with proper error boundaries, user feedback, and debugging.
+globs:
+  - src/**/*.vue
+  - src/**/*.js
+  - src/services/**/*.js
+  - src/store/**/*.js
+alwaysApply: true
+rules:
+  # Error Handling Patterns
+  - Use try-catch blocks for async operations
+  - Implement proper error boundaries in components
+  - Use the established error handling patterns
+  - Follow the established error state management
+
+  # User Feedback
+  - Use vue-toasted for error notifications
+  - Implement proper error message display
+  - Use the established user feedback patterns
+  - Follow the established error notification patterns
+
+  # API Error Handling
+  - Use the established axios interceptor patterns
+  - Implement proper API error handling
+  - Use the established error response patterns
+  - Follow the established error retry patterns
+
+  # Store Error Handling
+  - Use proper error handling in store actions
+  - Implement proper error state management
+  - Use the established store error patterns
+  - Follow the established error state patterns
+
+  # Component Error Handling
+  - Use proper error handling in component methods
+  - Implement proper error state management
+  - Use the established component error patterns
+  - Follow the established error lifecycle patterns
+
+  # Debugging
+  - Use proper error logging and debugging
+  - Implement proper error tracking
+  - Use the established debugging patterns
+  - Follow the established error monitoring patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - API standards: `02-technical/05-api-standards.mdc`
+  - Vuex patterns: `02-technical/02-vuex-patterns.mdc`
+---

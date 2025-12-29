@@ -1,0 +1,22 @@
+{
+  "name": "pf-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js",
+    "*.css",
+    "*.*",
+    "*/img/*.*"
+  ],
+  "main": "./pf-web.common.js"
+}

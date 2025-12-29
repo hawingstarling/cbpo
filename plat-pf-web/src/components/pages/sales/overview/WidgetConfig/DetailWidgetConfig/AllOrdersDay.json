@@ -1,0 +1,479 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 0,
+      "y": 220,
+      "w": 6,
+      "h": 20,
+      "i": 9
+    },
+    "autoHeight": false,
+    "widget": {
+      "title": {
+        "text": "All Orders (Last 30 Days)",
+        "enabled": true,
+        "edited": false
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      }
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-chart",
+        "config": {
+          "dataSource": "YOY_30_DAY_SALE",
+          "widget": {
+            "title": {
+              "enabled": false,
+              "text": "Quantitation of [Total Cost, Total Profit, Total Revenue, Total Cost, Total Profit] over [Item Type]",
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "library": "highcharts",
+          "columns": [
+            {
+              "name": "date",
+              "displayName": "Date",
+              "type": "date",
+              "format": null,
+              "aggrFormats": null
+            },
+            {
+              "name": "f0_order",
+              "displayName": "MFN",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 0
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "f1_order",
+              "displayName": "INV",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 0
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "f2_order",
+              "displayName": "prime",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 0
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "f_order_total",
+              "displayName": "All Sales",
+              "type": "number",
+              "format": {
+                "type": "numeric",
+                "config": {
+                  "comma": true,
+                  "precision": 0
+                }
+              },
+              "aggrFormats": null
+            },
+            {
+              "name": "modified",
+              "displayName": "modified",
+              "visible": false,
+              "type": "date"
+            }
+          ],
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "charts": [
+            {
+              "margin": {},
+              "axis": {
+                "x": [],
+                "y": [
+                  {
+                    "id": "y_id-740dd88d-0740-475a-a629-75a99d1762e6",
+                    "type": "linear",
+                    "format": {
+                      "type": "numeric",
+                      "config": {
+                        "comma": true,
+                        "precision": 0,
+                        "siPrefix": true
+                      }
+                    },
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-15757603-255d-41cb-8a53-be328e7dbc46",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  },
+                  {
+                    "id": "y_id-a3e9b5ca-60bb-4034-9894-0b7e3ca26c1f",
+                    "type": "linear",
+                    "format": null,
+                    "position": "left",
+                    "stack": false,
+                    "ticks": {
+                      "beginAtZero": true,
+                      "stepSize": "",
+                      "maxTicksLimit": 5,
+                      "fontSize": 11,
+                      "fontStyle": "bold"
+                    },
+                    "scaleLabel": {
+                      "display": false,
+                      "labelString": ""
+                    }
+                  }
+                ]
+              },
+              "options": {
+                "legend": {
+                  "enabled": true,
+                  "position": "bottom",
+                  "widthPercent": 40,
+                  "isHorizontal": true,
+                  "customSymbol": "circle"
+                },
+                "step": "right",
+                "marker": {
+                  "enabled": false
+                },
+                "lineLegendRemoved": true
+              },
+              "series": [
+                {
+                  "type": "area",
+                  "name": "MFN",
+                  "axis": {
+                    "x": "x_id-740dd88d-0740-475a-a629-75a99d1762e6",
+                    "y": "y_id-740dd88d-0740-475a-a629-75a99d1762e6"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null,
+                    "color": [
+                      "rgba(5, 160, 209, 1)",
+                      "rgba(5, 160, 209, 0.22)",
+                      {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 1
+                      }
+                    ]
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "f0_order"
+                  },
+                  "id": "id-740dd88d-0740-475a-a629-75a99d1762e6"
+                },
+                {
+                  "type": "line",
+                  "name": "INV",
+                  "axis": {
+                    "x": "x_id-15757603-255d-41cb-8a53-be328e7dbc46",
+                    "y": "y_id-740dd88d-0740-475a-a629-75a99d1762e6"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null,
+                    "color": "#F4B400"
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "f1_order"
+                  },
+                  "id": "id-15757603-255d-41cb-8a53-be328e7dbc46"
+                },
+                {
+                  "type": "line",
+                  "name": "Prime",
+                  "axis": {
+                    "x": "x_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c",
+                    "y": "y_id-740dd88d-0740-475a-a629-75a99d1762e6"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null,
+                    "color": "#FF9A9A"
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "f2_order"
+                  },
+                  "id": "id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c"
+                },
+                {
+                  "type": "line",
+                  "name": "All Sales",
+                  "axis": {
+                    "x": "x_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256",
+                    "y": "y_id-740dd88d-0740-475a-a629-75a99d1762e6"
+                  },
+                  "options": {
+                    "stacking": "",
+                    "isHorizontal": false,
+                    "pointPadding": 0,
+                    "borderColor": null,
+                    "color": "#91E4AB"
+                  },
+                  "data": {
+                    "x": "date",
+                    "y": "f_order_total"
+                  },
+                  "id": "id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256"
+                }
+              ]
+            }
+          ],
+          "sorting": [],
+          "grouping": {
+            "aggregations": [
+              {
+                "column": "f0_order",
+                "aggregation": "sum",
+                "alias": "f0_order_sum_id-740dd88d-0740-475a-a629-75a99d1762e6"
+              },
+              {
+                "column": "f1_order",
+                "aggregation": "sum",
+                "alias": "f1_order_sum_id-15757603-255d-41cb-8a53-be328e7dbc46"
+              },
+              {
+                "column": "f2_order",
+                "aggregation": "sum",
+                "alias": "f2_order_sum_id-143f7f58-ca22-4e29-a8d0-96fbc061bf2c"
+              },
+              {
+                "column": "f_order_total",
+                "aggregation": "sum",
+                "alias": "f_order_total_sum_id-d3c01c63-f3b0-4bb5-a990-ab7c8a7e8256"
+              }
+            ],
+            "columns": [
+              {
+                "name": "modified"
+              },
+              {
+                "name": "date"
+              }
+            ]
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 1000,
+            "current": 1,
+            "type": "buttons"
+          },
+          "color_scheme": "Google",
+          "formats": {
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "No data",
+            "no_data_found": "No data found"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "exportConfig": {
+            "fileName": "all-orders-last-30-days"
+          },
+          "id": "id-68b3058a-5733-4793-9c6a-a26bb8f7a66c"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {}
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "icons": {
+          "css": "fa fa-ellipsis-v"
+        }
+      }
+    },
+    "waitingForGlobalFilter": false
+  }
+}

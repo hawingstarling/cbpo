@@ -1,0 +1,52 @@
+---
+description: |
+  CoreUI 2.1.9 and Bootstrap Vue 2.0.4 specific patterns and best practices for UI components, styling, and theming.
+globs:
+  - src/components/**/*.vue
+  - src/assets/scss/**/*.scss
+  - src/App.vue
+  - src/main.js
+alwaysApply: true
+rules:
+  # CoreUI Integration
+  - Use CoreUI components for consistent UI patterns
+  - Follow the established CoreUI theme structure
+  - Use the custom precise-theme for consistent styling
+  - Import CoreUI styles in main.js as established
+
+  # Bootstrap Vue Components
+  - Use Bootstrap Vue components for form elements, modals, and navigation
+  - Follow Bootstrap Vue component patterns and props
+  - Use Bootstrap Vue directives for form validation
+  - Implement proper Bootstrap Vue component lifecycle
+
+  # SCSS Styling
+  - Use SCSS for styling with proper nesting
+  - Follow BEM methodology for CSS classes
+  - Use CSS custom properties for theming
+  - Import global styles in main.js
+  - Use scoped styles in components when appropriate
+
+  # Icon Systems
+  - Use Font Awesome icons as established in the project
+  - Use Simple Line Icons for consistent iconography
+  - Follow the established icon import patterns
+  - Use proper icon sizing and styling
+
+  # Theme Integration
+  - Use the established color scheme and design system
+  - Follow the precise-theme patterns
+  - Implement responsive design patterns
+  - Use the established spacing and typography patterns
+
+  # Component Styling
+  - Use Bootstrap classes for layout and spacing
+  - Use CoreUI components for complex UI elements
+  - Follow the established component styling patterns
+  - Use proper CSS specificity and scoping
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+  - Project structure: `02-technical/04-project-structure.mdc`
+---

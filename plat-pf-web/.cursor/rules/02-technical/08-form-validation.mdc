@@ -1,0 +1,44 @@
+---
+description: |
+  Form validation patterns using Vee-validate 3.3.7 and Vuelidate for Vue.js forms with proper error handling and user feedback.
+globs:
+  - src/components/**/*.vue
+  - src/plugins/vee-validate/**/*.js
+  - src/mixins/**/*.js
+alwaysApply: true
+rules:
+  # Vee-validate Integration
+  - Use Vee-validate 3.3.7 for form validation
+  - Follow the established validation patterns
+  - Use proper validation rules and error messages
+  - Implement proper form validation lifecycle
+
+  # Form Validation Patterns
+  - Use validation rules for form fields
+  - Implement proper error message display
+  - Use the established validation error patterns
+  - Follow the established form validation lifecycle
+
+  # Error Handling
+  - Display validation errors properly
+  - Use the established error message patterns
+  - Implement proper error state management
+  - Use the established error handling patterns
+
+  # Form State Management
+  - Use proper form state management
+  - Implement proper form validation state
+  - Use the established form state patterns
+  - Follow the established form lifecycle patterns
+
+  # User Feedback
+  - Use proper user feedback for validation
+  - Implement proper error message display
+  - Use the established user feedback patterns
+  - Follow the established validation feedback patterns
+
+  # Cross-References
+  - Vue patterns: `02-technical/01-vue-patterns.mdc`
+  - UI components: `02-technical/06-ui-component-rules.mdc`
+  - Code quality: `01-core/03-code-quality.mdc`
+---

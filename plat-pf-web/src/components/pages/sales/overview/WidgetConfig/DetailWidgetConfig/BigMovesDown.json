@@ -1,0 +1,486 @@
+{
+  "type": "cbpo-widget",
+  "config": {
+    "grid": {
+      "x": 9,
+      "y": 140,
+      "w": 3,
+      "h": 20,
+      "i": 31
+    },
+    "autoHeight": false,
+    "exportConfig": {
+      "fileName": "big-moves-down"
+    },
+    "widget": {
+      "title": {
+        "text": "<i class='fa fa-caret-down title-down'></i> DOWN",
+        "enabled": true,
+        "edited": true
+      },
+      "style": {
+        "background_color": null,
+        "foreground_color": null,
+        "header_background_color": null,
+        "header_foreground_color": null,
+        "border_width": null,
+        "border_radius": null
+      },
+      "id": "id-d90c92bf-511e-4abe-997f-76763f1756cb",
+      "class": ""
+    },
+    "action": {
+      "elements": []
+    },
+    "elements": [
+      {
+        "type": "cbpo-element-table",
+        "config": {
+          "styles": {
+            "beautyScrollbar": true
+          },
+          "dataSource": "",
+          "exportConfig": {
+            "fileName": "big-moves-down"
+          },
+          "header": {
+            "resizeMinWidth": null,
+            "multiline": false,
+            "draggable": false
+          },
+          "drillDown": {
+            "enabled": false,
+            "config": {}
+          },
+          "columns": [
+            {
+              "displayName": "Product Number",
+              "name": "product_number",
+              "visible": true,
+              "cell": {
+                "width": 100,
+                "style": {},
+                "aggrFormats": null,
+                "binFormats": null,
+                "format": {
+                  "type": "text",
+                  "common": {
+                    "prefix": "<i class='fa fa-times'></i> "
+                  }
+                }
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": false,
+                "direction": null
+              },
+              "type": "string"
+            },
+            {
+              "displayName": "Order",
+              "name": "total_quantity_day",
+              "visible": true,
+              "cell": {
+                "width": 100,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": false,
+                "direction": null
+              },
+              "type": "number"
+            },
+            {
+              "displayName": "AVG",
+              "name": "total_avg_quantity_30d",
+              "visible": true,
+              "cell": {
+                "width": 100,
+                "style": {},
+                "format": null,
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": false,
+                "direction": null
+              },
+              "type": "number"
+            },
+            {
+              "displayName": "(%)",
+              "name": "quantity_d_vs_quantity_avg_30d",
+              "visible": true,
+              "cell": {
+                "width": 100,
+                "style": {},
+                "format": {
+                  "common": {
+                    "plain": {
+                      "nil": "NULL",
+                      "empty": "EMPTY",
+                      "na": "N/A"
+                    },
+                    "html": {
+                      "nil": "<span class=\"d-sdk-nil\">null</span>",
+                      "empty": "<span class=\"d-sdk-empty\">empty</span>",
+                      "na": "<span class=\"d-sdk-na\">N/A</span>"
+                    },
+                    "suffix": "%"
+                  },
+                  "type": "segments"
+                },
+                "aggrFormats": null,
+                "binFormats": null
+              },
+              "header": {
+                "style": {},
+                "format": null
+              },
+              "sort": {
+                "enabled": true,
+                "direction": "desc"
+              },
+              "type": "number"
+            },
+            {
+              "name": "modified",
+              "displayName": "modified",
+              "visible": false,
+              "type": "date"
+            }
+          ],
+          "sorting": [
+            {
+              "column": "quantity_d_vs_quantity_avg_30d",
+              "direction": "asc"
+            }
+          ],
+          "widget": {
+            "title": {
+              "text": "Table of [Region, Units Sold, Unit Price, Unit Cost]",
+              "enabled": false,
+              "edited": false
+            },
+            "style": {
+              "background_color": null,
+              "foreground_color": null,
+              "header_background_color": null,
+              "header_foreground_color": null,
+              "border_width": null,
+              "border_radius": null
+            }
+          },
+          "sizeSettings": {
+            "defaultMinSize": 250,
+            "warningText": "The area is too small for this visualization."
+          },
+          "globalControlOptions": {
+            "aggregation": {
+              "enabled": false
+            },
+            "globalGrouping": {
+              "enabled": false,
+              "config": {
+                "value": false
+              },
+              "position": "top"
+            },
+            "grouping": {
+              "enabled": false
+            },
+            "editColumn": {
+              "enabled": false
+            },
+            "editColumnLabel": {
+              "enabled": false
+            },
+            "editColumnFormat": {
+              "enabled": false
+            },
+            "editBin": {
+              "enabled": false
+            },
+            "id": "id-d90c92bf-511e-4abe-997f-76763f1756cb"
+          },
+          "grouping": {
+            "columns": [],
+            "aggregations": []
+          },
+          "bins": [],
+          "pagination": {
+            "limit": 10,
+            "current": 1,
+            "total": null,
+            "type": "auto",
+            "buttons": {
+              "first": {
+                "visibility": false,
+                "label": "First",
+                "style": {}
+              },
+              "last": {
+                "visibility": false,
+                "label": "Last",
+                "style": {}
+              },
+              "prev": {
+                "visibility": true,
+                "label": "Previous",
+                "style": {}
+              },
+              "next": {
+                "visibility": true,
+                "label": "Next",
+                "style": {}
+              }
+            },
+            "numbers": {
+              "beforeCurrent": 2,
+              "afterCurrent": 2,
+              "showThreeDots": true
+            },
+            "default": "auto",
+            "id": "id-d90c92bf-511e-4abe-997f-76763f1756cb",
+            "widget": {
+              "title": {
+                "enabled": true,
+                "text": ""
+              },
+              "class": "",
+              "style": {}
+            }
+          },
+          "formats": {
+            "binFormats": {},
+            "aggrs": {}
+          },
+          "messages": {
+            "no_data_at_all": "<p style='margin-bottom:0px;margin-left: 35%;'>No data found </p><p style='font-size:10px;margin-top: -7px;line-height: 14px;text-align: center;'>Please provide the required information for this field: Product </p>",
+            "no_data_found": "<p style='margin-bottom:0px;margin-left: 35%;'>No data found </p><p style='font-size:10px;margin-top: -7px;line-height: 14px;text-align: center;'>Please provide the required information for this field: Product </p>"
+          },
+          "timezone": {
+            "enabled": false,
+            "utc": null,
+            "visible": true
+          },
+          "compactMode": {
+            "enabled": false,
+            "mode": "normal"
+          },
+          "rowActions": {
+            "enabled": false,
+            "inline": 1,
+            "display": "always",
+            "position": "left",
+            "colWidth": 150,
+            "controls": []
+          },
+          "bulkActions": {
+            "enabled": false,
+            "enableInlineAction": true,
+            "mode": "checkbox",
+            "filterMode": false,
+            "total": 100,
+            "labels": {
+              "actionColumn": "Actions",
+              "selectAll": "Select all $total items",
+              "allSelected": "All $total items selected"
+            },
+            "controls": []
+          },
+          "detailView": {
+            "enabled": true,
+            "mode": "inline",
+            "action": {
+              "breakpoint": 768,
+              "props": {
+                "size": "sm",
+                "variant": "primary"
+              },
+              "icons": {
+                "closed": "fa-arrow-circle-o-down",
+                "opened": "fa-arrow-circle-o-right"
+              },
+              "label": "View"
+            },
+            "breakpoints": {
+              "320": 1,
+              "768": 2,
+              "1024": 3
+            }
+          },
+          "globalSummary": {
+            "enabled": false,
+            "summaries": []
+          },
+          "tableSummary": {
+            "enabled": false,
+            "position": "footer",
+            "labelActionColumn": "Summary",
+            "summaries": []
+          },
+          "filter": {},
+          "id": "id-d90c92bf-511e-4abe-997f-76763f1756cb"
+        }
+      }
+    ],
+    "filter": {
+      "form": {
+        "config": {
+          "controls": [],
+          "query": {}
+        }
+      },
+      "base": {
+        "config": {
+          "query": {
+            "type": "AND",
+            "conditions": [
+              {
+                "column": "product_number",
+                "operator": "not_null"
+              },
+              {
+                "column": "quantity_d_vs_quantity_avg_30d",
+                "operator": "$gt",
+                "value": 40
+              },
+              {
+                "column": "distance_day_vs_avg_30d",
+                "operator": "$lt",
+                "value": 0
+              }
+            ]
+          }
+        }
+      },
+      "builder": {
+        "enabled": false,
+        "readable": {
+          "enabled": false
+        },
+        "config": {
+          "trigger": {
+            "label": "Setting Filter"
+          },
+          "modal": {
+            "title": "Query Builder"
+          },
+          "format": {
+            "temporal": {}
+          },
+          "threshold": {
+            "maxLevel": 5
+          },
+          "ignore": {
+            "global": {
+              "visible": false,
+              "value": false
+            },
+            "base": {
+              "visible": false,
+              "value": false
+            }
+          },
+          "query": {
+            "id": null,
+            "level": 0,
+            "type": "AND",
+            "conditions": []
+          },
+          "form": {
+            "columns": []
+          }
+        }
+      },
+      "globalFilter": {
+        "enabled": false
+      },
+      "alignment": ""
+    },
+    "columnManager": {
+      "enabled": false,
+      "config": {
+        "trigger": {
+          "label": "Manage Columns"
+        },
+        "modal": {
+          "title": "Manage Columns"
+        },
+        "hiddenColumns": [],
+        "managedColumns": []
+      }
+    },
+    "calculatedColumn": {
+      "enabled": false
+    },
+    "menu": {
+      "enabled": true,
+      "config": {
+        "label": {
+          "text": ""
+        },
+        "icons": {
+          "css": "fa fa-ellipsis-h"
+        },
+        "dataSource": null,
+        "selection": {
+          "dsUrl": "",
+          "options": [
+            {
+              "label": "Widget Settings",
+              "icon": "fa fa-cog",
+              "value": "widget-settings",
+              "type": "item"
+            },
+            {
+              "label": "Element Settings",
+              "icon": "fa fa-cog",
+              "value": "element-settings",
+              "type": "item"
+            },
+            {
+              "label": "Remove",
+              "icon": "fa fa-times",
+              "value": "remove",
+              "type": "item"
+            },
+            {
+              "type": "divider"
+            },
+            {
+              "label": "Export CSV",
+              "icon": "fa fa-download",
+              "value": "csv",
+              "type": "item"
+            },
+            {
+              "label": "Data Source",
+              "icon": "fa fa-database",
+              "value": "",
+              "link": true,
+              "type": "item"
+            }
+          ]
+        }
+      }
+    },
+    "waitingForGlobalFilter": false,
+    "id": "id-d90c92bf-511e-4abe-997f-76763f1756cb"
+  }
+}
