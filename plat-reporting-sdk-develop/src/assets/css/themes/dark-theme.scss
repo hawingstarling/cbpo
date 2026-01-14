@@ -1,0 +1,744 @@
+@import '../core/color';
+
+// main variables
+$background-color: #323a46;
+$text-color: $light;
+$border-color: $dark;
+$empty-background-color: #888;
+$empty-text-color: $light;
+$primary: #337ab7;
+
+@mixin themeStyles {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.cbpo-sdk-dark-theme {
+  // common style
+  .cbpo-dashboard,
+  .cbpo-widget,
+  .cbpo-drop-layout,
+  .cbpo-table-reporting,
+  .cbpo-crosstab-table,
+  .cbpo-chart-widget,
+  .cbpo-control-features {
+    @include themeStyles;
+  }
+  .cbpo-dashboard,
+  .cbpo-widget,
+  .cbpo-widget .cbpo-crosstab-table-container {
+    border: 1px solid $border-color;
+  }
+  .cbpo-widget .cbpo-widget-title {
+    border-bottom: 1px solid $border-color;
+    background-color: darken($background-color, 5);
+    color: $light;
+  }
+  .cbpo-template-widget-title {
+    background-color: darken($background-color, 5);
+    color: $light;
+  }
+  // element table
+  .cbpo-table-element-container {
+    .cbpo-progress-container {
+      width: 100%;
+      height: 20px;
+      margin-top: 7px;
+
+      .cbpo-progress {
+        background-color: $primary;
+        height: 16.5px;
+        border-radius: 3px;
+      }
+    }
+    .cbpo-table-global-grouping:not(.--no-border), .cbpo-drill-down-action:not(.--no-border) {
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
+    }
+    .cbpo-table-global-grouping.cpbo-custom-switch .custom-switch {
+      border-left: 1.5px solid $border-color;
+    }
+
+    .cbpo-message {
+      color: lighten($primary, 15);
+      &:not(.--no-action):hover {
+        color: lighten($primary, 30);
+      }
+    }
+
+    .cbpo-table-action {
+      border: 1px solid $border-color;
+      border-bottom: 0;
+    }
+
+    .cbpo-table-title {
+      border: 1px solid $border-color;
+      background-color: darken($background-color, 5);
+    }
+
+    .cbpo-table-container {
+      .cbpo-grouping-setup-icon {
+        i {
+          color: $primary
+        }
+      }
+      .cbpo-table {
+        border: 1px solid $border-color;
+        background-color: darken($background-color, 5);
+        .cbpo-table-header .sorting-holder .sort-link {
+          &.cbpo__sort-down {
+            border-top-color: darken($border-color, 15);
+          }
+
+          &.cbpo__sort-up {
+            border-bottom-color: darken($border-color, 15);
+          }
+        }
+        .cbpo-table-body .cbpo-table-cell.c-grouped {
+          &:not(.--expand):before {
+            border-left-color: $border-color;
+          }
+
+          &.--expand:before {
+            border-top-color: $border-color;
+            transform: translateY(calc(-50% + 3px)) !important;
+          }
+        }
+        .cbpo-table-body .vue-recycle-scroller__item-view {
+          &.hover .cbpo-table-cell {
+            background-color: darken($background-color, 8)!important;
+            &--selected {
+              background-color: #174ea6 !important;
+            }
+            &--updated {
+              background-color: #ceffca !important;
+            }
+          }
+
+          .cbpo-table-cell {
+            background-color: $background-color;
+            transition: background-color 0.1s linear;
+            cursor: default;
+            &--selected {
+              background-color: #174ea6 !important;
+              &.--current-cursor {
+                background-color: darken(#174ea6, 10)!important;
+              }
+            }
+            &--updated {
+              background-color: #ceffca !important;
+            }
+            &.row-odd {
+              background-color: darken($background-color, 5);
+            }
+            &.--current-cursor{
+              &:before {
+                background-color: lighten(#174ea6, 30);
+              }
+              &:after {
+                background-color: lighten(#174ea6, 30);
+              }
+              &:first-child .cbpo-cell--for-cursor:before {
+                background-color: lighten(#174ea6, 30);
+              }
+              &:last-child .cbpo-cell--for-cursor:before {
+                background-color: lighten(#174ea6, 30);
+              }
+            }
+            .cbpo-drilldown-btn {
+              background: $primary;
+              i {
+                color: $light;
+              }
+              &:hover {
+                background-color: lighten($primary, 10);
+              }
+            }
+            span.d-sdk-na, span.d-sdk-empty, span.d-sdk-nil,
+            span.d-na, span.d-empty, span.d-nil, span.d-null {
+              line-height: normal;
+              border-radius: 3px;
+              padding: 0 0.25rem;
+              display: inline-block;
+              font-size: 90%;
+              background-color: #808080;
+              color: $light
+            }
+          }
+        }
+        .cbpo-header-col, .cbpo-table-cell {
+          border: 1px solid $border-color;
+          background-color: $background-color;
+        }
+        &.--no-data {
+          .cbpo-table-footer {
+            border-top: 1px solid $border-color;
+          }
+        }
+      }
+      .cbpo-table-load-more-container, .cbpo-table-loading-container {
+        .cbpo-loading-btn, .message {
+          background-color: $warning;
+          color: #323a46;
+          &:not(.message):hover {
+            background-color: darken($warning, 5);
+          }
+
+          &:not(.message):active {
+            background-color: darken($warning, 10);
+          }
+        }
+      }
+    }
+  }
+  // element crosstab table
+  .cbpo-crosstab-table {
+    .warning-size-content {
+      border: 1px solid $border-color;
+    }
+    .cbpo-crosstab-widget-header {
+      @include themeStyles;
+      border: 1px solid $border-color;
+    }
+    .cross-tab-x-header {
+      background-color: $background-color;
+    }
+    .cbpo-crosstab-table-container {
+      border: 1px solid $border-color;
+      background-color: $border-color;
+    }
+    .cbpo-crosstab-table-container__inner .cbpo-crosstab-left-side .cross-tab-x-header .cbpo-sorting-holder .cbpo-sort-link {
+      &.cbpo__sort-down {
+        border-top-color: $border-color;
+      }
+      &.cbpo__sort-up {
+        border-bottom-color: $border-color;
+      }
+    }
+    .cbpo-crosstab-table--header-scroll-container:after {
+      background-color: $border-color;
+    }
+    .cbpo-crosstab-table-header,
+    .cbpo-crosstab-table-cell,
+    .cbpo-crosstab-table-last-left-column {
+      tr {
+        td,
+        th {
+          border-color: $border-color;
+        }
+        @include themeStyles;
+        .cbpo-text-value {
+          color: $text-color;
+          span.d-sdk-na,
+          span.d-sdk-empty,
+          span.d-sdk-nil,
+          span.d-na,
+          span.d-empty,
+          span.d-nil,
+          span.d-null {
+            background-color: #888;
+            color: $light;
+          }
+        }
+        &.row-even {
+          background-color: lighten($background-color, 5);
+        }
+      }
+    }
+    .cbpo-crosstab-table-cell {
+      tr:hover {
+        background-color: lighten($background-color, 10);
+      }
+    }
+    .cross-tab-x-header {
+      border-color: $border-color;
+    }
+  }
+  // dropdown
+  .cbpo-widget-menu {
+    .dropdown-menu {
+      @include themeStyles;
+      border: 1px solid $border-color;
+      .dropdown-item {
+        @include themeStyles;
+        &:hover {
+          background-color: $primary;
+          color: $light;
+          span {
+            background-color: unset;
+          }
+        }
+      }
+    }
+    .dropdown-divider {
+      border-top-color: $border-color;
+    }
+  }
+  // dashboard
+  .cbpo-dashboard-container {
+    .cbpo-dashboard-header {
+      background-color: darken($background-color, 5);
+    }
+    .cbpo-dashboard-border-bottom {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .drop-layout.active {
+    background-color: lighten($success, 50);
+    color: $dark;
+  }
+  // modal
+  .cbpo-custom-modal {
+    div[role='group']:focus {
+      outline: none;
+    }
+    .text-error {
+      color: $danger;
+    }
+    .close-icon i.fa.fa-times-circle {
+      color: lighten($danger, 10);
+    }
+    .cell-box {
+      border: 1px solid $border-color;
+      background-color: darken($background-color, 5);
+      select {
+        color: $text-color;
+      }
+    }
+    &.modal-dialog {
+      .modal-content {
+        @include themeStyles;
+        border: 1px solid $dark;
+      }
+      .modal-header {
+        button:not(.cbpo-button).close {
+          color: $light;
+        }
+      }
+      .custom-fieldset {
+        border: 1px solid $border-color;
+      }
+      .card {
+        border: none;
+        .card-header {
+          @include themeStyles;
+          border: 1px solid $border-color;
+          border-top-left-radius: calc(0.25rem - 1px);
+          border-top-right-radius: calc(0.25rem - 1px);
+          &.collapsed {
+            border-bottom-left-radius: calc(0.25rem - 1px);
+            border-bottom-right-radius: calc(0.25rem - 1px);
+          }
+        }
+        .card-body {
+          border: 1px solid $border-color;
+          border-top: none;
+          border-bottom-left-radius: calc(0.25rem - 1px);
+          border-bottom-right-radius: calc(0.25rem - 1px);
+        }
+      }
+      .modal-header,
+      .modal-body,
+      .modal-footer,
+      .card-header,
+      .card-body {
+        &:not(.cbpo-button) {
+          @include themeStyles;
+        }
+      }
+      input,
+      select,
+      textarea {
+        @include themeStyles;
+        border-color: $dark !important;
+      }
+    }
+  }
+  .v--modal-overlay {
+    .v--modal-box.cbpo-custom-modal {
+      background-color: $background-color;
+      border: 1px solid black;
+      overflow: visible;
+      .cell-box {
+        border: 1px solid $border-color;
+        background-color: darken($background-color, 5);
+        color: $text-color;
+      }
+    }
+  }
+  // color picker
+  .input-group-addon.color-picker-container {
+    @include themeStyles;
+    border: 1px solid $dark;
+    border-left: none;
+  }
+  .vc-sketch {
+    @include themeStyles;
+    box-shadow: 0 0 0 1px $border-color, 0 8px 16px $border-color;
+    .vc-input__label {
+      color: $text-color;
+    }
+    .vc-input__input {
+      box-shadow: inset 0 0 0 1px #000;
+    }
+  }
+  // cbpo query builder
+  .cbpo-builder-action {
+    .btn-logic:before {
+      border-color: $border-color;
+    }
+  }
+  .cbpo-filter-group:before,
+  .tree-form-group:before,
+  .cbpo-filter-group:after {
+    border-color: $border-color;
+  }
+  .cbpo-filter-group {
+    border-color: $border-color;
+  }
+  .tree-node-draggable.fa-arrows,
+  .tree-group-draggable.fa-arrows {
+    color: $info;
+  }
+  // pagination
+  .cbpo-pagination {
+    p,
+    span {
+      color: $text-color;
+    }
+    .cbpo-pagination-input {
+      input {
+        @include themeStyles;
+        border: 1px solid $border-color;
+      }
+      button {
+        border: none;
+        @include themeStyles;
+        &:not([disabled]):hover {
+          background-color: $default;
+        }
+      }
+    }
+    .cbpo-pagination-next-previous {
+      button {
+        border: 1px solid $border-color;
+      }
+    }
+    :not(.cbpo-pagination-input) {
+      button {
+        @include themeStyles;
+        border-color: $border-color;
+        &:disabled {
+          background-color: lighten($background-color, 10);
+          color: $light;
+          &.btn-primary {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+  // form
+  .cbpo-form {
+    input,
+    select,
+    textarea {
+      @include themeStyles;
+      border-color: $dark;
+    }
+  }
+  // filter expression
+  .exp-filter {
+    color: map-get($filter-color, 'exp');
+  }
+  .in-range-filter {
+    color: map-get($filter-color, 'range');
+  }
+  .column-filter {
+    color: map-get($filter-color, 'column');
+  }
+  .value-filter {
+    color: map-get($filter-color, 'value');
+  }
+  .condition-filter {
+    color: map-get($filter-color, 'condition-filter');
+  }
+  // drilldown
+  .cbpo-breadcrumbs-container {
+    .cbpo-drilldown- {
+      &main-column {
+        color: $light;
+      }
+      &column {
+        color: map-get($filter-color, 'column');
+      }
+      &operator {
+        color: map-get($filter-color, 'exp');
+      }
+      &value {
+        color: map-get($filter-color, 'value');
+      }
+    }
+  }
+  .cbpo-breadcrumbs-container {
+    /deep/ .breadcrumb {
+      background-color: darken($background-color, 5);
+    }
+  }
+  // column manager
+  .cbpo__element {
+    .wrapper-row {
+      .cbpo__row {
+        border-bottom: 1px solid $border-color;
+      }
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+  // html editor
+  .tox.tox-tinymce {
+    .tox-menubar,
+    .tox-collection__item-caret,
+    .tox-toolbar__primary {
+      @include themeStyles;
+      svg {
+        fill: $text-color;
+      }
+      button {
+        color: $text-color;
+        .tox-mbtn__select-label {
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .tox-tiered-menu .tox-collection__group {
+    background-color: $background-color;
+    .tox-collection__item {
+      @include themeStyles;
+      .tox-collection__item-accessory {
+        color: $light;
+      }
+      .tox-collection__item-caret svg {
+        fill: $text-color;
+      }
+      &.tox-collection__item--active:not(.tox-collection__item--state-disabled) {
+        background-color: $primary;
+        color: $light;
+      }
+    }
+
+  }
+  .tox.tox-silver-sink.tox-tinymce-aux {
+    .tox-dialog__header,
+    .tox-dialog__content-js,
+    .tox-dialog__footer,
+    .tox-dialog__body-content {
+      @include themeStyles;
+    }
+    p,
+    span,
+    label {
+      color: $text-color;
+    }
+    input,
+    select,
+    textarea {
+      @include themeStyles;
+      border-color: $dark;
+    }
+  }
+  // visualization builder
+  .visualization-builder {
+    i.fa.fa-gear {
+      color: $primary;
+    }
+    .cbpo-card {
+      border: 1px solid $border-color;
+      @include themeStyles;
+      .card-body {
+        border-radius: unset;
+        @include themeStyles;
+      }
+    }
+    .tabs {
+      @include themeStyles;
+      .tab-pane {
+        outline: none;
+      }
+      .tab-content {
+        border: none;
+      }
+    }
+    .nav.nav-pills .nav-link {
+      border-radius: 0;
+      background-color: $light;
+      &.active {
+        background-color: $primary;
+      }
+    }
+    .cbpo-visualization-element {
+      outline: none;
+      .cbpo-element-header {
+        @include themeStyles;
+      }
+      .cbpo-element-content {
+        @include themeStyles;
+        .cbpo-grid-item {
+          &.active {
+            border-color: $light;
+          }
+          i {
+            color: $light;
+          }
+          svg {
+            path,
+            polygon,
+            circle {
+              fill: $text-color;
+            }
+          }
+        }
+      }
+    }
+    .widget-content-invalid-config {
+      border: 1px solid $border-color;
+    }
+    .cbpo-axis-content {
+      .cbpo-dropzone {
+        border: 1px solid $border-color;
+        box-shadow: inset 0 0 5px $light;
+        @include themeStyles;
+        &.active {
+          background-color: lighten($background-color, 20);
+        }
+        .cell-box {
+          border: 1px solid $border-color;
+          background-color: darken($background-color, 5);
+          select {
+            color: $text-color;
+          }
+          i.fa.fa-times-circle {
+            color: lighten($danger, 10);
+          }
+        }
+      }
+    }
+  }
+  .thead-cell.ui-draggable-dragging {
+    i {
+      display: none;
+    }
+    color: $light;
+  }
+  .cell-box.ui-draggable-dragging {
+    color: $light;
+    i {
+      display: none;
+    }
+  }
+  // date picker
+  .mx-datepicker-popup {
+    .mx-datepicker-body,
+    .mx-time-header,
+    .mx-time-item,
+    .mx-time-item.active,
+    .mx-datepicker-footer,
+    .mx-datepicker-header {
+      @include themeStyles;
+    }
+    .mx-time-item.active {
+      background: darken($background-color, 10);
+    }
+    .mx-time-list:after {
+      @include themeStyles;
+    }
+  }
+  // v-select
+  .cbpo-custom-select {
+    .vs__dropdown-toggle {
+      border-color: $border-color;
+      input[type='search'].vs__search {
+        line-height: 1.6;
+        border: none;
+        color: $light;
+      }
+      .vs__selected {
+        color: $light;
+      }
+      .vs__open-indicator {
+        color: $text-color;
+      }
+      .vs__clear {
+        fill: $text-color;
+      }
+    }
+    .vs__dropdown-menu {
+      @include themeStyles;
+      box-shadow: 0 3px 6px 0 lighten($dark, 30);
+      li {
+        @include themeStyles;
+        &:hover {
+          background-color: $primary;
+          color: $light;
+        }
+      }
+      .vs__dropdown-option--selected {
+        background-color: $primary;
+        color: $light;
+      }
+    }
+  }
+  // drag and drop column
+  .col-reorder-dropzone {
+    background-color: $light;
+    i.fa {
+      color: $background-color;
+    }
+  }
+
+  // sdk multi dropdown
+  .sdk-dropdown__container {
+    .sdk-dropdown__input, .sdk-dropdown__dropdown, .sdk-dropdown__search-input {
+      border: 1px solid $border-color;
+    }
+
+    .sdk-dropdown__dropdown {
+      background-color: $background-color;
+    }
+
+    .sdk-dropdown__text-option, .sdk-dropdown__header h4 {
+      color: $text-color!important;
+    }
+
+    .sdk-dropdown__list-option:hover {
+      background-color: darken($background-color, 5)!important
+    }
+
+    .sdk-dropdown__search-container {
+      .sdk-dropdown__search-input {
+        background-color: $background-color!important;
+        color: $text-color!important;
+      }
+      i {
+        color: $text-color!important;
+      }
+    }
+  }
+  .border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.cbpo-header-col.ui-draggable-dragging {
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  color: $light;
+}
+.chartSets {
+  background-color: $background-color;
+}

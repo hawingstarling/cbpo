@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <base href="/">
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+    <link rel="stylesheet" href="/live-docs/assets/prism.css">
+    <link rel="stylesheet" href="/live-docs/assets/dark-theme.css">
+    <style>
+      pre {
+        max-height: 300px;
+      }
+      .sdk-main-page {
+        min-height: 100vh;
+      }
+      .sdk-main-page .sdk-toggle-theme {
+          padding: 106px 40px 0 40px;
+      }
+      .sdk-main-page .sdk-live-docs-container {
+        width: 100%;
+        padding: 0px 40px 40px 40px;
+      }
+      .sdk-main-page .sdk-navbar {
+        position: fixed!important;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+      .nav-text-dark, .nav-text-dark > a,  .nav-text-dark > span {
+        color: black!important;
+      }
+    </style>
+</head>
+<body>
+    <div id="cbpo-live-docs-app"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script>
+<script src="/live-docs/assets/prism.js"></script>
+<!-- Load Vue followed by BootstrapVue -->
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<!-- Load the following for BootstrapVueIcons support -->
+<script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+<!--lodash-->
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<!--Axios Instance and Services-->
+<script src="/live-docs/services/axiosConfig.js"></script>
+<script src="/live-docs/services/config/configService.js"></script>
+<script src="/live-docs/services/columns/columnService.js"></script>
+<!--Mixins-->
+<script src="/live-docs/mixins/config.mixins.js"></script>
+<script src="/live-docs/mixins/render.mixins.js"></script>
+
+<!--Components-->
+<script src="/live-docs/components/menuItem/menuItem.js"></script>
+<script src="/live-docs/components/toolbar/toolbar.js"></script>
+<script src="/live-docs/components/liveDataSource/liveDataSource.js"></script>
+<script src="/live-docs/components/exportCode/exportCode.js"></script>
+<script src="/live-docs/pages/table/table.js"></script>
+<script src="/live-docs/pages/chartjsDemo/chartjsDemo.js"></script>
+<script src="/live-docs/pages/highthChartDemo/hightchartDemo.js"></script>
+<script src="/live-docs/pages/table/groupTable.js"></script>
+<script src="/live-docs/pages/crosstab/crosstabTable.js"></script>
+<script src="/live-docs/pages/crosstab/crosstabChart.js"></script>
+<script src="/live-docs/pages/widget/saveConfig.js"></script>
+<script src="/live-docs/pages/widget/filterFormTable.js"></script>
+<script src="/live-docs/pages/widget/fullFeatureTable.js"></script>
+<script src="/live-docs/pages/widget/comparableTable.js"></script>
+<script src="/live-docs/pages/dashboard/dashboardContainer.js"></script>
+<script src="/live-docs/pages/dashboard/dashboardBuilder.js"></script>
+<script src="/live-docs/pages/dashboard/dashboardGlobalFilter.js"></script>
+<script src="/live-docs/pages/dashboard/dashboardVisualize.js"></script>
+<script src="/live-docs/pages/visualization/visualizationBuilder.js"></script>
+<script src="/live-docs/pages/html/htmlEditor.js"></script>
+<script src="/live-docs/pages/drilldown/drillDownChart.js"></script>
+<script src="/live-docs/pages/drilldown/drillDownTable.js"></script>
+<script src="/live-docs/pages/widget/widgetLoader.js"></script>
+<script src="/live-docs/pages/widget/performanceTable.js"></script>
+
+
+<!--Routes-->
+<script src="/live-docs/services/routes.js"></script>
+<script src="/live-docs/assets/json/10kRowDataSource.json"></script>
+<script src="/live-docs/assets/json/us-all-state.json"></script>
+<script src="/live-docs/assets/json/us-state.json"></script>
+<script>
+(() => {
+  Vue.config.devtools = true
+  Vue.use(VueRouter)
+  Vue.use(BootstrapVue)
+  Vue.prototype.$CBPO = window.CBPO
+  Vue.prototype.VUE_DEMO_TOKEN = '652cce4a-7190-475f-8e4d-d73b02173ab5'
+  Vue.prototype.VUE_DEMO_PROD_TOKEN = 'a9975665-5ee9-402b-8b46-64df2f95cfdf'
+
+  const router = new VueRouter({ routes })
+  router.beforeEach((to, from, next) => {
+    document.title = (to.meta.title || 'Live-docs')
+    next()
+  })
+
+  const sdkMainApp = Vue.component('sdkMainApp', {
+    template: `
+      <div class="sdk-main-page">
+        <sdk-tool-bar class="sdk-navbar"/>
+        <div class="sdk-toggle-theme">
+          <b-form-checkbox v-model="darkTheme">Dark theme</b-form-checkbox>
+        </div>
+        <div class="sdk-live-docs-container">
+          <router-view/>
+        </div>
+      </div>
+    `,
+    data() {
+      return {
+        darkTheme: true,
+        message: 'Index'
+      }
+    },
+    watch: {
+      darkTheme: {
+        immediate: true,
+        handler(val) {
+          if (val) {
+            document.body.className =  document.body.className.replace('default-sdk-theme', '')
+            document.body.className = document.body.classList + 'cbpo-sdk-dark-theme'
+          } else {
+            document.body.className =  document.body.className.replace('cbpo-sdk-dark-theme', '')
+            document.body.className = document.body.classList + 'default-sdk-theme'
+          }
+        }
+      }
+    }
+  })
+
+  new Vue({
+    el: '#cbpo-live-docs-app',
+    router,
+    render: h => h(sdkMainApp)
+  })
+})()
+</script>
+</html>

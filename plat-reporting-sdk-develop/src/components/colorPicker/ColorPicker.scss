@@ -1,0 +1,20 @@
+.vc-sketch {
+	position: absolute;
+	top: 35px;
+	right: 0;
+	z-index: 9;
+}
+.current-color {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+.input-group-addon {
+  padding: 2px;
+  font-weight: 400;
+  text-align: center;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}

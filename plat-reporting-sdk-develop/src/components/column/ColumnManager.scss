@@ -1,0 +1,101 @@
+.cbpo-column-manager {
+  height: 100%;
+  .max-height {
+    height: calc(100% - 30px - 0.5rem);
+    overflow: auto;
+  }
+  .cbpo-column-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .cbpo-table-container{
+      width: 100%;
+    }
+    .column-box {
+      width: 120px;
+      .cell-box {
+        height: 40px;
+        max-width: 150px;
+        border-radius: 5px;
+        margin: 0 5px 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        .card-info {
+          position: absolute;
+          right: 5px;
+          top: 9px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .text {
+          width: 100%;
+          text-align: center;
+          font-size: 12px;
+          padding: 0 20px 0 10px;
+        }
+      }
+    }
+  }
+}
+
+.cell-box {
+  height: 40px;
+  max-width: 150px;
+  border-radius: 5px;
+  margin: 0 5px 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  .card-info {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .text {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 20px 0 10px;
+  }
+}
+
+.ui-draggable-dragging {
+  width: 120px;
+  z-index: 1000;
+}
+.v--modal-overlay[data-modal="column-modal"] {
+  width: 0;
+  background: transparent;
+  z-index: 10000;
+  .cbpo-column-manager {
+    padding: 0 15px 20px 20px;
+    height: 90vh;
+    overflow-y: auto;
+  }
+  .drag-part {
+    height: 20px;
+    cursor: move;
+  }
+  .close-icon {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    transform: translate3d(-50%, 50%, 0);
+    position: absolute;
+    cursor: pointer;
+    font-size: 15px
+  }
+}

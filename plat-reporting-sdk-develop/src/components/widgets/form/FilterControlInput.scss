@@ -1,0 +1,19 @@
+.cbpo-filter-control-input{
+  margin-bottom: 0;
+  > label {
+    margin: 0;
+    padding: 5px 10px 5px 0;
+    display: inline-block;
+  }
+  .cbpo-custom-text, .cbpo-custom-date{
+    padding: 0.2rem 0.5rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    font-size: 11.5px;
+    border-radius: 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.cbpo-axis-zone {
+  .title {
+    display: flex;
+    padding-bottom: .5rem;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+
+  .feature__buttons {
+    padding: 0 0.15rem;
+  }
+
+  .cbpo-dropzone {
+    min-height: 100px;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing;
+    }
+  }
+
+  .cbpo-column-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100px;
+    margin-right: 0!important;
+
+    .cell-box {
+      width: 100%;
+      // min-width: 120px;
+      min-height: 40px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: auto;
+      padding: 0.25rem 0.5rem;
+      // margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      .text {
+        padding: 0 10px;
+      }
+
+      .fa{
+        &.fa-times-circle {
+          position: absolute;
+          cursor: pointer;
+          font-size: 12px;
+          top: 5px;
+          right: 5px;
+        }
+        &.fa-gear {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0.5rem;
+    }
+
+  }
+
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.cell-box /deep/ .custom-select{
+  font-size: 0.65rem;
+  width: auto;
+  border: none;
+  height: auto !important;
+  margin-right: .25rem;
+  padding: 0 .5rem;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.cell-box /deep/ .custom-select:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.form-control.custom-select {
+  padding: 0 5px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+}

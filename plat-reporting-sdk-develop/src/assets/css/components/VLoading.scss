@@ -1,0 +1,38 @@
+:root {
+  --size: 26px;
+}
+.lds-hourglass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(var(--size) * 3);
+}
+
+.lds-hourglass:after {
+  content: " ";
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 6px;
+  box-sizing: border-box;
+  border: var(--size) solid #000;
+  border-color: rgba($color: #000000, $alpha: .3) transparent rgba($color: #000000, $alpha: .3) transparent;
+  animation: lds-hourglass 1.5s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}

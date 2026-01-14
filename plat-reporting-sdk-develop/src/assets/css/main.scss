@@ -1,0 +1,148 @@
+// import link download font family
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+$font-roboto: 'Roboto', sans-serif;
+
+// ALL FILES SCSS WHICH IMPORTED INTO MAIN.SCSS MUST START WITH PREFIX 'cbpo'
+
+*, html {
+  &:focus {
+    outline: none
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-roboto;
+
+  .tooltip-float {
+    z-index: 11000 !important;
+  }
+
+  .highcharts-credits {
+    display: none !important;
+    width: 0;
+    height: 0;
+  }
+
+  // connectorDirective
+  #connector-blue-canvas {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999999;
+    .connector-blue-path {
+      stroke: #5bb7e8;
+      stroke-width: 2;
+      fill: transparent;
+    }
+  }
+
+  .ql-container.isInvisible {
+    path.needle {
+      visibility: hidden !important;
+    }
+  }
+}
+
+.cbpo-custom-modal.modal-dialog {
+  button, a, legend, div {
+    &:active, &:focus {
+      outline: none;
+    }
+  }
+
+  header.modal-header {
+    padding: 10px;
+    h5 {
+      font-size: 14px;
+    }
+  }
+
+  .card-header {
+    padding: 0;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .form-control {
+    line-height: 15px;
+    font-size: 12px !important;
+  }
+
+  select.custom-select {
+    height: 30px;
+    line-height: 15px;
+    font-size: 12px !important;
+  }
+
+  .card-body {
+    padding: .5rem;
+  }
+
+  font-size: 14px;
+}
+
+.cpbo-toast-export {
+  font-weight: normal !important;
+  box-shadow: 0 1px 1px rgba(0,0,0,.12), 0 1px 1px rgba(0,0,0,.24) !important;
+  .btn-export-data {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  &.toasted {
+    max-width: fit-content;
+    align-self: center;
+  }
+}
+
+.mx-datepicker-body {
+  .mx-calendar-time {
+    display:flex;
+    flex-direction: column;
+
+    .mx-time-content {
+      height:100%;
+    }
+  }
+}
+
+.cbpo-custom-select {
+  .vs__dropdown-menu {
+    li {
+      padding-left:8px;
+    }
+  }
+}
+
+// base
+@import 'base/global';
+// @import 'base/jquery-ui.scss';
+
+// functions
+@import 'core/functions';
+
+// mixins
+@import 'core/mixins';
+
+// components
+@import '~vue-select/dist/vue-select.css';
+@import 'components/VLoading';
+@import 'components/Button';
+@import 'components/Select';
+@import 'components/ProgressBarFormat';
+//@import 'components/HtmlEditor';
+//@import 'components/BoostrapModalCustom';
+// @import 'components/VTable';
+// @import 'components/VPaginationPreviousNext';
+// @import 'components/VPaginationSizing';
+// @import 'components/VPaginationInputSearch';
+
+@import 'themes/default-theme';
+
+

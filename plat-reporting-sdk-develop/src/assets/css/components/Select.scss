@@ -1,0 +1,48 @@
+.cbpo-custom-select {
+  display: inline-block;
+
+  .vs__dropdown-toggle {
+    border-radius: 0;
+  }
+
+  .vs__actions {
+    cursor: pointer;
+  }
+
+  span.vs__selected {
+    pointer-events: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  input.vs__search[type=search] {
+    width: auto !important;
+  }
+
+  li.vs__dropdown-option--selected {
+    background-color: #cccccc;
+  }
+
+  span.vs__selected+input[type=search] {
+    width: 0 !important;
+  }
+
+  &.vs--open input.vs__search[type=search] {
+    width: auto !important;
+  }
+
+  .vs__open-indicator {
+    font-size: 15px;
+    color: #5B6973;
+  }
+
+  .vs__dropdown-menu {
+    display: flex !important;
+    flex-direction: column !important;
+
+    li {
+      flex: 1 1 auto;
+    }
+  }
+}

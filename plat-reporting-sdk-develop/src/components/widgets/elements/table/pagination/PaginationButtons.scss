@@ -1,0 +1,44 @@
+// @import url('./assets/css/main.scss');
+$font-size: 11.5px;
+
+@mixin d-flex($direction: row, $j-content: flex-start, $a-items: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
+
+.cbpo-pagination-next-previous {
+  padding: $spacing 0;
+  font-size: $font-size;
+  width: 100%;
+  border-top: none;
+  @include d-flex(row, space-between, center);
+  >div:first-child {
+    button:first-child {
+      margin-left: 0;
+    }
+  }
+  >div:nth-last-child(1) {
+    button:nth-last-child(1) {
+      margin-right: 0;
+    }
+  }
+  div {
+    width: 35%;
+    display: flex;
+    @include d-flex(row, space-between, center);
+    .cbpo-btn {
+      width: 50%;
+      margin: 0 .25rem;
+      transition: .2s all;
+      font-size: $font-size;
+      text-align: center;
+    }
+  }
+  .cbpo-pagination-page-of {
+    font-size: $font-size;
+    font-weight: 400;
+    height: 0;
+  }
+}

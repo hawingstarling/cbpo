@@ -1,0 +1,63 @@
+.cbpo-filter-control-select,
+.cbpo-filter-control-input {
+  margin-bottom: 0;
+
+  >label {
+    margin: 0;
+    padding: 5px 10px 5px 0;
+    display: inline-block;
+  }
+
+  .cbpo-custom-select,
+  .cbpo-custom-input {
+    padding: 0.2rem 0.5rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    font-size: 11.5px;
+    border-radius: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .cbpo-custom-input {
+    border-radius: .25rem;
+  }
+
+  .select-section {
+    position: relative;
+    display: inline-block;
+
+    i[role="clearBtn"] {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      z-index: 200;
+      color: #C8CCCF;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+::v-deep .vs__dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+::v-deep .vs__dropdown-option {
+  display: table;
+  min-width: 100%;
+}
+
+::v-deep .vs__dropdown-toggle {
+  padding-bottom: 2px;
+}
+
+::v-deep .select-section {
+  i {
+    cursor: pointer;
+  }
+}

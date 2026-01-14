@@ -1,0 +1,29 @@
+$font-size-pagination : 12px;
+
+@mixin d-flex($direction: row, $j-content: flex-start, $a-items: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $j-content;
+  align-items: $a-items;
+}
+
+.cbpo-pagination-input {
+  width: 100%;
+  padding: $spacing 0;
+  @include d-flex(row, flex-end, center);
+
+  .cbpo-pagination-page-of,
+  .cbpo-pagination-page-current,
+  p {
+    font-size: .75rem;
+    font-weight: 400;
+    margin: 0 10px;
+  }
+
+  .cbpo-pagination-input__search {
+    border-radius: 3px;
+    width: 70px;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}

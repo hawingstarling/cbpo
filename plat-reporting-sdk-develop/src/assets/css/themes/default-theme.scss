@@ -1,0 +1,679 @@
+@import '../core/color';
+
+// main variables
+$background-color: #ffffff;
+$text-color: #000000;
+$border-color: lighten($dark, 85);
+$empty-background-color: #c8ced3;
+$empty-text-color: #444;
+@mixin themeStyles {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.default-sdk-theme {
+  // common style
+  .cbpo-dashboard,
+  .cbpo-drop-layout,
+  .cbpo-widget,
+  .cbpo-table-reporting,
+  .cbpo-crosstab-table,
+  .cbpo-chart-widget,
+  .cbpo-control-features {
+    @include themeStyles;
+  }
+
+  .cbpo-dashboard,
+  .cbpo-widget,
+  .cbpo-widget .cbpo-crosstab-table-container {
+    border: 1px solid $border-color;
+  }
+
+  .cbpo-crosstab-table--header-scroll-container:after {
+    background-color: $border-color;
+  }
+
+  .cbpo-widget .cbpo-widget-title, .cbpo-table-title {
+    border-bottom: 1px solid $border-color;
+    color: $dark;
+    background-color: darken($background-color, 8);
+  }
+
+  // element table
+  .cbpo-table-element-container {
+    .cbpo-progress-container {
+      width: 100%;
+      height: 20px;
+      margin-top: 7px;
+
+      .cbpo-progress {
+        background-color: $primary;
+        height: 16.5px;
+        border-radius: 3px;
+      }
+    }
+    .cbpo-table-global-grouping:not(.--no-border), .cbpo-drill-down-action:not(.--no-border) {
+      border-left: .5px solid $border-color;
+      border-right: .5px solid $border-color;
+    }
+    .cbpo-table-global-grouping.cpbo-custom-switch .custom-switch {
+      border-left: 1px solid $border-color;
+    }
+
+    .cbpo-table-action {
+      border: .5px solid $border-color;
+      border-bottom: 0;
+    }
+
+    .cbpo-message {
+      color: $blue;
+      &:not(.--no-action):hover {
+        color: darken($blue, 15);
+      }
+    }
+
+    .cbpo-table-title {
+      border: .5px solid $border-color;
+    }
+
+    .cbpo-table-container {
+      .cbpo-grouping-setup-icon {
+        i {
+          color: $primary
+        }
+      }
+      .cbpo-table {
+        border: .5px solid $border-color;
+        background-color: $border-color;
+        .cbpo-table-header .sorting-holder .sort-link {
+          &.cbpo__sort-down {
+            border-top-color: darken($border-color, 15);
+          }
+
+          &.cbpo__sort-up {
+            border-bottom-color: darken($border-color, 15);
+          }
+        }
+        .cbpo-table-body .cbpo-table-cell.c-grouped {
+          &:not(.--expand):before {
+            border-left-color: $border-color;
+          }
+
+          &.--expand:before {
+            border-top-color: $border-color;
+            transform: translateY(calc(-50% + 3px)) !important;
+          }
+        }
+        .cbpo-table-body .vue-recycle-scroller__item-view {
+          &.hover .cbpo-table-cell {
+            background-color: darken($light, 10)!important;
+            &--selected {
+              background-color: #c2dbff !important;
+              &.--current-cursor {
+                background-color: darken(#c2dbff, 10)!important;
+              }
+            }
+            &--updated {
+              background-color: #ceffca !important;
+            }
+          }
+
+          .cbpo-table-cell {
+            background-color: $light;
+            transition: background-color 0.1s linear;
+            cursor: default;
+            &--selected {
+              background-color: #c2dbff !important;
+              &.--current-cursor {
+                background-color: darken(#c2dbff, 10)!important;
+              }
+            }
+            &--updated {
+              background-color: #ceffca !important;
+            }
+            &.row-odd {
+              background-color: darken($light, 5);
+            }
+            &.--current-cursor{
+              &:before {
+                background-color: darken(#c2dbff, 50);
+              }
+              &:after {
+                background-color: darken(#c2dbff, 50);
+              }
+              &:first-child .cbpo-cell--for-cursor:before {
+                background-color: darken(#c2dbff, 50);
+              }
+
+              &:last-child .cbpo-cell--for-cursor:before {
+                background-color: darken(#c2dbff, 50);
+              }
+            }
+            .cbpo-drilldown-btn {
+              background: $primary;
+              i {
+                color: $light;
+              }
+              &:hover {
+                background-color: darken($primary, 10);
+              }
+            }
+            span.d-sdk-na, span.d-sdk-empty, span.d-sdk-nil,
+            span.d-na, span.d-empty, span.d-nil, span.d-null {
+              line-height: normal;
+              border-radius: 3px;
+              padding: 0 0.25rem;
+              display: inline-block;
+              font-size: 90%;
+              background-color: #989898;
+              color: $light
+            }
+          }
+        }
+        .cbpo-header-col, .cbpo-table-cell {
+          border: 1px solid #d9d9d9;
+          background-color: $light;
+        }
+        &.--no-data {
+          .cbpo-table-footer {
+            border-top: 1px solid $border-color;
+          }
+        }
+      }
+      .cbpo-table-load-more-container, .cbpo-table-loading-container {
+        .cbpo-loading-btn, .message {
+          background-color: $warning;
+
+          &:not(.message):hover {
+            background-color: darken($warning, 5);
+          }
+
+          &:not(.message):active {
+            background-color: darken($warning, 10);
+          }
+
+          .cbpo-spinner {
+            border: 1px solid $dark
+          }
+        }
+      }
+    }
+  }
+
+  // element crosstab table
+  .cbpo-crosstab-table {
+    .cbpo-crosstab-widget-header {
+      @include themeStyles;
+      border: 1px solid $border-color;
+    }
+
+    .cross-tab-x-header {
+      background-color: $background-color;
+    }
+
+    .cbpo-crosstab-table-container {
+      border: 1px solid $border-color;
+      background-color: $border-color;
+    }
+
+    .cbpo-crosstab-table-container__inner .cbpo-crosstab-left-side .cross-tab-x-header .cbpo-sorting-holder .cbpo-sort-link {
+      &.cbpo__sort-down {
+        border-top-color: darken($border-color, 15);
+      }
+
+      &.cbpo__sort-up {
+        border-bottom-color: darken($border-color, 15);
+      }
+    }
+
+    .cbpo-crosstab-table-header,
+    .cbpo-crosstab-table-cell,
+    .cbpo-crosstab-table-last-left-column {
+      tr {
+        td, th {
+          border-color: $border-color;
+        }
+
+        @include themeStyles;
+
+        .cbpo-text-value {
+          color: $text-color;
+
+          span.d-sdk-na, span.d-sdk-empty, span.d-sdk-nil,
+          span.d-na, span.d-empty, span.d-nil, span.d-null {
+            background-color: #c8ced3;
+            color: $light
+          }
+        }
+
+        &.row-even {
+          background-color: lighten($background-color, 5);
+        }
+      }
+    }
+
+    .cbpo-crosstab-table-cell {
+      tr:hover {
+        background-color: lighten($background-color, 10);
+      }
+    }
+
+    .cross-tab-x-header {
+      border-color: $border-color;
+    }
+  }
+
+  // dropdown
+  .cbpo-widget-menu .dropdown-menu {
+    @include themeStyles;
+    border: 1px solid $border-color;
+
+    .dropdown-item {
+      @include themeStyles;
+
+      &:hover {
+        background-color: $primary;
+        color: $light;
+      }
+    }
+  }
+
+  // dashboard
+  .cbpo-dashboard-container > .cbpo-dashboard-border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .drop-layout.active {
+    background-color: lighten($success, 50);
+  }
+
+  // modal
+  .cbpo-custom-modal {
+    .text-error {
+      color: $danger;
+    }
+
+    .close-icon i.fa.fa-times-circle {
+      color: lighten($danger, 10);
+    }
+
+    .cell-box {
+      border: 1px solid $border-color;
+      background-color: $background-color;
+      select {
+        color: $text-color;
+      }
+    }
+
+    &.modal-dialog {
+      .modal-content {
+        @include themeStyles;
+        border: 1px solid $border-color;
+      }
+
+      .modal-header {
+        button:not(.cbpo-button).close {
+          color: $dark;
+        }
+      }
+
+      .custom-fieldset {
+        border: 1px solid $border-color;
+      }
+
+      .card-header {
+        border: 1px solid transparent;
+        border-bottom-color: $border-color;
+        background-color: darken($background-color, 10);
+      }
+
+      .modal-header,
+      .modal-body,
+      .modal-footer,
+      .card-body {
+        &:not(.cbpo-button) {
+          @include themeStyles;
+        }
+
+        .card-header {
+          background-color: darken($background-color, 5);
+        }
+      }
+
+      input,
+      select,
+      textarea {
+        @include themeStyles;
+      }
+    }
+  }
+
+  .v--modal-overlay {
+    .v--modal-box.cbpo-custom-modal {
+      background-color: $background-color;
+      border: 1px solid $border-color;
+      overflow: visible;
+
+      .cell-box {
+        border: 1px solid $border-color;
+        background-color: darken($background-color, 5);
+        color: $text-color;
+      }
+    }
+  }
+
+  // color picker
+  .input-group-addon.color-picker-container {
+    @include themeStyles;
+    border: 1px solid $border-color;
+  }
+
+  .vc-sketch {
+    @include themeStyles;
+    box-shadow: 0 0 0 1px $border-color, 0 8px 16px $border-color;
+
+    .vc-input__label {
+      color: $text-color;
+    }
+  }
+
+  // cbpo query builder
+  .cbpo-builder-action {
+    .btn-logic:before {
+      border-color: $border-color;
+    }
+  }
+
+  .cbpo-filter-group:before,
+  .tree-form-group:before,
+  .cbpo-filter-group:after {
+    border-color: $border-color;
+  }
+
+  .cbpo-filter-group {
+    border-color: $border-color;
+  }
+
+  .tree-node-draggable.fa-arrows,
+  .tree-group-draggable.fa-arrows {
+    color: $info;
+  }
+
+  // pagination
+  .cbpo-pagination {
+    p,
+    span {
+      color: $text-color;
+    }
+
+    .cbpo-pagination-input {
+      input {
+        @include themeStyles;
+      }
+
+      button {
+        border: none;
+
+        &:not([disabled]):hover {
+          background-color: lighten($default, 50);
+          color: $dark;
+        }
+      }
+    }
+
+    .cbpo-pagination-next-previous {
+      button {
+        border: 1px solid $border-color;
+      }
+    }
+
+    :not(.cbpo-pagination-input) {
+      button {
+        @include themeStyles;
+        border-color: $border-color;
+
+        &:disabled {
+          background-color: darken($background-color, 30);
+          color: $light;
+
+          &.btn-primary {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  // form
+  .cbpo-form {
+    input,
+    select,
+    textarea {
+      @include themeStyles;
+    }
+  }
+
+  // filter expression
+  .exp-filter {
+    color: map-get($filter-color, 'exp');
+  }
+
+  .in-range-filter {
+    color: map-get($filter-color, 'range');
+  }
+
+  .column-filter {
+    color: map-get($filter-color, 'column');
+  }
+
+  .value-filter {
+    color: map-get($filter-color, 'value');
+  }
+
+  .condition-filter {
+    color: map-get($filter-color, 'condition-filter');
+  }
+
+  // drilldown
+  .cbpo-breadcrumbs-container, .cbpo-drill-down-detail {
+    .cbpo-drilldown- {
+      &column {
+        color: map-get($filter-color, 'column');
+      }
+
+      &operator {
+        color: map-get($filter-color, 'exp');
+      }
+
+      &value {
+        color: map-get($filter-color, 'value');
+      }
+    }
+  }
+
+  // column manager
+  .cbpo__element {
+    .wrapper-row {
+      .cbpo__row {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:not(:last-child) {
+        border-bottom: none;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+
+  // html editor
+  .tox.tox-tinymce {
+    .tox-menubar,
+    .tox-toolbar__primary {
+      @include themeStyles;
+
+      svg {
+        fill: $text-color;
+      }
+
+      button {
+        color: $text-color;
+
+        .tox-mbtn__select-label {
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  .tox-tiered-menu .tox-collection__group {
+    background-color: $background-color;
+
+    div {
+      @include themeStyles;
+    }
+  }
+
+  .tox.tox-silver-sink.tox-tinymce-aux {
+    .tox-dialog__header,
+    .tox-dialog__content-js,
+    .tox-dialog__footer {
+      @include themeStyles;
+    }
+
+    p,
+    span,
+    label {
+      color: $text-color;
+    }
+
+    input,
+    select,
+    textarea {
+      @include themeStyles;
+    }
+  }
+
+  // visualization builder
+  .visualization-builder {
+    i.fa.fa-gear {
+      color: $primary;
+    }
+
+    .cbpo-card {
+      border: 1px solid $border-color;
+      @include themeStyles;
+    }
+
+    .tabs {
+      @include themeStyles;
+
+      .tab-pane {
+        outline: none;
+      }
+    }
+
+    .nav.nav-pills .nav-link {
+      border-radius: 0;
+      background-color: $light;
+      border: 1px solid $border-color;
+
+      &.active {
+        background-color: $primary;
+      }
+    }
+
+    .cbpo-visualization-element {
+      outline: none;
+
+      .cbpo-element-header {
+        @include themeStyles;
+      }
+
+      .cbpo-element-content {
+        .cbpo-grid-item {
+          &.active {
+            border-color: $primary;
+          }
+
+          i {
+            color: $dark;
+          }
+        }
+      }
+    }
+
+    .widget-content-invalid-config {
+      border: 1px solid $border-color;
+      background-color: darken($light, 10);
+    }
+
+    .cbpo-axis-content {
+      .cbpo-dropzone {
+        border: 1px solid $border-color;
+        box-shadow: inset 0 0 5px lighten($dark, 30);
+        background-color: darken($background-color, 10);
+
+        &.active {
+          background-color: darken($background-color, 15);
+        }
+
+        .cell-box {
+          border: 1px solid $border-color;
+          background-color: $background-color;
+
+          select {
+            color: $text-color;
+          }
+
+          i.fa.fa-times-circle {
+            color: lighten($danger, 10);
+          }
+        }
+      }
+    }
+  }
+
+  .thead-cell.ui-draggable-dragging {
+    i {
+      display: none;
+    }
+
+    color: $dark;
+  }
+
+  // sdk multi dropdown
+  .sdk-dropdown__container {
+    .sdk-dropdown__input, .sdk-dropdown__dropdown, .sdk-dropdown__search-input {
+      border: 1px solid $border-color;
+    }
+  }
+
+  .cell-box.ui-draggable-dragging {
+    color: $dark;
+
+    i {
+      display: none;
+    }
+  }
+  .border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.cbpo-header-col.ui-draggable-dragging {
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  color: $dark;
+}
+
+// v-select
+.cbpo-custom-select {
+  border-color: darken($background-color, 15) !important;
+
+  .vs__dropdown-toggle {
+    border-color: darken($background-color, 15);
+  }
+}

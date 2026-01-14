@@ -31,6 +31,13 @@ from app.permission.sub_serializers.access_rule_serializer import (
     PermissionSerializer,
     PermissionGroupJSONSerializer,
 )
+from app.permission.bitset_permissions import (
+    PermissionBitset,
+    from_permission_list,
+    to_permission_list,
+    get_registry,
+    initialize_permission_registry,
+)
 from app.tenancies.config_static_variable import MEMBER_STATUS
 from app.tenancies.models import UserClient, OrganizationUser, Client, Organization
 
@@ -124,95 +131,92 @@ class ComposePermissionService:
     @staticmethod
     def compose_permission_from_access_rules(query_set: [AccessRule], overriding_permissions_groups=None) -> [dict]:
         """
-        compose permission from list of access rules
-        :return:
-        @param query_set:
+        Compose permission from list of access rules using bitset/bitwise operations.
+        
+        This method uses bitwise operations similar to Discord's permission system:
+        1. Collect all permissions from access rules
+        2. Combine them using OR operations (union)
+        3. Apply deny bits first, then allow bits
+        4. Apply overriding permissions (highest priority)
+        
+        :return: List of permission dictionaries
+        @param query_set: List of AccessRule objects
         @param overriding_permissions_groups: permissions are in high priority, they will override permissions from
         custom roles and access rules defined
         """
-        res = []
-        res_inherit_not_handle = []
-
-        def append_method(x, which="res"):
-            if which == "res":
-                find_exist = [item for item in res if item["key"] == x["key"]]
-                if len(find_exist) == 0:
-                    res.append(x)
-            else:
-                find_exist = [item for item in res_inherit_not_handle if item["key"] == x["key"]]
-                if len(find_exist) == 0:
-                    res_inherit_not_handle.append(x)
-
-        def classify_permission(classified_per):
-            if classified_per["status"] == STATUS_PERMISSION_INHERIT_KEY:
-                append_method(
-                    {
-                        "key": classified_per["key"],
-                        "name": classified_per["name"],
-                        "group": classified_per["group"],
-                        "module": classified_per["module"],
-                    },
-                    which="res_inherit_not_handle",
-                )
-            else:
-                append_method(
-                    {
-                        "key": classified_per["key"],
-                        "name": classified_per["name"],
-                        "group": classified_per["group"],
-                        "module": classified_per["module"],
-                        "status": classified_per["status"],
-                    },
-                    which="res",
-                )
-
-        def handler_overriding_permissions_groups(_group_key, _module, _list_per):
-            for _per in list_per:
-                _status = _per.get("status")
-                _key = _per.get("key")
-                try:
-                    ins = Permission.objects.get(key=_key, group=_group_key)
-                    permission_data = PermissionSerializer(ins).data
-                    classify_permission(
-                        {
-                            "key": _key,
-                            "name": permission_data["name"],
-                            "group": _group_key,
-                            "module": _module,
-                            "status": _status,
-                        }
-                    )
-                except Permission.DoesNotExist:
-                    raise ValidationError("Permission does not exist. [{}, {}]".format(_key, _group_key))
-
+        # Ensure registry is initialized
+        registry = get_registry()
+        if not registry.get_all_permissions():
+            initialize_permission_registry()
+        
+        # Start with empty bitset
+        base_bitset = PermissionBitset(allow=0, deny=0)
+        
+        # Collect all permissions from access rules
         list_permission = []
         for access_rule in query_set:
             access_rule_permission_query_set = AccessRulePermission.objects.filter(access_rule=access_rule)
             list_permission += AccessRulePermissionSerializer(access_rule_permission_query_set, many=True).data
-
+        
+        # Process permissions using bitset operations
+        # Combine all permissions (allow and deny) into one bitset
+        # This ensures all permissions are tracked properly
+        all_permissions = [perm for perm in list_permission if perm.get("status") != STATUS_PERMISSION_INHERIT_KEY]
+        inherit_permissions = [perm for perm in list_permission if perm.get("status") == STATUS_PERMISSION_INHERIT_KEY]
+        
+        if all_permissions:
+            # Create bitset from all non-inherit permissions
+            base_bitset = from_permission_list(all_permissions)
+        
+        # Handle overriding permissions (highest priority)
         if overriding_permissions_groups:
+            overriding_permissions = []
             for per_group in overriding_permissions_groups:
                 group_key = per_group.get("group")["key"]
                 module = per_group.get("module")["key"]
                 list_per = per_group.get("permissions")
-                handler_overriding_permissions_groups(group_key, module, list_per)
-
-        # implement handle permissions
-        for perm in list_permission:
-            classify_permission(perm)
-
-        for per in res_inherit_not_handle:
-            append_method(
-                {
-                    "key": per["key"],
-                    "name": per["name"],
-                    "group": per["group"],
-                    "module": per["module"],
+                for _per in list_per:
+                    _status = _per.get("status")
+                    _key = _per.get("key")
+                    try:
+                        ins = Permission.objects.get(key=_key, group=group_key)
+                        permission_data = PermissionSerializer(ins).data
+                        overriding_permissions.append({
+                            "key": _key,
+                            "name": permission_data["name"],
+                            "group": group_key,
+                            "module": module,
+                            "status": _status,
+                        })
+                    except Permission.DoesNotExist:
+                        raise ValidationError("Permission does not exist. [{}, {}]".format(_key, group_key))
+            
+            if overriding_permissions:
+                override_bitset = from_permission_list(overriding_permissions)
+                # Override takes precedence, so combine it last
+                base_bitset = base_bitset.combine(override_bitset)
+        
+        # Convert bitset back to list format
+        result = to_permission_list(base_bitset)
+        
+        # Handle inherit permissions that weren't explicitly set
+        # These should default to DENY
+        inherit_keys = {perm.get("key") for perm in inherit_permissions}
+        result_keys = {perm.get("key") for perm in result}
+        
+        for inherit_perm in inherit_permissions:
+            perm_key = inherit_perm.get("key")
+            if perm_key not in result_keys:
+                # Add as DENY since it was inherited but not explicitly set
+                result.append({
+                    "key": perm_key,
+                    "name": inherit_perm.get("name", perm_key),
+                    "group": inherit_perm.get("group", ""),
+                    "module": inherit_perm.get("module", ""),
                     "status": STATUS_PERMISSION_DENY_KEY,
-                },
-                which="res",
-            )
-        return res
+                })
+        
+        return result
 
     @staticmethod
     def group_composed_permission(composed_permission):

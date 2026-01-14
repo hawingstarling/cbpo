@@ -1,0 +1,108 @@
+#image: node:10.2.1
+
+#cache:
+#  paths:
+#    - node_modules/
+
+stages:
+  - test
+  - build-deploy
+  - deploy
+  - build-lib
+  - build-lib-prod
+
+.setup-registry: &setup-registry
+  - echo "registry=http://npm-registry.channelprecision.com" > .npmrc
+  - echo "//npm-registry.channelprecision.com/:_authToken=$NPM_TOKEN" >> .npmrc
+
+test:
+  stage: test
+  script:
+    - *setup-registry
+    - npm install
+    - npm run build
+    - npm run lintsrc
+#    - npm run lint
+    - npm run test:coverage
+    - rm .npmrc
+
+variables:
+  VERSION_APP: 'v1.0.0-dev0' # app
+  # VERSION_LIB: 'v1.0.0-dev13' # lib gs
+  VERSION: 'v1.0.0-dev1' # lib npm
+  CONTAINER_DEV_IMAGE: $REGISTRY/$PROJECT_ID/$PROJECT_NAME
+  DEPLOYMENT_TYPE: 'dev'
+  CLUSTER_NAME: uat-hd-bpo-cluster
+  DEV_CLUSTER_NAME: dev-hd-cbpo-cluster
+  QA_CLUSTER_NAME: qa-hd-bpo-cluster
+  DEV_ZONE: 'us-central1-f'
+  QA_ZONE: 'us-central1-a'
+  REPLICAS: '1'
+  PORT: '5000'
+  APP_NAME: plat-rs-sdk
+
+build-deploy:
+  stage: build-deploy
+  tags:
+    - deploy
+  script:
+    - docker build -t $CONTAINER_DEV_IMAGE:$VERSION_APP .
+    - docker push $CONTAINER_DEV_IMAGE:$VERSION_APP
+    - docker rmi -f $(docker images $CONTAINER_DEV_IMAGE -q)
+  only:
+    - build/dev
+    - build/qa
+    - build/uat
+
+deploy:
+  stage: deploy
+  tags:
+    - deploy
+  environment:
+    name: deploy
+  script:
+    - if [ $DEPLOYMENT_TYPE == "dev" ]; then gcloud container clusters get-credentials $DEV_CLUSTER_NAME --zone $DEV_ZONE --project $PROJECT_ID; fi
+    - if [ $DEPLOYMENT_TYPE == "qa" ]; then gcloud container clusters get-credentials $QA_CLUSTER_NAME --zone $QA_ZONE --project $PROJECT_ID; fi
+    - if [ $DEPLOYMENT_TYPE == "uat" ]; then gcloud container clusters get-credentials $CLUSTER_NAME --zone $ZONE --project $PROJECT_ID; fi
+    - sed 's/_APP_NAME_/'"$PROJECT_NAME"'/g; s/_PROJECT_ID_/'"$PROJECT_ID"'/g; s/_REGISTRY_/'"$REGISTRY"'/g; s/_DEPLOYMENT_TYPE_/'"$DEPLOYMENT_TYPE"'/g; s/_REPLICAS_/'"$REPLICAS"'/g; s/_PORT_/'"$PORT"'/g; s/_VERSION_/'"$VERSION_APP"'/g' values.tpl.yml > values.yml;
+    - export DEPLOYS=$(helm ls | grep ${DEPLOYMENT_TYPE}-${PROJECT_NAME} | wc -l)
+    - if [ ${DEPLOYS} == 0 ]; then helm install cbpo-repo/bpo-chart --name ${DEPLOYMENT_TYPE}-${PROJECT_NAME} --values values.yml; else helm upgrade ${DEPLOYMENT_TYPE}-${PROJECT_NAME} cbpo-repo/bpo-chart --values values.yml; fi
+  only:
+    - build/dev
+    - build/qa
+    - build/uat
+
+build-lib:
+  stage: build-lib
+  tags:
+    - deploy
+  script:
+    - *setup-registry
+    - cp scripts/run-build-lib.sh run-build-lib.sh
+    - chmod +x run-build-lib.sh
+    - export SDK_VERSION_CHECKED=$(npm view $APP_NAME versions | grep ${VERSION:1} | wc -l)
+    - if [ ${SDK_VERSION_CHECKED} == 0 ]; then ./run-build-lib.sh; else echo "$VERSION has existed"; fi
+    - rm .npmrc
+  only:
+    - develop
+    - build/dev
+    - build/qa
+    - build/uat
+    - build/release
+
+build-lib-prod:
+  stage: build-lib-prod
+  tags:
+    - deploy-production
+  environment:
+    name: production
+  script:
+    - npm install
+    - npm run build
+    - gsutil cp -r dist/ gs://ds-sdk-prod/${VERSION}/
+    - gsutil acl ch -u AllUsers:R gs://ds-sdk-prod/${VERSION}/dist/js/app.js
+    - gsutil acl ch -u AllUsers:R gs://ds-sdk-prod/${VERSION}/dist/js/chunk-vendors.js
+    - gsutil acl ch -u AllUsers:R gs://ds-sdk-prod/${VERSION}/dist/css/app.css
+    - gsutil acl ch -u AllUsers:R gs://ds-sdk-prod/${VERSION}/dist/css/chunk-vendors.css
+  only:
+    - build/release

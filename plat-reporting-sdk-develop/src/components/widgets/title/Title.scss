@@ -1,0 +1,22 @@
+$switch-box-width: 40px;
+$switch-box-height: 15px;
+
+.cbpo-widget-title {
+  padding: 0.7rem;
+  font-size: 12px;
+  font-weight: 700 !important;
+  display: flex;
+  border: none;
+  border-bottom: 1px solid #000000;
+  h4 {
+    margin: 0;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    width: calc(100% - 32px);
+    text-align: center;
+  }
+}

@@ -1,0 +1,25 @@
+.cbpo-container-html-editor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.5rem;
+  height: 100%;
+  overflow: auto;
+  .ql-editor, .ql-container, /deep/.tox-tinymce {
+    width: 100%;
+  }
+
+  .ql-container.max-height {
+    height: calc(100% - 42px);
+  }
+
+  .editor-btn {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: right;
+    .btn-sm, .btn-group-sm > .btn {
+      font-size: 11px;
+    }
+  }
+}
+

@@ -1,0 +1,114 @@
+.cbpo-list {
+  &__search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    &__form {
+      width: 50%;
+
+      .clear-keyword {
+        position: absolute;
+        cursor: pointer;
+        right: 10px;
+        top: 50%;
+        z-index: 20;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .cbpo__element__column {
+    width: 50%;
+
+    .wrapper-row {
+      width: 100%;
+
+      .cbpo__row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        justify-content: center;
+
+        > div {
+          height: 40px;
+
+          &:not(.cbpo__switch) {
+            line-height: 40px;
+          }
+        }
+
+        .cbpo__index {
+          width: 32px;
+          text-align: center;
+        }
+
+        .cbpo__name {
+          width: calc(100% - 32px - 55px);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding: 0 10px;
+        }
+
+        .cbpo__switch {
+          width: 55px;
+          overflow: hidden;
+          padding: 7px 0;
+
+          &::v-deep .custom-control.custom-switch{
+            height: 26px;
+          }
+        }
+      }
+
+      &:not(:last-child) .cbpo__row{
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+
+    &.--left {
+      .cbpo__index {
+        border-right: 1px solid #d9d9d9;
+      }
+    }
+    &.--right {
+      .cbpo__index {
+        border-left: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+      }
+    }
+  }
+
+  .cbpo__element__column__wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    border: 1px solid #d9d9d9;
+    max-height: 450px;
+    overflow: auto;
+
+    &.--diff {
+      .cbpo__element__column {
+        &.--left .wrapper-row:last-child {
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            right: -1px;
+            top: 0;
+            bottom: 0;
+            display: block;
+            width: 1px;
+            background: #d9d9d9;
+          }
+        }
+
+        &.--right .wrapper-row:last-child .cbpo__row{
+          border-bottom: 1px solid #d9d9d9;
+        }
+      }
+    }
+  }
+}

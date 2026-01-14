@@ -1,0 +1,40 @@
+.widget-list-container {
+  padding: $spacing;
+  height: 500px;
+
+  .widget-list {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 100%;
+
+    .widget-slot {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .widget-content {
+      display: flex;
+      height: 200px;
+      flex-direction: column;
+      .img-content {
+        width: 100%;
+        height: 170px;
+        padding: 0.5rem;
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.widget-slot.ui-draggable-dragging {
+  width: 300px!important;
+  height: 150px!important;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+/deep/ .cbpo-builder-action {
+  width: auto;
+  height: 30px;
+  margin-bottom: 0!important;
+}
+
+::v-deep .modal-custom {
+  width: clamp(50vw, 1140px, 90vw);
+}
+
+::v-deep .modal-dialog {
+  max-width: 100% !important;
+  margin: 1.75rem auto;
+}
+
+::v-deep .cbpo-custom-checkbox {
+  line-height: 19px;
+  .custom-control {
+    padding-left: 1rem;
+  }
+  .custom-control-label {
+    font-size: 11px;
+    &:before {
+      left: -1rem;
+      width: 13px;
+      height: 13px;
+    }
+    &:after {
+      background-position-x: 3px;
+      left: -1rem;
+      width: 13px;
+      height: 13px;
+    }
+  }
+}

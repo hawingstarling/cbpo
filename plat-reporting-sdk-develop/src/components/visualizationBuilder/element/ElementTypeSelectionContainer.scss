@@ -1,0 +1,37 @@
+.cbpo-visualization-element {
+  height: 100%;
+
+  .cbpo-element-content {
+    height: calc(100% - 30px - 10px);
+    overflow: auto;
+
+    .cbpo-grid-row {
+      display: flex;
+      flex-flow: row wrap;
+
+      .cbpo-grid-item {
+        min-width: 50px;
+        height: 50px;
+        flex-grow: 1;
+        -ms-flex: auto;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        border: 3px solid transparent;
+        i {
+          font-size: 2rem;
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}

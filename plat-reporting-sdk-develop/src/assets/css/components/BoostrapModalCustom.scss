@@ -1,0 +1,56 @@
+.cbpo-custom-modal {
+  header {
+    border-color: lighten(#ffffff, 15)!important;
+    background-color: #ffffff!important;
+    h5, button, span {
+      color: #000000!important;
+    }
+  }
+  .modal-body {
+    background-color: $modal-background-color!important;
+    color: $modal-text-color!important;
+    .card {
+      border-color: lighten(#ffffff, 15)!important;
+    }
+    .card-header {
+      background-color: lighten(#ffffff, 5)!important;
+    }
+    .card-body {
+      background-color: #ffffff!important;
+      color: #000000!important;
+    }
+    legend, span, label {
+      color: #000000!important;
+    }
+    input, select, textarea {
+      color: #000000!important;
+      background-color: #ffffff!important;
+      border-color: lighten(#ffffff, 15)!important;
+    }
+    .list-group-item {
+      color: #000000!important;
+      background-color: #ffffff!important;
+      border-color: lighten(#ffffff, 15)!important;
+    }
+  }
+  footer {
+    border-color: lighten(#ffffff, 15)!important;
+    background-color: #ffffff!important;
+  }
+}
+
+.v--modal {
+  border-color: $modal-border-color!important;
+  background-color: $modal-background-color!important;
+  color: $modal-text-color!important;
+  .cbpo-column-manager {
+    .cbpo-column-content {
+      .column-box {
+        background-color: $modal-background-color!important;
+        .cell-box {
+          border-color: $modal-border-color!important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.cbpo-detail-layout {
+  overflow-y: auto;
+  overflow-x: hidden;
+  .cbpo-row {
+    &::after, &::before {
+      display: table;
+      content: '';
+      clear: both;
+    }
+    padding: .5rem 45px;
+    .cbpo-1-row {
+      height: 32px;
+      font-size: 11px;
+      display: flex;
+      flex-wrap: wrap;
+      .cbpo-1-col {
+        width: 15%;
+      }
+      .cbpo-2-col {
+        width: 85%;
+        padding-left: .5rem;
+      }
+    }
+  }
+  .custom-text {
+    white-space: pre-wrap;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+  .cbpo-col {
+    display: block;
+    float: left;
+  }
+}

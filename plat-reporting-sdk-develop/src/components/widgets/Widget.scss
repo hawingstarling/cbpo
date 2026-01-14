@@ -1,0 +1,43 @@
+.cbpo-widget {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  font-size: $text-font-size;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+
+  .cbpo-control {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+
+    .cbpo-wrapper-action {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      margin-left: auto;
+
+      .cbpo-action-item {
+        padding: 0;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .cbpo-readable-filter {
+    font-size: 1rem;
+  }
+
+  .filter-center {
+    justify-content: center;
+  }
+
+  .filter-right {
+    justify-content: flex-end;
+  }
+}
+
+.cbpo-p-cs {
+  padding: 0.5rem;
+}

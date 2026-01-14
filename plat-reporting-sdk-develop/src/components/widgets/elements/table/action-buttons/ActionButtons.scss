@@ -1,0 +1,19 @@
+.action-buttons {
+  min-width: 72px;
+  button {
+    font-size: 11px;
+    i {
+      margin-right: 5px;
+    }
+  }
+  ul.dropdown-menu {
+    font-size: 11px;
+    min-width: 7rem;
+    a {
+      padding: 0.25rem 1rem;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}

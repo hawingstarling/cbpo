@@ -1,0 +1,144 @@
+// base variables
+$light: #fff;
+$dark: #000;
+$primary: #337ab7;
+$info: #17a2b8;
+$success: #28a744;
+$danger: #dc3546;
+$warning: #ffc107;
+$default: #6c757d;
+.cbpo{
+    &-btn {
+      padding: .3rem .5rem;
+      border: none;
+      border-radius: 5px;
+      outline: none!important;
+      font-size: 11px;
+      background: $default;
+      color: $light;
+      span {
+        outline: none!important;
+      }
+      &:not(:disabled) {
+        cursor: pointer;
+        &:hover {
+          background: lighten($default, 15)!important;
+          color: $light!important;
+        }
+        &:focus {
+          box-shadow: none;
+          border-color: transparent;
+        }
+        &:active {
+          background: lighten($default, 30)!important;
+        }
+      }
+      &.btn-icon {
+        padding: 0;
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        text-align: center;
+        &.circle {
+          border-radius: 100%;
+          width: 24px;
+          min-width: 24px;
+          height: 24px;
+        }
+      }
+      &.btn-light {
+        color: $dark;
+        background: $light;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            color: $dark;
+            background: darken($light, 15)!important;
+          }
+          &:active {
+            color: $dark;
+            background: darken($light, 30)!important;
+          }
+        }
+      }
+      &.btn-dark {
+        color: $light;
+        background: $dark;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            color: $light;
+            background: lighten($dark, 15)!important;
+          }
+          &:active {
+            color: $light;
+            background: lighten($dark, 30)!important;
+          }
+        }
+      }
+      &.btn-primary {
+        background: $primary;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            background: darken($primary, 15)!important;
+          }
+          &:active {
+            background: darken($primary, 30)!important;
+          }
+        }
+        &:disabled {
+          background-color: $primary!important;
+          opacity: .6;
+        }
+      }
+      &.btn-success {
+        background: $success;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            background: darken($success, 15)!important;
+          }
+          &:active {
+            background: darken($success, 30)!important;
+          }
+        }
+      }
+      &.btn-warning {
+        background: $warning;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            background: darken($warning, 15)!important;
+          }
+          &:active {
+            background: darken($warning, 30)!important;
+          }
+        }
+      }
+      &.btn-danger {
+        background: $danger;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            background: darken($danger, 15)!important;
+          }
+          &:active {
+            background: darken($danger, 30)!important;
+          }
+        }
+      }
+      &.btn-info {
+        background: $info;
+        &:not(:disabled) {
+          &:hover, &:focus {
+            background: darken($info, 15)!important;
+          }
+          &:active {
+            background: darken($info, 30)!important;
+          }
+        }
+      }
+      &.--small {
+        width: 20px;
+        height: 20px;
+        min-width: 15px;
+        line-height: 10px;
+        padding: 0.25rem;
+      }
+    }
+  }

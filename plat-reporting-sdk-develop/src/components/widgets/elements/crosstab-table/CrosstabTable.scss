@@ -1,0 +1,184 @@
+@mixin textTruncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin arrow-border($size, $direction, $color) {
+  width: 0;
+  height: 0;
+  border: $size solid transparent;
+
+  @if $direction == "top" {
+    border-top-color: $color;
+    margin-top: $size;
+  } @else if $direction == "right" {
+    border-right-color: $color;
+  } @else if $direction == "bottom" {
+    border-bottom-color: $color;
+    margin-bottom: $size;
+  } @else {
+    border-left-color: $color;
+  }
+}
+
+.cbpo-crosstab-table {
+  flex-wrap: nowrap;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.5rem;
+  height: 100%;
+  .cbpo-crosstab-widget-header {
+    display: flex;
+    font-size: 13px;
+    font-weight: bolder;
+    border-bottom: none!important;
+    padding: 0.5rem;
+    justify-content: center;
+    margin-bottom: 0!important;
+  }
+  .cbpo-crosstab-table-container {
+    flex-grow: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .cbpo-crosstab-table-container__inner {
+    border-bottom: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    .cbpo-crosstab-left-side {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .cbpo-crosstab-table--tab-scroll-container {
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-top: -1px;
+      }
+      .cross-tab-x-header {
+        width: 100%;
+        position: relative;
+        border-right-width: 1px;
+        border-right-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        .cbpo-first-x-column {
+          margin-right: 30px;
+          .cbpo-text-value {
+            height: 33px;
+            line-height: 33px;
+            font-size: $text-font-size;
+            padding: 0 0.5rem;
+            font-weight: bold;
+            @include textTruncate;
+          }
+        }
+        .cbpo-sorting-holder {
+          position: absolute;
+          padding: 0 5px;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .cbpo-sort-link {
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0.3;
+
+            &.cbpo__sort-down {
+              margin-top: 3px;
+            }
+            &.cbpo__sort-up {
+              margin-bottom: 3px;
+            }
+
+            &.active {
+              opacity: 1
+            }
+          }
+        }
+      }
+      .crosstab-empty-cell {
+        width: auto!important;
+      }
+    }
+    .cbpo-crosstab-right-side {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      overflow: hidden;
+      .cbpo-crosstab-table--header-scroll-container {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        z-index: 100;
+        position: relative;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+        }
+      }
+      .cbpo-crosstab-table--body-scroll-container {
+        height: 100%;
+        overflow: scroll;
+        margin-top: -1px;
+      }
+    }
+    ::v-deep .cbpo-crosstab-table-header, ::v-deep .cbpo-crosstab-table-last-left-column, ::v-deep .cbpo-crosstab-table-cell {
+      //border-right-style: hidden;
+      td, th {
+        .cbpo-text-value {
+          height: 33px;
+          line-height: 33px;
+          font-size: $text-font-size;
+          padding: 0 0.5rem;
+        }
+        @include textTruncate
+      }
+
+      td.empty-cell {
+        height: 34px;
+      }
+    }
+    ::v-deep .cbpo-crosstab-table-header, ::v-deep .cbpo-crosstab-table-cell {
+      table-layout: fixed;
+      min-width: 100%;
+    }
+  }
+}
+
+.warning-size-content {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  padding: 0.2rem;
+  text-align: center;
+  .error-text {
+    font-size: 13px;
+  }
+
+  &.show {
+    display: flex;
+    height: 100%;
+  }
+}

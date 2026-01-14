@@ -1,0 +1,101 @@
+.cbpo-card {
+  height: 100%;
+  overflow: auto;
+  padding: $spacing;
+  font-size: 11px;
+
+  ::v-deep div[class^=cbpo-][class$="-header"] {
+    &:not(.cbpo-table-header) {
+      display: flex;
+      margin-bottom: 10px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      h4 {
+        font-size: 1rem;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 0;
+        line-height: 30px;
+      }
+    }
+  }
+  .card {
+    height: 100%;
+    border: none;
+    position: relative;
+    ::v-deep .tabs {
+      height: 100%;
+      .tab-content {
+        height: 100%;
+        margin-right: calc(31px - 0.5rem);
+        border: none;
+        .card-body {
+          height: 100%;
+          padding: 0;
+        }
+      }
+      .col-auto {
+        position: absolute;
+        right: -0.5rem;
+        top: -0.5rem;
+        .card-header {
+          background: none;
+          position: relative;
+          padding: 0;
+          right: 0;
+          top: 0;
+          .nav-item {
+            .nav-link {
+              padding: 7px 9.5px;
+              &.active {
+                border-radius: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::v-deep .cbpo-readable-filter {
+  align-items: center;
+  font-size: 15px;
+  max-width: 90%;
+  margin-left: auto;
+}
+::v-deep .control-box {
+  // margin-left: auto;
+  .btn-manage {
+    i {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.spacing-top {
+  margin-top: 0.5rem;
+}
+
+.cbpo-preset {
+  width: 100%;
+  max-height: 100%;
+  // overflow-y: auto;
+  ::v-deep .page-link {
+    padding: 0.3rem 0.5rem;
+  }
+  ::v-deep .custom-pagination {
+    ::v-deep .pagination {
+      display: inline-flex;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      .page-item {
+        display: inline-block;
+      }
+    }
+    overflow-x: auto;
+  }
+}

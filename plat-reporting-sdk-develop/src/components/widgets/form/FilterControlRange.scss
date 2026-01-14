@@ -1,0 +1,14 @@
+.cbpo-filter-control-range {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  label {
+    margin-bottom: 0;
+    padding-right: 10px;
+  }
+
+  .cbpo-cs-pr {
+    margin-right: 10px;
+  }
+}
