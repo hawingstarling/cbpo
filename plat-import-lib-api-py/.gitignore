@@ -1,0 +1,5 @@
+build/*
+dist/*
+django_plat_import_lib_api.egg-info/*
+.idea/
+**/__pycache__
